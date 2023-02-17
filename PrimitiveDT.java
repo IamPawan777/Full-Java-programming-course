@@ -1,6 +1,6 @@
 public class PrimitiveDT {
     public static void main(String[] args) {
-        byte val = 2312;
+        byte val = 23122;
         System.out.println("val: "+ val);
     }
 }
