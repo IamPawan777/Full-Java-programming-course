@@ -1,4 +1,3 @@
-
 public class Operator {
     void arthematic() {
         int a = 20, b = 10;
@@ -20,10 +19,17 @@ public class Operator {
             System.out.println("Wrong answer");
     }
 
-    void relational() {
+    void relational()
+    {
         int a=10, b=10;
         System.out.println(a<=b);           //return boolean
         System.out.println(a<b);
+    }
+
+    void ternaryOpe(int p, int q, int r) 
+    {
+        int sNum = (p<q)? ((p<r)? p:q):((q<r)? q:r);       //focused on smaller values          
+        System.out.println(sNum);
     }
 
     
@@ -33,5 +39,6 @@ public class Operator {
         obj.assignment(12);
         logicalAndRelation();
         obj.relational();
+        obj.ternaryOpe(5,2,7 );
     }
 }
