@@ -15,7 +15,7 @@ public class TypeCasting {
         System.out.println(a);
 
         int p = 12; int q = 5;
-    float s = (float)p/q;            //can change
+    float s = (float)p/q;              //can change
         System.out.println(s);
     }
 }
