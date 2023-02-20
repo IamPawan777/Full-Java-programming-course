@@ -1,5 +1,4 @@
-import javax.xml.transform.Source;
-
+//......1......
 // public class Patterns {
 //     public static void main(String[] args) {
 //         int n = 5;
@@ -11,6 +10,7 @@ import javax.xml.transform.Source;
 
 
 
+//........2.....
 // public class Patterns {
 //     public static void main(String[] args) {
 //         int n = 5;
@@ -24,6 +24,9 @@ import javax.xml.transform.Source;
 // }
 
 
+
+
+//.........3.....
 // public class Patterns {
 //     public static void main(String[] args) {
         
@@ -43,6 +46,7 @@ import javax.xml.transform.Source;
 
 
 
+//..........4........
 // public class Patterns {
 //     public static void main(String[] args) {
 //        int n=5;
@@ -62,6 +66,7 @@ import javax.xml.transform.Source;
 
 
 
+//............5.......
 // public class Patterns {
 //     public static void main(String[] args) {
 //        int n=5;
@@ -80,7 +85,7 @@ import javax.xml.transform.Source;
 
 
 
-
+//............6.............
 // public class Patterns {
 //     public static void main(String[] args) {
 //        int n=5;
@@ -100,6 +105,7 @@ import javax.xml.transform.Source;
 
 
 
+//.......7.........
 // public class Patterns {
 //     public static void main(String[] args) {
 //        int n=7;
@@ -118,7 +124,7 @@ import javax.xml.transform.Source;
 
 
 
-
+//.........8.......
 // public class Patterns {
 //     public static void main(String[] args) {
 //        int n=5;
@@ -138,7 +144,7 @@ import javax.xml.transform.Source;
 
 
 
-
+//..........9.......
 // public class Patterns {
 //     public static void main(String[] args) {
 //        int n=5;
@@ -156,6 +162,27 @@ import javax.xml.transform.Source;
 
 
 
+
+
+//........10......
+// class Patterns {
+//     public static void main(String[] args) {
+//         int n=7;
+//         for (int i = 0; i < n; i++) {
+//             for (int j = 0; j < n; j++) {
+//                 if(i==0 || j==(n-1)/2)
+//                     System.out.print("*");
+//                 else    
+//                     System.out.print(" ");
+//             }
+//             System.out.println();            
+//         }
+//     }
+// }
+
+
+
+// //...11....some advance...
 
 // public class Patterns {
 //     public static void main(String[] args) {
@@ -175,7 +202,7 @@ import javax.xml.transform.Source;
 
 
 
-// //A
+//.......12............
 // public class Patterns {
 //         public static void main(String[] args) {
 //             int n=7;
@@ -194,18 +221,102 @@ import javax.xml.transform.Source;
 
 
 
-//D
-public class Patterns {
+//.......13.........
+// public class Patterns {
+//     public static void main(String[] args) {
+//         int n=7;
+//         for (int i = 0; i < n; i++) {
+//             for (int j = 0; j < n; j++) {
+//                 if(j==0 || i==0 && j<n-1  || i==n-1 && j<n-1 || j==n-1 && i>0 && i<n-1 )
+//                     System.out.print("*");
+//                 else
+//                     System.out.print(" ");
+//             }
+//             System.out.println();
+//         }
+//     }
+// }
+
+
+
+//..........14.......
+// class Patterns {
+//     public static void main(String[] args) {
+//         int n=7;
+//         for (int i = 0; i < n; i++) {
+//             for (int j = 0; j < n; j++) {
+//                 if(i==n-1 && j>0 && j<n-1  ||  j==0 && i<n-1  ||  j==n-1 && i<n-1) 
+//                     System.out.print("*");
+//                 else
+//                     System.out.print(" ");
+//             }            
+//             System.out.println();
+//         }
+//     }
+// }
+
+
+
+
+//.......15...........
+// class Patterns {
+//     public static void main(String[] args) {
+//         int n=7;
+//         for (int i = 0; i < n; i++) {
+//             for (int j = 0; j < n; j++) {
+//                 if(i==n-1 || j==0 || i>=j)
+//                     System.out.print("*");
+//                 else 
+//                     System.out.print(" ");
+//             }
+//             System.out.println();
+//         }
+//     }
+// }
+
+
+
+//.........16........
+// class Patterns {
+//     public static void main(String[] args) {
+//         int n=7;
+//         for (int i = 0; i < n; i++) {
+//             for (int j = 0; j < n; j++) {
+//                 if(i==0 || j==0 || i+j<=n-1)
+//                     System.out.print("*");
+//                 else 
+//                     System.out.print(" ");
+//             }
+//             System.out.println();
+//         }
+//     }
+// }
+
+
+
+
+//.........17.........
+class Patterns {
     public static void main(String[] args) {
-        int n=7;
+        java.util.Scanner scan = new java.util.Scanner(System.in);
+        System.out.println("Row and Column: ");
+        int n = scan.nextInt();
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
-                if(j==0 || i==0 && j<n-1  || i==n-1 && j<n-1 || j==n-1 && i>0 && i<n-1 )
-                    System.out.print("*");
-                else
+                if(j==0 && i<n-1 || j==n-1 && i<n-1 || j==(n-1)/2 && i>=(n-1)/2 && i<n-1 || i==n-1 && j>0 && j<(n-1)/2 || i==n-1 && j>(n-1)/2 && j<n-1 )
+                    System.out.print("#");
+                else 
+                    System.out.print(" ");
+            }
+            System.out.print("  ");
+            for (int j = 0; j < n; j++) {
+                if(j==0 && i>0 || j==n-1 && i>0 || i==0 && j>0 && j<n-1 || i==(n-1)/2 && j>0 && j<n-1)
+                    System.out.print("#");
+                else 
                     System.out.print(" ");
             }
             System.out.println();
         }
     }
 }
+
