@@ -295,28 +295,170 @@
 
 
 
-//.........17.........
+
+
+
+
+
+// //.........17.PAWAN BISHT.........
+// class Patterns {
+//     public static void main(String[] args) {
+//         java.util.Scanner scan = new java.util.Scanner(System.in);
+//         System.out.println("Row and Column: ");
+//         // int n = scan.nextInt();
+//         int n =  7;
+//         for (int i=0; i<n; i++) {
+//             for(int j=0; j<n; j++) {
+//                 if(j==0 || j==n-1 && i>0 && i<(n-1)/2 || i==0 && j<n-1 || i==(n-1)/2 && j<n-1) 
+//                     System.out.print("#");
+//                 else
+//                     System.out.print(" ");
+//             }
+//             System.out.print("  ");
+//             for (int j=0; j<n; j++) {
+//                 if(j==0 && i>0 || j==n-1 && i>0 || i==0 && j>0 && j<n-1 || i==(n-1)/2) 
+//                     System.out.print("#");
+//                 else 
+//                     System.out.print(" ");
+//             }
+//             System.out.print("  ");
+//             for (int j=0; j<n; j++) {
+//                 if(j==0 && i<n-1 || j==n-1 && i<n-1 || j==(n-1)/2 && i>=(n-1)/2 && i<n-1 || i==n-1 && j>0 && j<(n-1)/2 || i==n-1 && j>(n-1)/2 && j<n-1 )
+//                     System.out.print("#");
+//                 else 
+//                     System.out.print(" ");
+//             }
+//             System.out.print("  ");
+//             for (int j=0; j<n; j++) {
+//                 if(j==0 && i>0 || j==n-1 && i>0 || i==0 && j>0 && j<n-1 || i==(n-1)/2 && j>0 && j<n-1)
+//                     System.out.print("#");
+//                 else 
+//                     System.out.print(" ");
+//             }
+//             System.out.print("  ");
+//             for(int j=0; j<n; j++) {
+//                 if(j==0 || j==n-1 || i==j)
+//                     System.out.print("#");
+//                 else
+//                     System.out.print(" ");
+//             }
+//         System.out.println();
+//         }
+        
+//         //new line
+//         System.out.println();
+//         System.out.println();
+//         for (int i=0; i<n; i++) {
+//             for(int j=0; j<n; j++) {
+//                 if(j==0 || i==0 && j<n-1 || i==(n-1)/2 && j<n-1 || i==n-1 && j<n-1 || j==n-1 && i>0 && j<(n-1)/2 || j==n-1 && i>0 && i<(n-1)/2 || j==n-1 && i>(n-1)/2 && i<n-1)  
+//                     System.out.print("#");
+//                 else
+//                     System.out.print(" ");
+//             }
+//             System.out.print("  ");
+//             for (int j=0; j<n; j++) {
+//                 if(i==0 || i==n-1 || j==(n-1)/2) 
+//                     System.out.print("#");
+//                 else 
+//                     System.out.print(" ");
+//             }
+//             System.out.print("  ");
+//             for (int j=0; j<n; j++) {
+//                 if(i==0 && j>0 || i==n-1 && j<n-1 || i==(n-1)/2 && j>0 && j<n-1 || j==0 && i>0 && i<(n-1)/2 || j==n-1 && i>(n-1)/2 && i<n-1)
+//                     System.out.print("#");
+//                 else 
+//                     System.out.print(" ");
+//             }
+//             System.out.print("  ");
+//             for (int j=0; j<n; j++) {
+//                 if(j==0 || j==n-1 || i==(n-1)/2)
+//                     System.out.print("#");
+//                 else 
+//                     System.out.print(" ");
+//             }
+//             System.out.print("  ");
+//             for(int j=0; j<n; j++) {
+//                 if(i==0 || j==(n-1)/2)
+//                     System.out.print("#");
+//                 else
+//                     System.out.print(" ");
+//             }
+//             System.out.println();
+//         }
+//     }
+// }
+
+
+
+
+
+// class Patterns {
+//     public static void main(String[] args) {
+//         int n = 9;
+//         for (int i = 0; i < n; i++) {
+//             for (int j = 0; j < n; j++) {
+//                 if(i==j && j<(n-1)/2 || i+j==n-1 && j>(n-1)/2 || j==(n-1)/2 && i>(n-2)/2)
+//                     System.out.print("*");
+//                 else
+//                     System.out.print(" ");
+//             }
+//             System.out.println();
+//         }
+//     }
+// }
+
+
+
+
+
+
+// /*.....18.Advance pattern..........*/
+
+// class Patterns {
+//     public static void main(String[] args) {
+//         int n=17;
+//         for (int i = 0; i < n; i++) {
+//             for (int j = 0; j < n; j++) {
+//                 if(i==j)
+//                     System.out.print("*");
+//                 else
+//                     System.out.print(" ");
+//             }
+//             System.out.print("    ");
+//             for (int j = 0; j < n; j++) {
+//                 if(i==j || i+j==n-1)
+//                     System.out.print("*");
+//                 else
+//                     System.out.print(" ");
+//             }
+//             System.out.print("    ");
+//             for (int j = 0; j < n; j++) {
+//                 if(i==0 || i==n-1 || j==0 || j==n-1 || i==j || i+j==n-1)
+//                     System.out.print("*");
+//                 else
+//                     System.out.print(" ");
+//             }
+//             System.out.println();            
+//         }
+//     }
+// }
+
+
+
+
 class Patterns {
     public static void main(String[] args) {
-        java.util.Scanner scan = new java.util.Scanner(System.in);
-        System.out.println("Row and Column: ");
-        int n = scan.nextInt();
+        int n=21;
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
-                if(j==0 && i<n-1 || j==n-1 && i<n-1 || j==(n-1)/2 && i>=(n-1)/2 && i<n-1 || i==n-1 && j>0 && j<(n-1)/2 || i==n-1 && j>(n-1)/2 && j<n-1 )
+                if(i==j || i+j==n-1 || j==0 || i==0 || i==n-1 ||j==n-1 || i+j==(n-1)/2 || i-j==(n-1)/2) {
                     System.out.print("#");
-                else 
+                } 
+                else {
                     System.out.print(" ");
-            }
-            System.out.print("  ");
-            for (int j = 0; j < n; j++) {
-                if(j==0 && i>0 || j==n-1 && i>0 || i==0 && j>0 && j<n-1 || i==(n-1)/2 && j>0 && j<n-1)
-                    System.out.print("#");
-                else 
-                    System.out.print(" ");
+                }
             }
             System.out.println();
         }
     }
 }
-
