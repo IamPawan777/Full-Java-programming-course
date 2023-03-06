@@ -14,6 +14,7 @@
 
 
 
+
 // // print the value of input if it is even and divisible by 3.
 
 // class Conditional {
@@ -28,6 +29,7 @@
 //         obj.evenDiv3();
 //     }
 // }
+
 
 
 
@@ -56,6 +58,8 @@
 
 
 
+
+
 // // program that prints each number from 1 to 100 on a new line, except 
 // // if the number is a multiple of 5 or 7.
 
@@ -64,11 +68,13 @@
 //         int i=1;
 //         while(i<=100) {
 //             if(i%5==0 || i%7==0) 
-//                 System.out.println(n);
+//                 System.out.println(i);
 //             i++;
 //         }
 //     }
 // }
+
+
 
 
 
@@ -114,17 +120,57 @@
 
 
 
-//.........character at string.......
+// //.........character at string.......
 
-class MathsQue {
-    public static void main(String[] args) {
-        java.util.Scanner scan = new java.util.Scanner(System.in);
-        System.out.println("Enter String: ");
-        String str = scan.nextLine();
+// class MathsQue {
+//     public static void main(String[] args) {
+//         java.util.Scanner scan = new java.util.Scanner(System.in);
+//         System.out.println("Enter String: ");
+//         String str = scan.nextLine();
 
-        System.out.println("at Index: ");
-        char ch = str.charAt(scan.nextInt()-1);
+//         System.out.println("at Index: ");
+//         char ch = str.charAt(scan.nextInt()-1);
 
-        System.out.println("character: "+ch);
-    }
-}
+//         System.out.println("character: "+ch);
+//     }
+// }
+
+
+
+
+
+
+// //.......Swap two number without third variable.....
+
+// import java.util.*;
+// class MathsQue {
+//     public static void main(String[] args) {
+//         int a = 10;
+//         int b = 20;
+//         a = a+b;
+//         b = a-b;
+//         a = a-b;
+//         System.out.println(a+"\n"+b);
+//     }
+// }
+
+
+
+
+
+
+// //.......calculate the sum of the digits of a number.......
+
+// import java.util.*;
+// class MathsQue {
+//     public static void main(String[] args) {
+//         Scanner scan = new Scanner(System.in);
+//         int no = scan.nextInt();
+//         int sum = 0;
+//         while(no>0) {
+//             sum = sum+no%10;
+//             no = no/10;
+//         }
+//         System.out.println(sum);
+//     }
+// }
