@@ -85,20 +85,46 @@
 // }
 
 
-public class MathsQue {
-    static void primeNumber() {
-        for(int i=2; i<=100; i++) {
-            for(int j=2; j<i; j++) {
-                if(i%j != 0) {
-                    System.out.println(i);
-                    break;
-                }
-            }
-        }
-    }
+
+
+
+
+// //........Simple interest.........
+
+// class MathsQue {
+//     public static void main(String[] args) {
+//         java.util.Scanner sc = new java.util.Scanner(System.in);
+
+//         System.out.print("Enter principal: ");
+//         float p = sc.nextFloat();
+
+//         System.out.print("Enter Interest Rate: ");
+//         float i = sc.nextFloat();
+
+//         System.out.print("Enter period: ");
+//         int t = sc.nextInt();
+
+//         double SI = (p*i*t)/100;
+//         System.out.println("Simple Interest: "+SI);
+//     }
+// }
+
+
+
+
+
+
+//.........character at string.......
+
+class MathsQue {
     public static void main(String[] args) {
-        primeNumber();
+        java.util.Scanner scan = new java.util.Scanner(System.in);
+        System.out.println("Enter String: ");
+        String str = scan.nextLine();
+
+        System.out.println("at Index: ");
+        char ch = str.charAt(scan.nextInt()-1);
+
+        System.out.println("character: "+ch);
     }
 }
-
-
