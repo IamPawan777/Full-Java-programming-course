@@ -120,7 +120,7 @@
 
 
 
-// //.........character at string.......
+// //.........character at string**********.......
 
 // class MathsQue {
 //     public static void main(String[] args) {
@@ -157,6 +157,26 @@
 
 
 
+// //.....count total numbers of digit in any number.......
+
+// import java.util.*;
+// class MathsQue {
+//     public static void main(String[] args) {
+//         Scanner scan = new Scanner(System.in);
+//         System.out.println("Enter no: ");
+//         int n = scan.nextInt();
+//         int count = 0;
+//         while(n>0) {
+//             n/=10;              //234 -> 23 -> 2 -> 0
+//             count++;
+//         }
+//         System.out.println(count);
+//     }
+// }
+
+
+
+
 
 
 // //.......calculate the sum of the digits of a number.......
@@ -165,12 +185,92 @@
 // class MathsQue {
 //     public static void main(String[] args) {
 //         Scanner scan = new Scanner(System.in);
+//         System.out.print("Enter no: ");
 //         int no = scan.nextInt();
 //         int sum = 0;
 //         while(no>0) {
-//             sum = sum+no%10;
-//             no = no/10;
+//             sum += no%10;
+//             no /= 10;
 //         }
 //         System.out.println(sum);
 //     }
 // }
+
+
+
+
+
+// //.....reverse the number........
+
+// class MathsQue {
+//     public static void main(String[] args) {
+//         java.util.Scanner scan = new java.util.Scanner(System.in);
+//         System.out.println("Enter no: ");
+//         int n = scan.nextInt();
+//         int store = 0;
+//         while (n>0) {
+//             store = store*10 + n%10;
+//             n/=10;
+//         }
+//         System.out.println(store);
+//     }
+// }
+
+
+
+
+// //..........sum of series.(1+2-3+4-5+6-7+8-9).....
+
+// class MathsQue {
+//     public static void main(String[] args) {
+//         java.util.Scanner scan = new java.util.Scanner(System.in);
+//         System.out.println("Enter no: ");
+//         int n = scan.nextInt();
+//         int calculate = 0;
+//         for (int i = 1; i <= n; i++) {
+//             if(i%2 == 0)
+//                 calculate -= i;
+//             else if(i%2 != 0)
+//                 calculate += i;
+//         }
+//         System.out.println(calculate);
+//     }
+// }
+
+
+
+
+
+
+// //..........factrial no.......
+
+// class MathsQue {
+//     public static void main(String[] args) {
+//         java.util.Scanner scan = new java.util.Scanner(System.in);
+//         System.out.println("Enter no: ");
+//         int n = scan.nextInt();
+//         int sum = 1;
+//         for(int i=1; i<=n; i++) {
+//             sum*=i;
+//         }
+//         System.out.println(sum);
+//     }
+// }
+
+
+
+
+
+//..........a raised to power b......
+
+class MathsQue {
+    public static void main(String[] args) {
+        java.util.Scanner scan = new java.util.Scanner(System.in);
+        System.out.println("Enter no: ");
+        int a = scan.nextInt(), b=scan.nextInt(), store=1;
+        for(int i=1; i<=b; i++) {
+            store *= a;
+        }
+        System.out.println(store);
+    }
+}
