@@ -261,16 +261,97 @@
 
 
 
-//..........a raised to power b......
+// //..........a raised to power b......
+
+// class MathsQue {
+//     public static void main(String[] args) {
+//         java.util.Scanner scan = new java.util.Scanner(System.in);
+//         System.out.println("Enter no: ");
+//         int a = scan.nextInt(), b=scan.nextInt(), store=1;
+//         for(int i=1; i<=b; i++) {
+//             store *= a;
+//         }
+//         System.out.println(store);
+//     }
+// }
+
+
+
+
+
+// //....print Fibonacci series of n terms ....
+
+// class MathsQue {
+//     public static void main(String[] args) {
+//         java.util.Scanner scan = new java.util.Scanner(System.in);
+//         System.out.println("Enter no: ");
+//         int n = scan.nextInt();
+//         int a=1, b=1;
+//         for (int i = 0; i < n; i++) {
+//             System.out.print(a+" ");
+//             int sum = a+b;
+//             a = b;
+//             b = sum;
+//         }        
+//     }
+// }
+
+
+
+
+
+
+//....print factorial no....
 
 class MathsQue {
     public static void main(String[] args) {
         java.util.Scanner scan = new java.util.Scanner(System.in);
         System.out.println("Enter no: ");
-        int a = scan.nextInt(), b=scan.nextInt(), store=1;
-        for(int i=1; i<=b; i++) {
-            store *= a;
+        int n = scan.nextInt();
+        int sum = 1;
+        for(int i=n; i>=1; i--) {
+            sum *= i;
         }
-        System.out.println(store);
+        System.out.println(sum);
     }
 }
+
+
+
+
+
+
+
+
+// //........prime no or not.....(*****  again solve *****)
+
+// class MathsQue {
+//     public static void main(String[] args) {
+//         java.util.Scanner scan = new java.util.Scanner(System.in);
+//         System.out.println("Enter no: ");
+//         int n = scan.nextInt();
+//         int i=2;
+//         while(i<n) {
+//             if(n%i == 0){
+//                 System.out.println("Number is not prime divide.."+i);
+//                 break;
+//             }
+//             else if(n%i != 0) {
+//                 System.out.println("Prime No..");
+//                 break;
+//             }
+//             i++;
+//         }
+//         continue;
+//     }
+// }
+
+
+
+
+
+
+
+
+
+

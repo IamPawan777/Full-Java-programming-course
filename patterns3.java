@@ -522,16 +522,206 @@
 
 
 
-// .............22............
+// // .............22............
+
+// import java.util.Scanner;
+
+// class patterns3 {
+//     public static void main(String[] args) {
+//         Scanner scan = new Scanner(System.in);
+//         System.out.print("enter no: ");
+//         int n = scan.nextInt();
+//         // for (int i = 1; i <= n; i++) {
+//         //     for (int j = 1; j <= i; j++) {
+//         //         System.out.print("*");
+//         //     }
+//         //     System.out.println();
+//         // }
+//         // or
+//         for (int i = 1; i <= n; i++) {
+//             for (int j = 1; j <= n; j++) {
+//                 if(i>=j)
+//                     System.out.print("*"); 
+//             }
+//             System.out.println();
+//         }
+//     }
+// }
+
+
+
+
+
+
+
+
+// // .............23............
+
+// import java.util.Scanner;
+
+// class patterns3 {
+//     public static void main(String[] args) {
+//         Scanner scan = new Scanner(System.in);
+//         System.out.print("enter no: ");
+//         int n = scan.nextInt();
+//         int count = 0;
+//         for(int i=1; i<=n; i++) {
+//             for(int j=1; j<=i; j++) {
+//                 System.out.print(i+j-1);
+//             }
+//             System.out.println();
+//         }
+//     }
+// }
+
+
+
+
+
+
+
+
+
+// // .............24............
+
+// import java.util.Scanner;
+
+// class patterns3 {
+//     public static void main(String[] args) {
+//         Scanner scan = new Scanner(System.in);
+//         System.out.print("enter no: ");
+//         int n = scan.nextInt();
+//         for (int i = 1; i <= n; i++) {
+//             for (int k = i; k >= 1; k--) {
+//                 System.out.print(k);
+//             }
+//             System.out.println();
+//         }
+//     }
+// }
+
+
+
+
+
+// // .............25............
+
+// import java.util.Scanner;
+
+// class patterns3 {
+//     public static void main(String[] args) {
+//         Scanner scan = new Scanner(System.in);
+//         System.out.print("enter no: ");
+//         int n = scan.nextInt();
+//         // for (int i = 1; i <= n; i++) {
+//         //     for (int k = i; k >= 1; k--) {
+//         //         System.out.print(k);
+//         //     }
+//         //     System.out.println();
+//         // }
+//         // or
+//         for (int i = 1; i <= n; i++) {
+//             for (int k = 1; k <= i; k++) {
+//                 System.out.print(i-k+1);
+//             }
+//             System.out.println();
+//         }
+//     }
+// }
+
+
+
+
+
+
+// // .............25............
+
+// import java.util.Scanner;
+
+// class patterns3 {
+//     public static void main(String[] args) {
+//         Scanner scan = new Scanner(System.in);
+//         System.out.print("enter no: ");
+//         int n = scan.nextInt();
+//         for (int i = 1; i <= n; i++) {
+//             for (int j = 1; j <= n; j++) {
+//                 char c = (char)('A'+j-1);       //change into char
+//                 System.out.print(c);
+//             }
+//             System.out.println();
+//         }
+//     }
+// }
+
+
+
+
+
+
+// // .............26............
+
+// import java.util.Scanner;
+
+// class patterns3 {
+//     public static void main(String[] args) {
+//         Scanner scan = new Scanner(System.in);
+//         System.out.print("enter no: ");
+//         int n = scan.nextInt();
+//         int start = 'A';
+//         for (int i = 1; i <= n; i++) {
+//             for (int j = 1; j <= n; j++) {
+//                 char c = (char)start;           //change into char
+//                 System.out.print(c);
+//                 start += 1;
+//             }
+//             System.out.println();
+//         }
+//     }
+// }
+
+
+
+
+
+
+// // .............27............
+
+// import java.util.Scanner;
+
+// class patterns3 {
+//     public static void main(String[] args) {
+//         Scanner scan = new Scanner(System.in);
+//         System.out.print("enter no: ");
+//         int n = scan.nextInt();
+//         for (int i = 1; i <= n; i++) {
+//             char ch = 'A';
+//             for (int j = 0; j < n; j++) {
+//                 int st = ch + j;
+//                 char ch2 = (char)st;
+//                 System.out.print(ch2);
+//             }
+//             System.out.println();
+//         }
+//     }
+// }
+
+
+
+
+
+
+// .............27............
+
+import java.util.Scanner;
 
 class patterns3 {
     public static void main(String[] args) {
-        int n = 3;
-        int count =0;
+        Scanner scan = new Scanner(System.in);
+        System.out.print("enter no: ");
+        int n = scan.nextInt();
         for (int i = 1; i <= n; i++) {
-            for (int j = 1; j <= n; j++) {
-                count++;
-                System.out.print(count);
+            for (int j = 0; j < n; j++) {
+                
             }
             System.out.println();
         }
