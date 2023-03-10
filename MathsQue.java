@@ -301,18 +301,83 @@
 
 
 
-//....print factorial no....
+// //....print factorial no....
 
+// class MathsQue {
+//     int factorialNo(int n, int sum) {
+//         if(n==0) 
+//             return n;
+//         else {
+//             for (int j = n; j >= 1; j--) {
+//                 sum*=j;                
+//             }
+//             return sum;            
+//         }
+//     }
+//     public static void main(String[] args) {
+//         MathsQue obj = new MathsQue();
+//         java.util.Scanner scan = new java.util.Scanner(System.in);
+//         System.out.println("Enter no: ");
+//         int n = scan.nextInt();
+//         int sum = 1;
+//         int store = obj.factorialNo(n, sum);
+//         System.out.println(store);
+//     }
+// }
+
+
+
+
+
+
+
+// // //..........armstrong number or not.........
+
+// import java.util.Scanner;
+// class MathsQue {
+//     public static void main(String[] args) {
+//         Scanner scan = new Scanner(System.in);
+//         System.out.println("Enter no: ");
+//         int n = scan.nextInt();
+//         int store = n;
+//         int sum = 0;
+//         while(n>0) {
+//             int digit = n%10;
+//             sum += digit*digit*digit;
+//             n/=10;
+//         }
+//             if(sum == store) 
+//                 System.out.println(store+" is armstrong number...");
+//             else
+//                 System.out.println(store+" not armstrong number...");
+//     }
+// }
+
+
+
+
+
+
+// //..........armstrong number among........
+
+import java.util.Scanner;
 class MathsQue {
     public static void main(String[] args) {
-        java.util.Scanner scan = new java.util.Scanner(System.in);
-        System.out.println("Enter no: ");
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter no: ");
         int n = scan.nextInt();
-        int sum = 1;
-        for(int i=n; i>=1; i--) {
-            sum *= i;
+
+        for(int i=0; i<=n; i++) {
+            int store = i;
+            int sum = 0;
+            while(store>0) {
+                int digit = store%10;
+                sum += digit*digit*digit;
+                store /= 10;
+            }
+            if(i==sum) 
+                System.out.println(i+" ");
         }
-        System.out.println(sum);
     }
 }
 

@@ -579,32 +579,7 @@
 
 
 
-
-
-
 // // .............24............
-
-// import java.util.Scanner;
-
-// class patterns3 {
-//     public static void main(String[] args) {
-//         Scanner scan = new Scanner(System.in);
-//         System.out.print("enter no: ");
-//         int n = scan.nextInt();
-//         for (int i = 1; i <= n; i++) {
-//             for (int k = i; k >= 1; k--) {
-//                 System.out.print(k);
-//             }
-//             System.out.println();
-//         }
-//     }
-// }
-
-
-
-
-
-// // .............25............
 
 // import java.util.Scanner;
 
@@ -633,8 +608,36 @@
 
 
 
-
 // // .............25............
+
+// import java.util.Scanner;
+
+// class patterns3 {
+//     public static void main(String[] args) {
+//         Scanner scan = new Scanner(System.in);
+//         System.out.print("enter no: ");
+//         int n = scan.nextInt();
+//         for (int i = 1; i <= n; i++) {
+//             for (int j = 1; j <= n-i; j++) {
+//                 System.out.print(" ");
+//             }
+//             for(int k = 1; k <= i; k++) {
+//                 System.out.print(k);
+//             }
+//             for (int l = 1; l <= i-1; l++) {
+//                 System.out.print(l);
+//             }
+//             System.out.println();
+//         }
+//     }
+// }
+
+
+
+
+
+
+// // .............26............
 
 // import java.util.Scanner;
 
@@ -658,7 +661,7 @@
 
 
 
-// // .............26............
+// // // .............27............
 
 // import java.util.Scanner;
 
@@ -667,11 +670,10 @@
 //         Scanner scan = new Scanner(System.in);
 //         System.out.print("enter no: ");
 //         int n = scan.nextInt();
-//         int start = 'A';
+//         char start = 'A';
 //         for (int i = 1; i <= n; i++) {
 //             for (int j = 1; j <= n; j++) {
-//                 char c = (char)start;           //change into char
-//                 System.out.print(c);
+//                 System.out.print(start);
 //                 start += 1;
 //             }
 //             System.out.println();
@@ -684,7 +686,7 @@
 
 
 
-// // .............27............
+// // .............28............
 
 // import java.util.Scanner;
 
@@ -696,9 +698,8 @@
 //         for (int i = 1; i <= n; i++) {
 //             char ch = 'A';
 //             for (int j = 0; j < n; j++) {
-//                 int st = ch + j;
-//                 char ch2 = (char)st;
-//                 System.out.print(ch2);
+//                 System.out.print(ch);
+//                 ch += 1;
 //             }
 //             System.out.println();
 //         }
@@ -710,7 +711,6 @@
 
 
 
-// .............27............
 
 import java.util.Scanner;
 
@@ -720,6 +720,7 @@ class patterns3 {
         System.out.print("enter no: ");
         int n = scan.nextInt();
         for (int i = 1; i <= n; i++) {
+            char ch = 'A';
             for (int j = 0; j < n; j++) {
                 
             }
