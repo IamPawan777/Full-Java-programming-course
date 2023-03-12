@@ -11,12 +11,44 @@
 
 
 
-public class ObjectClass {
+
+// //.......print the area of a rectangle...
+
+// import java.util.Scanner;
+
+// public class MathsQue {
+//     int lenght, breadth;
+//     MathsQue(int lenght, int breadth) {
+//         this.lenght = lenght;
+//         this.breadth = breadth;
+//     }
+//     int returnArea(){
+//         int area = lenght*breadth;
+//         return area; 
+//     }
+//     public static void main(String[] args) {        
+//         Scanner scan = new Scanner(System.in);
+//         System.out.println("enter length: ");
+//         int lenght = scan.nextInt();
+//         System.out.println("enter breadth: ");
+//         int breadth = scan.nextInt();
+
+//         MathsQue obj = new MathsQue(lenght, breadth);
+
+//         System.out.println("Area: "+obj.returnArea());
+//     }
+// }
+
+
+
+
+
+//.......complex no add, substract, multiply......
+
+import java.util.Scanner;
+
+public class MathsQue {
     public static void main(String[] args) {
-        ObjectClass obj = new ObjectClass();
-        int a = 16;   
-        double store = Math.pow(a,.5);
-        double store1 = Math.sqrt(a);
-        System.out.println(store+"  "+store1);
+        
     }
 }
