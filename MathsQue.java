@@ -433,9 +433,6 @@
 
 
 
-
-
-
 // //........prime no or not.....(*****  again solve *****)
 
 // class MathsQue {
@@ -458,11 +455,6 @@
 //         continue;
 //     }
 // }
-
-
-
-
-
 
 
 
