@@ -346,7 +346,7 @@
 
 
 
-// // .........15............
+// // // .........15............
 
 // import java.util.Scanner;
 
@@ -522,7 +522,7 @@
 
 
 
-// // .............22............
+// // // .............22............
 
 // import java.util.Scanner;
 
@@ -637,6 +637,73 @@
 
 
 
+// import java.util.Scanner;
+// class patterns3 {
+//     public static void main(String[] args) {
+//         Scanner scan = new Scanner(System.in);
+//         int n = scan.nextInt();
+//         for(int i=1; i<=n; i++) {
+//             for(int j=1; j<=n-i; j++)
+//                 System.out.print(" ");
+//             for (int k = 1; k <= 2*i-1; k++) 
+//                 System.out.print(i);
+//         System.out.println();
+                
+//         }
+//     }
+// }
+
+
+
+
+
+
+
+// import java.util.Scanner;
+// class patterns3 {
+//     public static void main(String[] args) {
+//         Scanner scan = new Scanner(System.in);
+//         int n = scan.nextInt();         
+//         for (int i = 1; i <= n; i++) {
+//             for (int j = 1; j <= n-i; j++) {
+//                 System.out.print(" ");
+//             }
+//             for (int k = 1; k <= 2*i-1; k++) {
+//                 System.out.print(k);
+//             }
+//             System.out.println();
+//         }
+//     }
+// }
+
+
+
+
+
+
+import java.util.Scanner;
+class patterns3 {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int n = scan.nextInt();         
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print(" ");
+            }
+            for(int k=(n-i)*2-1; k>=1; k--) {
+                System.out.print(k);
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+
+
+
+
+
 // // .............26............
 
 // import java.util.Scanner;
@@ -711,22 +778,23 @@
 
 
 
-import java.util.Scanner;
+// import java.util.Scanner;
 
-class patterns3 {
-    public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        int n = scan.nextInt();
+// class patterns3 {
+//     public static void main(String[] args) {
+//         Scanner scan = new Scanner(System.in);
+//         int n = scan.nextInt();
 
-        for(int i=1; i<=n; i++) {
-            for(int j=1; j<=n-i; j++) {
-                System.out.print(" ");
-            }
-            for(int k=1; k<=i; k++) {
-                System.out.print(k);
-            }
-            System.out.println();
-        }
-    }
-}
+//         for(int i=1; i<=n; i++) {
+//             for(int j=1; j<=n-i; j++) {
+//                 System.out.print(" ");
+//             }
+//             for(int k=1; k<=i; k++) {
+//                 System.out.print(k);
+//             }
+//             // for()
+//             System.out.println();
+//         }
+//     }
+// }
 
