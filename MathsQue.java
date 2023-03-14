@@ -433,6 +433,61 @@
 
 
 
+
+// //........average of 3 no....
+
+// import java.util.*;
+// class MathsQue {
+//     void average() {
+//         int sum = 0;
+//         Scanner scan = new Scanner(System.in);
+//         for (int i = 0; i < 3; i++) {
+//             int n = scan.nextInt();
+//             sum += n;
+//         }
+//         int average = sum/3;
+//         System.out.println(average);
+//     }
+//     public static void main(String[] args) {
+//         MathsQue obj = new MathsQue();
+//         obj.average();
+//     }
+// }
+
+
+
+
+
+
+
+
+//.......count all vowels in a string....
+
+import java.util.*;
+class MathsQue {
+    int vowels() {
+        Scanner scan = new Scanner(System.in);
+        String n = scan.next();
+        int count=0;
+        for (int i = 0; i < n.length(); i++) {
+            char ch = n.charAt(i);
+            if(ch=='a' || ch=='e' || ch=='i' || ch=='o'|| ch=='u')
+                count++;
+        }
+        return count;
+    }
+    public static void main(String[] args) {
+        MathsQue obj = new MathsQue();
+        System.out.println(obj.vowels());
+    }
+}
+
+
+
+
+
+
+
 // //........prime no or not.....(*****  again solve *****)
 
 // class MathsQue {
