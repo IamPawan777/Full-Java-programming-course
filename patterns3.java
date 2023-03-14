@@ -681,23 +681,150 @@
 
 
 
+// import java.util.Scanner;
+// class patterns3 {
+//     public static void main(String[] args) {
+//         Scanner scan = new Scanner(System.in);
+//         int n = scan.nextInt();    
+//         for(int i=1; i<=n; i++) {
+//             for (int j = 1; j <= i; j++) {
+//                 System.out.print(" ");
+//             }
+//             for(int k=1; k<=(n-i)*2-1; k++){
+//                 System.out.print(k);
+//             }
+//             System.out.println();
+//         }
+//     }
+// }
+
+
+
+
+
+
+// import java.util.Scanner;
+// class patterns3 {
+//     public static void main(String[] args) {
+//         Scanner scan = new Scanner(System.in);
+//         int n = scan.nextInt();         
+//         for (int i = 1; i <= n; i++) {
+//             for (int j = 1; j <= i; j++) {
+//                 System.out.print(" ");
+//             }
+//             for(int k=(n-i)*2-1; k>=1; k--) {
+//                 System.out.print(k);
+//             }
+//             System.out.println();
+//         }
+//     }
+// }
+
+
+
+
+
+// import java.util.Scanner;
+// class patterns3 {
+//     public static void main(String[] args) {
+//         Scanner scan = new Scanner(System.in);
+//         int n = scan.nextInt();    
+//         for(int i=1; i<=n; i++) {
+//             for (int j = 1; j <= i; j++) {
+//                 System.out.print(" ");
+//             }
+//             for (int k = (n-i)*2-1; k >= n-i; k--) {
+//                 System.out.print(k);
+//             }
+//             for (int k = (n+1)-i; k <= (n-i)*2-1; k++) {
+//                 System.out.print(k);
+//             }
+//             System.out.println();
+//         }
+//     }
+// }
+
+
+
+
+
+
+//...........********........
+
+// import java.util.*;
+
+// public class patterns3 {
+//     public static void main(String[] args) {
+//     Scanner scan = new Scanner(System.in);
+//     int n = scan.nextInt();
+//     for (int i = 1; i <= n; i++) {
+//         for (int j = 1; j <= n-i; j++) {
+//             System.out.print(" ");
+//         }
+//         char ch = 'A';
+//         for (int k = 1; k <= 2*i-1; k++) {
+//             System.out.print(ch);
+//             ch += 1;
+//         }
+//         System.out.println();
+//     }
+
+
+//     for (int i = 1; i <= n; i++) { 
+//         for (int l = 1; l <= i; l++) {
+//             System.out.print(" ");
+//         }
+//         char ch = 'A';
+//         for (int m = (n-i)*2-1; m >= n-i; m--) {
+//             System.out.print(ch);
+//             ch+=1;
+//         }
+//         for (int p = (n+1)-i; p <= (n-i)*2-1; p++) {
+//             System.out.print(ch);
+//             ch+=i;
+//         }
+//         System.out.println();
+//     }
+//     }
+// }
+
+
+
+
+
+// import java.util.Scanner;
+
+// class pattern3 {
+//     public static void main(String []args) {
+//         Scanner scan = new Scanner(System.in);
+//         int n = scan.nextInt();
+//         for (int i = 1; i <= n; i++) {
+//             for(int j=1; j<=n-i; j++) {
+//                 System.out.print(" ");
+//             }
+//             for (int k = 1; k <= (2*i)-1; k++) {
+//                 System.out.print(k);
+//             }
+//             System.out.println();
+//         }
+//     }
+// }
+
+
+
+
+
 import java.util.Scanner;
-class patterns3 {
-    public static void main(String[] args) {
+
+class pattern3 {
+    public static void main(String []args) {
         Scanner scan = new Scanner(System.in);
-        int n = scan.nextInt();         
-        for (int i = 1; i <= n; i++) {
-            for (int j = 1; j <= i; j++) {
-                System.out.print(" ");
-            }
-            for(int k=(n-i)*2-1; k>=1; k--) {
-                System.out.print(k);
-            }
-            System.out.println();
+        int n = scan.nextInt();
+        for (int i = 0; i < n; i++) {
+            
         }
     }
 }
-
 
 
 
@@ -753,7 +880,7 @@ class patterns3 {
 
 
 
-// // .............28............
+// // // .............28............
 
 // import java.util.Scanner;
 
