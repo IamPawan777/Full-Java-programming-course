@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 //.....number in the input is prime or not.........
 //.......Fibonacci series..........
 //........palindrome Number.......
@@ -376,7 +378,7 @@
 //                 store /= 10;
 //             }
 //             if(i==sum) 
-//                 System.out.println(i+" ");
+//                 System.out.println(i);
 //         }
 //     }
 // }
@@ -463,25 +465,119 @@
 
 //.......count all vowels in a string....
 
-import java.util.*;
-class MathsQue {
-    int vowels() {
-        Scanner scan = new Scanner(System.in);
-        String n = scan.next();
-        int count=0;
-        for (int i = 0; i < n.length(); i++) {
-            char ch = n.charAt(i);
-            if(ch=='a' || ch=='e' || ch=='i' || ch=='o'|| ch=='u')
-                count++;
-        }
-        return count;
-    }
-    public static void main(String[] args) {
-        MathsQue obj = new MathsQue();
-        System.out.println(obj.vowels());
-    }
-}
+// import java.util.*;
+// class MathsQue {
+//     static int vowels(String s) {
+//         int count = 0;
+//         for (int i = 0; i < s.length(); i++) {
+//             char ch = s.charAt(i);
+//             if (ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u')
+//                 count++;
+//             }
+//         return count;
+//     }
+//     public static void main(String[] args) {
+//         Scanner scan = new Scanner(System.in);
+//         String str = scan.next();
 
+
+//         System.out.println(vowels(str));
+//     }
+// }
+
+
+
+
+
+
+// //.....display the middle character of a string....
+
+// import java.util.*;
+// class MathsQue {
+//     static void  mid_Element(String s) {
+//         // int mid, mid2;
+//         // int count=-1;
+//         // for (int i = 0; i < s.length(); i++) {
+//         //     count++;
+//         // }
+//         // if(count%2==0){      //odd
+//         //     mid = count/2;
+//         //     char ch = s.charAt(mid);
+//         //     System.out.println(ch);
+//         // }
+//         // else{
+//         //     mid = count/2;
+//         //     mid2 = (count/2)+1;
+//         //     char ch = s.charAt(mid);
+//         //     char ch2 = s.charAt(mid2);
+//         //     System.out.println(ch+""+ch2);
+//         // }
+
+//         // or
+
+//         if(s.length()%2==0) 
+//             System.out.println(s.substring(s.length()/2-1, s.length()/2+1));
+//         else
+//             System.out.println(s.substring(s.length()/2, s.length()/2+1));
+//     }
+//     public static void main(String[] args) {
+//         Scanner scan = new Scanner(System.in);
+//         String str = scan.next();
+//         mid_Element(str);
+//     }
+// }
+
+
+
+
+
+
+// //........check leap year or not.......
+
+// class MathsQue {
+//     static boolean check_year(int n) {
+//         if(n%4==0 || n%100==0){
+//             return true;
+//         }
+//         else
+//             return false;
+//     }
+//     public static void main(String[] args) {
+//         Scanner scan = new Scanner(System.in);
+//         int year = scan.nextInt();
+//         System.out.println(check_year(year));
+//     }
+// }
+
+
+
+
+
+
+// //.......smallest number among three numbers........
+
+// class MathsQue {
+//     static int smallest_no(int a, int b, int c) {
+//         // if(a<b && a<c) 
+//         //     return a;
+//         // else if(b<a && b<c)
+//         //     return b;
+//         // else
+//         //     return c;
+
+//         // or
+
+//         return Math.min(a, Math.min(b,c));
+//     }
+//     public static void main(String[] args) {
+//         Scanner scan = new Scanner(System.in);
+//         int n1 = scan.nextInt();
+//         int n2 = scan.nextInt();
+//         int n3 = scan.nextInt();
+
+//         System.out.println(smallest_no(n1,n2,n3)); 
+//     }
+// }
 
 
 
