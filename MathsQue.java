@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 //.....number in the input is prime or not.........
 //.......Fibonacci series..........
 //........palindrome Number.......
@@ -578,6 +576,81 @@ import java.util.Scanner;
 //         System.out.println(smallest_no(n1,n2,n3)); 
 //     }
 // }
+
+
+
+
+
+
+// //....search an element in array.......
+
+// class Arrayss {
+//     static int getData(int a[]){
+//         int key = 7;
+//         for (int i = 0; i < a.length; i++) {
+//             if(key == a[i])
+//                 return i;
+//         }
+//         return -1;
+//     }
+//     public static void main(String[] args) {
+//         int[] arr = {5,2,7,9,1,4};
+//         System.out.println("Index: "+getData(arr));
+//     }
+// }
+
+
+
+
+
+// //.......occurrences of any element x........
+
+// import java.util.Scanner;
+
+// class MathsQue {
+//     static int frequenty(int[] a, int key) {
+//         int count = 0;
+//         for (int i = 0; i < a.length; i++) {
+//             if(key == a[i])
+//                 count++;
+//         }
+//         return count;
+//     }
+//     public static void main(String[] args) {
+//         int[] arr = new int[] {2,3,8,5,4,3,3};
+
+//         int key = 4;
+
+//         System.out.println("occurrence : "+frequenty(arr, key));
+
+//     }
+// }
+
+
+
+
+
+
+
+//..........last occurrence of an element.........
+
+class MathsQue {
+    static int occurrence(int[] a, int k) {
+        int index = -1;
+        for(int i=0; i<a.length; i++) {
+            if(a[i] == k) {
+                index = i;
+            }
+        }
+        return index;
+    }
+    public static void main(String[] args) {
+        int[] arr = {3,5,1,6,1,4,1,8,};
+        int key = 1;
+        System.out.println("last accurrence: "+occurrence(arr, key));
+    }
+}
+
 
 
 
