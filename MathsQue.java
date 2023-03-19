@@ -632,24 +632,137 @@
 
 
 
-//..........last occurrence of an element.........
+// //..........last occurrence of an element.........
+
+// class MathsQue {
+//     static int occurrence(int[] a, int e) {
+//         int last_ind = -1;
+//         for (int i = 0; i < a.length; i++) {
+//             if(a[i] == e)
+//                 last_ind = i;
+//         }
+//         return last_ind;
+//     }
+//     public static void main(String[] args) {
+//         int[] arr = {3,5,1,6,1,4,1,8,};
+//         int elem = 1;
+//         System.out.println("last accurrence: "+occurrence(arr, elem));
+//     }
+// }
+
+
+
+
+
+
+
+// //..........count the number of element greater then element 'a'.........
+
+// class MathsQue {
+//     static int greater_ele(int arr[], int ele) {
+//         int count = 0;
+//         for (int i=0; i<=arr.length-1; i++) {
+//             if(ele < arr[i])
+//                 count++;
+//         }
+//         return count;
+//     }
+//     public static void main(String[] args) {
+//         int[] arr = new int[]{11,22,33,44,55,66,77};
+//         int num = 55;
+//         System.out.println(greater_ele(arr, num));
+//     }
+// }
+
+
+
+
+
+
+
+// //..........check array shorted or not.........
+
+// import java.util.*;
+
+// class Demo {
+//     boolean check(int[] a) {
+//         boolean bool_val = true;
+//         for (int i = 1; i < a.length; i++) {
+//             if(a[i-1] > a[i]) {
+//                 bool_val = false;
+//                 break;
+//             }
+//         }
+//         return bool_val;
+//     }
+// }
+// class MathsQue {
+//     public static void main(String[] args) {
+//         Demo obj = new Demo();
+
+//         Scanner scan = new Scanner(System.in);
+//         System.out.println("Enter size: ");
+//         int n = scan.nextInt();
+//         int[] arr = new int[n];
+//         System.out.println("Enter element: ");
+//         for (int i = 0; i < arr.length; i++) {
+//             arr[i] = scan.nextInt();
+//         }
+
+//         System.out.println("is shorted: "+obj.check(arr));
+//     }
+// }
+
+
+
+
+
+
+
+//.........(* return array * ).....biggest and smallest number.........
+
+import java.util.*;
 
 class MathsQue {
-    static int occurrence(int[] a, int k) {
-        int index = -1;
-        for(int i=0; i<a.length; i++) {
-            if(a[i] == k) {
-                index = i;
-            }
-        }
-        return index;
+    static int[] big_small(int a[]) {
+        Arrays.sort(a);
+        int[] ans = {a[0], a[a.length-1]};          //store 1st and last element
+        return ans;
     }
+
     public static void main(String[] args) {
-        int[] arr = {3,5,1,6,1,4,1,8,};
-        int key = 1;
-        System.out.println("last accurrence: "+occurrence(arr, key));
+        int[] arr = new int[]{5,2,8,1,5,6,2};
+        int[] store = big_small(arr);
+
+        // System.out.println("smallest: "+store[0]);
+        // System.out.println("largest: "+store[1]);
+        // or
+        for (int i = 0; i < store.length; i++) {
+            System.out.print(store[i]+" ");
+        }
     }
 }
+
+
+
+
+
+
+
+// // .........(* return array * ).....biggest and smallest number.........
+
+// import java.util.*;
+
+// class MathsQue {
+//     static int[] big_small(int a[]) {
+        
+//     }
+
+//     public static void main(String[] args) {
+//         int[] arr = new int[]{5,2,8,1,5,6,2};
+//     }
+// }
+
 
 
 
