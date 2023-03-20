@@ -431,14 +431,6 @@
 
 
 
-
-
-
-
-
-
-
-
 // //.......squre root........
 
 // public class MathsQue {
