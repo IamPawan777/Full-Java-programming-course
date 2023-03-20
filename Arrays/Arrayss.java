@@ -296,7 +296,7 @@
 
 // //......change in array2 but not change in array1 (not pointed to the same location)
 // //.......int arr1[] = {12, 23, 34, 45};
-// //.......int arr2[] = arr.clone();              //deep copy
+// //.......int arr2[] = arr1.clone();              //deep copy
 
 
 // class Arrayss{
@@ -307,8 +307,8 @@
 //     }
 //     public static void main(String[] args) {
 //         int arr[] = {12, 23, 34, 45, 56};
-//         // int arr2[] = arr;                //same values
-//         int arr2[] = arr.clone();           //different values
+//         // int arr2[] = arr;                //same values same location
+//         int arr2[] = arr.clone();           //different location
 //         arr2[0] = 1000;
 //         arr2[3] = 9999;
 //         fun(arr);
@@ -323,27 +323,27 @@
 
 
 
-// //.......second way to copy the array without effecting the 1st array ..........
-// //......Array.copyOf(which_array_copy,  range_that_array)
+//.......second way to copy the array without effecting the 1st array ..........
+//......Array.copyOf(which_array_copied,  range_that_array)
 
-// import java.util.Arrays;
-// class Arrayss{
-//         static void fun(int[] a) {
-//             for (int i = 0; i < a.length; i++) {
-//                 System.out.print(a[i]+" ");
-//             }
-//         }
-//         public static void main(String[] args) {
-//             int arr[] = {2,3,4,5,6};
+import java.util.Arrays;
+class Arrayss{
+        static void fun(int[] a) {
+            for (int i = 0; i < a.length; i++) {
+                System.out.print(a[i]+" ");
+            }
+        }
+        public static void main(String[] args) {
+            int arr[] = {22,33,44,55,66};
 
-//             // int arr2[] = arr;
-//             int arr2[] = Arrays.copyOf(arr, arr.length);                //copy without effecting previous array
-//             arr2[0] = 11;
-//             // int arr2[] = Arrays.copyOf(arr, 2);         //2 element print
-//             // int arr2[] = Arrays.copyOfRange(arr, 2, 4);
+            // int arr2[] = arr;
+            // int arr2[] = Arrays.copyOf(arr, arr.length);                //copy without effecting previous array
+            // int arr2[] = Arrays.copyOf(arr, 2);         //upto 2 element 
+            int arr2[] = Arrays.copyOfRange(arr, 1, 4);         //now 1 to 4 is -> 0, 1, 2
+            arr2[0] = 11;
             
-//             fun(arr);
-//             System.out.println();
-//             fun(arr2);
-//         }
-//     }
+            fun(arr);
+            System.out.println();
+            fun(arr2);
+        }
+    }

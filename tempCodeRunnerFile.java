@@ -1,3 +1,1 @@
-for (int l = 1; l <= i; l++) {
-            System.out.print(" ");
-        }
+if no is prime never divide...if n=7 now 'i' also '7'

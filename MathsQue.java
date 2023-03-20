@@ -386,6 +386,59 @@
 
 
 
+
+// //........prime no or not.....
+
+// class MathsQue {
+//     public static void main(String[] args) {
+//         java.util.Scanner scan = new java.util.Scanner(System.in);
+//         System.out.println("Enter no: ");
+//         int n = scan.nextInt();
+//         int count = 0;
+//         // for(int i=1; i<=n; i++) {
+//         //     if(n%i == 0)
+//         //     count++;
+//         // }
+//         // if(count==2)            //because prime no divide only '1' and 'itself'
+//         //     System.out.println("Prime number");
+//         // else
+//         //     System.out.println("Not a Prime number");
+// //or
+//         // for(int i=2; i<=n/2; i++) {             //or   for(int i=2; i<=n-1; i++)
+//         //     if(n%i==0) {
+//         //         count++;
+//         //     }
+//         // }
+//         // if(count>0)
+//         //     System.out.println("Not prime no");
+//         // else 
+//         //     System.out.println("Prime no");
+// //or
+//         int i;
+//         for (i = 2; i < n; i++) {
+//             if(n%i == 0)            //if no is prime never divide...if n=7 now 'i' also '7'
+//                 break;
+//         }
+//         if(i==n)            // so 'i' is 7
+//             System.out.println("Number is prime...");
+//         else
+//             System.out.println("number is not prime..");
+//     }
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // //.......squre root........
 
 // public class MathsQue {
@@ -719,47 +772,27 @@
 
 
 
-//.........(* return array * ).....biggest and smallest number.........
-
-import java.util.*;
-
-class MathsQue {
-    static int[] big_small(int a[]) {
-        Arrays.sort(a);
-        int[] ans = {a[0], a[a.length-1]};          //store 1st and last element
-        return ans;
-    }
-
-    public static void main(String[] args) {
-        int[] arr = new int[]{5,2,8,1,5,6,2};
-        int[] store = big_small(arr);
-
-        // System.out.println("smallest: "+store[0]);
-        // System.out.println("largest: "+store[1]);
-        // or
-        for (int i = 0; i < store.length; i++) {
-            System.out.print(store[i]+" ");
-        }
-    }
-}
-
-
-
-
-
-
-
-// // .........(* return array * ).....biggest and smallest number.........
+// //.........(* return array * ).....biggest and smallest number.........
 
 // import java.util.*;
 
 // class MathsQue {
 //     static int[] big_small(int a[]) {
-        
+//         Arrays.sort(a);
+//         int[] ans = {a[0], a[a.length-1]};          //store 1st and last element
+//         return ans;
 //     }
 
 //     public static void main(String[] args) {
 //         int[] arr = new int[]{5,2,8,1,5,6,2};
+//         int[] store = big_small(arr);
+
+//         // System.out.println("smallest: "+store[0]);
+//         // System.out.println("largest: "+store[1]);
+//     // or
+//         for (int i = 0; i < store.length; i++) {
+//             System.out.print(store[i]+" ");
+//         }
 //     }
 // }
 
@@ -769,29 +802,35 @@ class MathsQue {
 
 
 
+// // .........(* return half array * )..........
 
-// //........prime no or not.....(*****  again solve *****)
+// import java.util.*;
 
 // class MathsQue {
+//     static int[] big_small(int a[]) {
+//         int[] b = Arrays.copyOf(a, a.length/2);             //copyOf() mehtod copy the array from 'a' to 'b' without effecting a'th location
+//         return b;
+//     }
+
 //     public static void main(String[] args) {
-//         java.util.Scanner scan = new java.util.Scanner(System.in);
-//         System.out.println("Enter no: ");
-//         int n = scan.nextInt();
-//         int i=2;
-//         while(i<n) {
-//             if(n%i == 0){
-//                 System.out.println("Number is not prime divide.."+i);
-//                 break;
-//             }
-//             else if(n%i != 0) {
-//                 System.out.println("Prime No..");
-//                 break;
-//             }
-//             i++;
+//         int[] arr = new int[]{5,2,8,1,3,6};
+        
+//         int arr2[] = big_small(arr);
+//         for (int i = 0; i < arr2.length; i++) {
+//             System.out.print(arr2[i]+" ");
 //         }
-//         continue;
 //     }
 // }
+
+
+
+
+
+
+
+
+
+
 
 
 
