@@ -794,12 +794,13 @@
 
 
 
-// // .........(* return half array * )..........
+// // .........(* return half sorted array * )..........
 
 // import java.util.*;
 
 // class MathsQue {
 //     static int[] big_small(int a[]) {
+//         Arrays.sort(a);
 //         int[] b = Arrays.copyOf(a, a.length/2);             //copyOf() mehtod copy the array from 'a' to 'b' without effecting a'th location
 //         return b;
 //     }
@@ -813,6 +814,29 @@
 //         }
 //     }
 // }
+
+
+
+
+
+class MathsQue {
+    public static void main(String[] args) {
+        int a = 7;
+        int sum = 0;
+        // int pow = 1;
+        while(a>0) {
+            int rem = a%2;
+            sum += rem;
+            sum*=10;
+            a/=2;
+        }
+        System.out.println(sum);
+
+    }
+}
+
+
+
 
 
 

@@ -323,27 +323,59 @@
 
 
 
-//.......second way to copy the array without effecting the 1st array ..........
-//......Array.copyOf(which_array_copied,  range_that_array)
+// //.......second way to copy the array without effecting the 1st array ..........
+// //......Array.copyOf(which_array_copied,  range_that_array)
 
-import java.util.Arrays;
-class Arrayss{
-        static void fun(int[] a) {
-            for (int i = 0; i < a.length; i++) {
-                System.out.print(a[i]+" ");
+// import java.util.Arrays;
+// class Arrayss{
+//         static void fun(int[] a) {
+//             for (int i = 0; i < a.length; i++) {
+//                 System.out.print(a[i]+" ");
+//             }
+//         }
+//         public static void main(String[] args) {
+//             int arr[] = {22,33,44,55,66};
+
+//             // int arr2[] = arr;
+//             // int arr2[] = Arrays.copyOf(arr, arr.length);                //copy without effecting previous array
+//             // int arr2[] = Arrays.copyOf(arr, 2);         //upto 2 element 
+//             int arr2[] = Arrays.copyOfRange(arr, 1, 4);         //now 1 to 4 is -> 0, 1, 2
+//             arr2[0] = 11;
+            
+//             fun(arr);
+//             System.out.println();
+//             fun(arr2);
+//         }
+//     }
+
+
+
+
+
+//.........positive element one side....negative element another side....
+
+class Arrayss {
+    public static void main(String[] args) {
+        int[] arr = {-2,3,2,-1,0,4,-3};
+        int n=7;
+        int[] arr2 = new int[n];
+        int ind = 0;
+        
+        for (int i = 0; i < n; i++) {
+            if(arr[i] >= 0) {
+                arr2[ind] = arr[i];
+                ind++;
             }
         }
-        public static void main(String[] args) {
-            int arr[] = {22,33,44,55,66};
-
-            // int arr2[] = arr;
-            // int arr2[] = Arrays.copyOf(arr, arr.length);                //copy without effecting previous array
-            // int arr2[] = Arrays.copyOf(arr, 2);         //upto 2 element 
-            int arr2[] = Arrays.copyOfRange(arr, 1, 4);         //now 1 to 4 is -> 0, 1, 2
-            arr2[0] = 11;
-            
-            fun(arr);
-            System.out.println();
-            fun(arr2);
+        for (int i = 0; i < n; i++) {
+            if(arr[i] < 0) {
+                arr2[ind] = arr[i];
+                ind++;
+            }
         }
+        for (int i = 0; i < n; i++) {
+            System.out.print(arr2[i] + " ");
+        }
+
     }
+}
