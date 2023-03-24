@@ -819,21 +819,140 @@
 
 
 
+// //........positive number placed in starting and negative number placed after that..........
+
+// class MathsQue {
+//     public static void main(String[] args) {
+//         java.util.Scanner scan = new java.util.Scanner(System.in);
+//         System.out.println("How Much: ");
+//         int n = scan.nextInt();
+
+//         System.out.println("Enter: ");
+//         int[] arr = new int[n];
+
+//         for(int i=0; i<n; i++) {
+//             arr[i] = scan.nextInt();
+//         }
+
+//         int arr2[] = new int[n];
+//         int ind = 0;
+
+//         for (int i = 0; i < n; i++) {
+//             if(arr[i]>=0) {
+//                 arr2[ind] = arr[i];
+//                 ind++;
+//             }
+//         }
+//         for (int i = 0; i < n; i++) {
+//             if(arr[i]<0) {
+//                 arr2[ind] = arr[i];
+//                 ind++;
+//             }
+//         }
+
+//         for (int i = 0; i < arr2.length; i++) {
+//             System.out.print(arr2[i]+" ");
+//         }
+
+        
+//     }
+// }
+
+
+
+
+
+
+
+// //........Union of 2 different array..........
+
+// import java.util.*;
+
+// public class MathsQue {
+//     public static void main(String[] args) {
+
+//         java.util.Scanner scan = new java.util.Scanner(System.in);
+//         System.out.println("1st array size: ");
+//         int n = scan.nextInt();
+//         System.out.println("2nd array size: ");
+//         int m = scan.nextInt();
+
+//         int[] a = new int[n];
+//         int[] b = new int[m];
+
+//         System.out.println("Enter in 1st array: ");
+//         for (int i = 0; i < a.length; i++) {
+//             a[i] = scan.nextInt();
+//         }
+//         System.out.println("Enter in 2nd array: ");
+//         for (int i = 0; i < b.length; i++) {
+//             b[i] = scan.nextInt();
+//         }
+
+//         LinkedHashSet<Integer> hs = new LinkedHashSet<>();          //hashSet and LinkedHashSet store unique object
+
+//         for (int i : a) {           //add element 1st array to hs
+//             hs.add(i);
+//         }
+//         for (int j : b) {            //add element 1st array to hs
+//             hs.add(j);
+//         }
+        
+//         System.out.println("Union of the two arrays is:");
+//         Iterator itr = hs.iterator();
+//         while(itr.hasNext()) {
+//             System.out.print(itr.next()+" ");
+//         }
+//         System.out.println("\nTotal element: "+hs.size());
+//     }
+// }
+
+
+
+
+
+
 class MathsQue {
-    public static void main(String[] args) {
-        int a = 7;
-        int sum = 0;
-        // int pow = 1;
-        while(a>0) {
-            int rem = a%2;
-            sum += rem;
-            sum*=10;
-            a/=2;
+    static boolean similar(int[] a, int[] b) {
+        boolean value = true;
+        for (int i = 0; i < a.length; i++) {
+            for (int j = i; j <= i; j++) {
+                if(a[i] != b[j])
+                value = false;
+            }
         }
-        System.out.println(sum);
+        return value;
+    }
+    
+    public static void main(String[] args) {
+        java.util.Scanner scan = new java.util.Scanner(System.in);
+        System.out.println("Enter size: ");
+        int n = scan.nextInt();
+
+        int[] arr1 = new int[n];
+        System.out.println("Enter 1st element: ");
+        for (int i = 0; i < arr1.length; i++) {
+            arr1[i] = scan.nextInt();
+        }
+        
+        int[] arr2 = new int[n];
+        System.out.println("Enter 2nd element: ");
+        for (int i = 0; i < arr2.length; i++) {
+            arr2[i] = scan.nextInt();
+        }
+
+        boolean ck = similar(arr1, arr2);
+        System.out.println(ck);
 
     }
 }
+
+
+
+
+
+
+
 
 
 

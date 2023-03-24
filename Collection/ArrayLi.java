@@ -75,35 +75,36 @@
 
 
 
-// //........contains(), indexOf(), size(), ensureCapacity(), trimToSize(), clear()
-// import java.util.*;
+//........contains(), indexOf(), size(), ensureCapacity(), trimToSize(), clear()
+
+import java.util.*;
 
 // import javax.xml.transform.Source;
 
-// class ArrayLi {
-//     public static void main(String[] args) {
-//         ArrayList ar1 = new ArrayList();
-//         ar1.add(10);
-//         ar1.add(20);
-//         ar1.add(30);
-//         System.out.println(ar1);
+class ArrayLi {
+    public static void main(String[] args) {
+        ArrayList ar1 = new ArrayList();
+        ar1.add(10);
+        ar1.add(20);
+        ar1.add(30);
+        System.out.println(ar1);
         
-//         System.out.println( ar1.contains(200 ));        //return boolean value
+        System.out.println( ar1.contains(200 ));        //return boolean value
 
-//         int index = ar1.indexOf(20);
-//         System.out.println("index: "+index);
+        int index = ar1.indexOf(20);
+        System.out.println("index: "+index);
 
-//         System.out.println("size of array: "+ar1.size());        
+        System.out.println("size of array: "+ar1.size());        
 
-//         ar1.ensureCapacity(10);
-//         System.out.println("capacity:"+ar1);
-//         ar1.trimToSize();
-//         System.out.println("capacity ofter trime: "+ar1.size());
+        ar1.ensureCapacity(10);                 //minimum 10 size occupy
+        System.out.println("capacity:"+ar1);
+        ar1.trimToSize();               //...after minimum capacity occupy..by ensureCapacity() method trim the number of element we have
+        System.out.println("capacity ofter trime: "+ar1.size());
 
-//         ar1.clear();
-//         System.out.println(ar1);
-//     }
-// }
+        ar1.clear();
+        System.out.println(ar1);
+    }
+}
 
 
 
