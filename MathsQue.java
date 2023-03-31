@@ -431,6 +431,37 @@
 
 
 
+
+// //........prime no..........
+
+// class MathsQue {
+//     public static void main(String[] args) {
+//         java.util.Scanner scan = new java.util.Scanner(System.in);
+//         int n = scan.nextInt();
+        
+//         for (int i = 2; i <= n; i++) {    
+//             int count = 0;
+//             for (int j = 2; j < i; j++) {
+//                 if(i%j == 0)
+//                     count++;
+//             }
+//             if(count == 0)
+//                 System.out.print(i+" ");
+//         }
+
+//         scan.close();
+//     }
+// }
+
+
+
+
+
+
+
+
+
+
 // //.......squre root........
 
 // public class MathsQue {
@@ -912,42 +943,42 @@
 
 
 
-class MathsQue {
-    static boolean similar(int[] a, int[] b) {
-        boolean value = true;
-        for (int i = 0; i < a.length; i++) {
-            for (int j = i; j <= i; j++) {
-                if(a[i] != b[j])
-                value = false;
-            }
-        }
-        return value;
-    }
+// // to test the equality of two arrays..arr1 = 22 33 44 11 8 || arr2 = 22 33 44 11 8 
+
+// class MathsQue {
+//     static boolean similar(int[] a, int[] b) {
+//         boolean value = true;
+//         for (int i = 0; i < a.length; i++) {
+//             for (int j = i; j <= i; j++) {
+//                 if(a[i] != b[j])
+//                 value = false;
+//             }
+//         }
+//         return value;
+//     }
     
-    public static void main(String[] args) {
-        java.util.Scanner scan = new java.util.Scanner(System.in);
-        System.out.println("Enter size: ");
-        int n = scan.nextInt();
+//     public static void main(String[] args) {
+//         java.util.Scanner scan = new java.util.Scanner(System.in);
+//         System.out.println("Enter size: ");
+//         int n = scan.nextInt();
 
-        int[] arr1 = new int[n];
-        System.out.println("Enter 1st element: ");
-        for (int i = 0; i < arr1.length; i++) {
-            arr1[i] = scan.nextInt();
-        }
+//         int[] arr1 = new int[n];
+//         System.out.println("Enter 1st element: ");
+//         for (int i = 0; i < arr1.length; i++) {
+//             arr1[i] = scan.nextInt();
+//         }
         
-        int[] arr2 = new int[n];
-        System.out.println("Enter 2nd element: ");
-        for (int i = 0; i < arr2.length; i++) {
-            arr2[i] = scan.nextInt();
-        }
+//         int[] arr2 = new int[n];
+//         System.out.println("Enter 2nd element: ");
+//         for (int i = 0; i < arr2.length; i++) {
+//             arr2[i] = scan.nextInt();
+//         }
 
-        boolean ck = similar(arr1, arr2);
-        System.out.println(ck);
+//         boolean ck = similar(arr1, arr2);
+//         System.out.println(ck);
 
-    }
-}
-
-
+//     }
+// }
 
 
 
@@ -955,19 +986,42 @@ class MathsQue {
 
 
 
+// // Given an unsorted array A of size N that contains only non-negative integers, find a continuous sub-array which adds to a given number S.
+// //  In case of multiple subarrays, return the subarray which comes first on moving from left to right.
+// //  You need to print the start and end index of answer subarray
 
+// class MathsQue {
+//     public static void main(String[] args) {
+//         java.util.Scanner scan = new java.util.Scanner(System.in);
+//         System.out.println("Enter size: ");
+//         int n = scan.nextInt();
+//         System.out.println("Sum: ");
+//         int s = scan.nextInt();
 
+//         System.out.println("Enter element: ");
+//         int[] arr = new int[n];
+//         for (int i = 0; i < n; i++) {
+//             arr[i] = scan.nextInt();
+//         }
 
-
-
-
-
-
-
-
-
-
-
+        
+//         int sum = 0, j=0; 
+//         for (int i = 0; i < arr.length; i++) {
+//             sum += arr[i];
+//             if(sum > s) {
+//                 while (sum > s) {           //Deleting starting index
+//                     sum -= arr[j];
+//                     j++;
+//                 }
+//             }
+//             if(sum == s) {
+//                 System.out.print("index: "+j+" ");
+//                 System.out.print(i);
+//                 break;
+//             }
+//         }
+//     }
+// }
 
 
 
