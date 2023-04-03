@@ -354,7 +354,7 @@ import javax.print.DocFlavor.STRING;
 
 
 
-//.......Lower case string to upper case string (A=65, a-97)
+//.......Lower case string to upper case string conversion (A=65, a-97)
 
 class StringKnow{
     public static void main(String[] args) {
