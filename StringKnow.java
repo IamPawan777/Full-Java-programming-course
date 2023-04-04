@@ -354,20 +354,53 @@ import javax.print.DocFlavor.STRING;
 
 
 
-//.......Lower case string to upper case string conversion (A=65, a-97)
+// //.......Lower case string to upper case string conversion (A=65, a-97)
 
-class StringKnow{
+// class StringKnow{
+//     public static void main(String[] args) {
+//         // String s = "pawan";
+//         // char[] s1 = s.toCharArray();
+//         // or
+//         char[] s1 = {'p','a','w','a','n'};
+//         String str = "";
+
+//         for(int i=0; i<s1.length; i++) {
+//             int n = s1[i]-32;
+//             str += (char)n;
+//         } 
+//         System.out.println(str);
+//     }
+// }
+
+
+
+
+
+//...check panagram of not....
+
+class StringKnow {
     public static void main(String[] args) {
-        // String s = "pawan";
-        // char[] s1 = s.toCharArray();
-        // or
-        char[] s1 = {'p','a','w','a','n'};
-        String str = "";
+        String str = "The quick brown fox jumps over lazy dog";
+        boolean check = false;
+        str = str.replace(" ", "");
+        str = str.toLowerCase();
 
-        for(int i=0; i<s1.length; i++) {
-            int n = s1[i]-32;
-            str += (char)n;
-        } 
-        System.out.println(str);
+        char[] ch = str.toCharArray();
+        char[] ch2 = new char[26];          //blank 26 size array every element are 0
+
+        for (int i = 0; i < ch.length; i++) {
+            ch2[ch[i]-97]++;
+        }
+
+        for (int i = 0; i < ch2.length; i++) {
+            if(ch2[i] == 0) {
+                System.out.println("not panagram");
+                check = true;
+            }
+        }
+        if (check==false) {
+            System.out.println("Panagram....");
+        }
+
     }
 }

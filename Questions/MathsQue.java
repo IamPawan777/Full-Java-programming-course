@@ -6,6 +6,7 @@
 //........armstrong Number.......
 //........reverse Number.....
 //.........swap number.......
+//.........prime number.......
 //..........chanage ascii......
 //........matrix multiplication.......
 ///.........number of charactor in String.......
@@ -432,11 +433,12 @@
 
 
 
-// //........prime no..........
+// //........prime no's..........
 
 // class MathsQue {
 //     public static void main(String[] args) {
 //         java.util.Scanner scan = new java.util.Scanner(System.in);
+//         System.out.println("prime no's upto: ");
 //         int n = scan.nextInt();
         
 //         for (int i = 2; i <= n; i++) {    
@@ -452,9 +454,6 @@
 //         scan.close();
 //     }
 // }
-
-
-
 
 
 
@@ -850,44 +849,44 @@
 
 
 
-// //........positive number placed in starting and negative number placed after that..........
+//........positive number placed in starting and negative number placed after that..........
 
-// class MathsQue {
-//     public static void main(String[] args) {
-//         java.util.Scanner scan = new java.util.Scanner(System.in);
-//         System.out.println("How Much: ");
-//         int n = scan.nextInt();
+class MathsQue {
+    public static void main(String[] args) {
+        java.util.Scanner scan = new java.util.Scanner(System.in);
+        System.out.println("How Much: ");
+        int n = scan.nextInt();
 
-//         System.out.println("Enter: ");
-//         int[] arr = new int[n];
+        System.out.println("Enter: ");
+        int[] arr = new int[n];
 
-//         for(int i=0; i<n; i++) {
-//             arr[i] = scan.nextInt();
-//         }
+        for(int i=0; i<n; i++) {
+            arr[i] = scan.nextInt();
+        }
 
-//         int arr2[] = new int[n];
-//         int ind = 0;
+        int arr2[] = new int[n];
+        int ind = 0;
 
-//         for (int i = 0; i < n; i++) {
-//             if(arr[i]>=0) {
-//                 arr2[ind] = arr[i];
-//                 ind++;
-//             }
-//         }
-//         for (int i = 0; i < n; i++) {
-//             if(arr[i]<0) {
-//                 arr2[ind] = arr[i];
-//                 ind++;
-//             }
-//         }
+        for (int i = 0; i < n; i++) {
+            if(arr[i]>=0) {
+                arr2[ind] = arr[i];
+                ind++;
+            }
+       }
+        for (int i = 0; i < n; i++) {
+            if(arr[i]<0) {
+                arr2[ind] = arr[i];
+                ind++;
+            }
+        }
 
-//         for (int i = 0; i < arr2.length; i++) {
-//             System.out.print(arr2[i]+" ");
-//         }
+        for (int i = 0; i < arr2.length; i++) {
+            System.out.print(arr2[i]+" ");
+        }
 
         
-//     }
-// }
+    }
+}
 
 
 
