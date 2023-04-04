@@ -236,6 +236,7 @@ import java.util.Scanner;
 
 
 
+
 // //....second minimal element in an array...
 
 // class MathsQue2 {
