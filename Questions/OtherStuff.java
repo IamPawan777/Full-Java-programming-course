@@ -67,20 +67,58 @@
 
 
 
-//......return array.......
+// //......return array.......
 
-class OtherStuff {
-    static int[] arr_return(int[] a) {
-        int ans[] = {a[0], a[3]};
-        return ans;
-    }
-    public static void main(String[] args) {
-        int arr[] = {10, 4, 23, 5, 3};
-        // System.out.println(arr_return(arr));         //address of 'arr' which in stack area
+// class OtherStuff {
+//     static int[] arr_return(int[] a) {
+//         int ans[] = {a[0], a[3]};
+//         return ans;
+//     }
+//     public static void main(String[] args) {
+//         int arr[] = {10, 4, 23, 5, 3};
+//         // System.out.println(arr_return(arr));         //address of 'arr' which in stack area
 
-        int store[] = arr_return(arr);          //call and store to another array
-        for (int i = 0; i < store.length; i++) {
-            System.out.print(store[i]+" ");
-        }
-    }
-}
+//         int store[] = arr_return(arr);          //call and store to another array
+//         for (int i = 0; i < store.length; i++) {
+//             System.out.print(store[i]+" ");
+//         }
+//     }
+// }
+
+
+
+
+
+// //.check.....
+
+// class OtherStuff {
+//     public static void main(String[] args) {
+//         System.out.println("==");
+//         System.out.println(""=="");
+//         System.out.println("A"=="A");
+//         System.out.println("a==A");
+//     }
+// }
+
+
+
+
+
+
+// class OtherStuff {
+//     public static void main(String[] args) {
+//         String s1 = "Pawan";
+//         String s2 = "Bisht";
+//         System.out.println(s1=s2);
+//     }
+// }
+
+
+
+
+
+
+
+
+
+

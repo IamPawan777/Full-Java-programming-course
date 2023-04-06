@@ -1,8 +1,11 @@
+import java.util.Scanner;
+
 import javax.print.DocFlavor.STRING;
 
 /*   String:-(Immutable // object never change)
  * obj.concat("..")  - concat string
  * s1 == s2 || s1.equals(s2) || s1.equalsIgnoreCase(s2)  - compare strings
+ * s1.isEmpty()             //return boolean
  * 
  * 
  *   StringBuiler:-(Mutable / changble)
@@ -161,6 +164,31 @@ import javax.print.DocFlavor.STRING;
 //         System.out.println(s3);
 //     }
 // }
+
+
+
+
+
+// class StringKnow {
+//     public static void main(String[] args) {
+//         String str = " ";
+//         str.trim();
+//         System.out.println(str.equals("")+" "+str.isEmpty());
+//     }
+// }
+
+
+
+
+
+// class StringKnow {
+//     public static void main(String[] args) {
+//         String s1 = "java";
+//         String s2 = new String("java");
+//         System.out.println("==");
+//     }
+// }
+
 
 
 
@@ -376,31 +404,123 @@ import javax.print.DocFlavor.STRING;
 
 
 
-//...check panagram of not....
+// //...check panagram of not....
+
+// class StringKnow {
+//     public static void main(String[] args) {
+//         String str = "The quick brown fox jumps over lazy dog";
+//         boolean check = false;
+//         str = str.replace(" ", "");
+//         str = str.toLowerCase();
+
+//         char[] ch = str.toCharArray();
+//         char[] ch2 = new char[26];          //blank 26 size array every element are 0
+
+//         for (int i = 0; i < ch.length; i++) {
+//             ch2[ch[i]-97]++;
+//         }
+
+//         for (int i = 0; i < ch2.length; i++) {
+//             if(ch2[i] == 0) {
+//                 System.out.println("not panagram");
+//                 check = true;
+//             }
+//         }
+//         if (check==false) {
+//             System.out.println("Panagram....");
+//         }
+
+//     }
+// }
+
+
+
+
+
+
+
+// // to remove duplicates form a string....
+
+// class StringKnow {
+
+//     static String removeDuplecate(String s) {
+//         char[] ch = s.toCharArray();
+//         String add = new String();
+//         // for (int i = 0; i < ch.length; i++) {
+//         //     boolean check = false;
+//         //     for (int j = i+1; j < ch.length; j++) {
+//         //         if(ch[i] == ch[j]){
+//         //             check = true;
+//         //             break;
+//         //         }
+//         //     }
+//         //     if(check==false) {
+//         //         add += ch[i];
+//         //     }
+//         // }
+//         // return add;
+        
+//         // or
+
+//         int j;
+//         for (int i = 0; i < ch.length; i++) {
+//             for (j = 0; j < ch.length; j++) {
+//                 if(ch[i]==ch[j])
+//                 break;
+//             }
+//             if(i==j){               //same location then add character
+//                 add += ch[i];
+//             }
+//         }
+//         return add;
+//     }
+//     public static void main(String[] args) {
+//         Scanner scan = new Scanner(System.in);
+//         System.out.println("Enter String: ");
+//         String str = scan.nextLine();
+//         System.out.println("Remove duplecate: "+removeDuplecate(str));
+
+//     }
+// }
+
+
+// or
+
 
 class StringKnow {
-    public static void main(String[] args) {
-        String str = "The quick brown fox jumps over lazy dog";
-        boolean check = false;
-        str = str.replace(" ", "");
-        str = str.toLowerCase();
 
-        char[] ch = str.toCharArray();
-        char[] ch2 = new char[26];          //blank 26 size array every element are 0
+    static StringBuffer noDuplecate(String s) {
+        char[] ch = s.toCharArray();
+        StringBuffer st = new StringBuffer();
+        // for (int i = 0; i < ch.length; i++) {
+        //     boolean check = false;
+        //     for (int j = i+1; j < ch.length; j++) {
+        //         if(ch[i] == ch[j]) {
+        //             check = true;
+        //             break;
+        //         }
+        //     }
+        //     if(check == false)
+        //     st.append(ch[i]);
+        // }
 
-        for (int i = 0; i < ch.length; i++) {
-            ch2[ch[i]-97]++;
-        }
-
-        for (int i = 0; i < ch2.length; i++) {
-            if(ch2[i] == 0) {
-                System.out.println("not panagram");
-                check = true;
+            int j;
+            for (int i = 0; i < ch.length; i++) {
+                for (j = 0; j < ch.length; j++) {
+                    if(ch[i]==ch[j])
+                    break;
+                }
+                if(i==j) {
+                    st.append(ch[i]);
+                }
             }
-        }
-        if (check==false) {
-            System.out.println("Panagram....");
-        }
 
+        return st;
+    }
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter String: ");
+        String str = scan.nextLine();
+        System.out.println("now get: "+noDuplecate(str));
     }
 }
