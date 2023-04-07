@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+import javax.net.ssl.SSLContext;
 import javax.print.DocFlavor.STRING;
 
 /*   String:-(Immutable // object never change)
@@ -382,6 +383,10 @@ import javax.print.DocFlavor.STRING;
 
 
 
+
+
+
+
 // //.......Lower case string to upper case string conversion (A=65, a-97)
 
 // class StringKnow{
@@ -487,40 +492,122 @@ import javax.print.DocFlavor.STRING;
 // or
 
 
-class StringKnow {
+// class StringKnow {
 
-    static StringBuffer noDuplecate(String s) {
-        char[] ch = s.toCharArray();
-        StringBuffer st = new StringBuffer();
-        // for (int i = 0; i < ch.length; i++) {
-        //     boolean check = false;
-        //     for (int j = i+1; j < ch.length; j++) {
-        //         if(ch[i] == ch[j]) {
-        //             check = true;
-        //             break;
-        //         }
-        //     }
-        //     if(check == false)
-        //     st.append(ch[i]);
-        // }
+//     static StringBuffer noDuplecate(String s) {
+//         char[] ch = s.toCharArray();
+//         StringBuffer st = new StringBuffer();
+//         // for (int i = 0; i < ch.length; i++) {
+//         //     boolean check = false;
+//         //     for (int j = i+1; j < ch.length; j++) {
+//         //         if(ch[i] == ch[j]) {
+//         //             check = true;
+//         //             break;
+//         //         }
+//         //     }
+//         //     if(check == false)
+//         //     st.append(ch[i]);
+//         // }
 
-            int j;
-            for (int i = 0; i < ch.length; i++) {
-                for (j = 0; j < ch.length; j++) {
-                    if(ch[i]==ch[j])
-                    break;
-                }
-                if(i==j) {
-                    st.append(ch[i]);
-                }
-            }
+//             int j;
+//             for (int i = 0; i < ch.length; i++) {
+//                 for (j = 0; j < ch.length; j++) {
+//                     if(ch[i]==ch[j])
+//                     break;
+//                 }
+//                 if(i==j) {
+//                     st.append(ch[i]);
+//                 }
+//             }
 
-        return st;
-    }
-    public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        System.out.println("Enter String: ");
-        String str = scan.nextLine();
-        System.out.println("now get: "+noDuplecate(str));
-    }
-}
+//         return st;
+//     }
+//     public static void main(String[] args) {
+//         Scanner scan = new Scanner(System.in);
+//         System.out.println("Enter String: ");
+//         String str = scan.nextLine();
+//         System.out.println("now get: "+noDuplecate(str));
+//     }
+// }
+
+
+
+
+
+// //......print duplicates string....
+
+// class StringKnow {
+//     static String printDuple(String s) {
+//         char[] ch = s.toCharArray();
+//         String sto = new String();
+//         for (int i = 0; i < ch.length; i++) {
+//             boolean ck = false;
+//                 for (int j = i+1; j < ch.length; j++) {
+//                     if(ch[i]==ch[j]){
+//                         ck = true;
+//                     }
+//                 }
+//                 if(ck==true){
+//                     sto+=ch[i];
+//                 }
+//             }
+//             return sto;
+//     }
+//     public static void main(String[] args) {
+//         Scanner scan = new Scanner(System.in);
+//         System.out.println("Enter String: ");
+//         String str = scan.nextLine();
+//         String str2 = printDuple(str);
+//         System.out.println(str2);
+//     }
+// }
+
+
+
+
+
+
+
+// //....count the vowels, consonants, digit, special character in a string
+
+// class StringKnow {
+//     static void countChracter(String str) {
+//         str = str.toUpperCase();
+//         char[] ch = str.toCharArray();
+//         int vowels=0;
+//         int consonant=0;
+//         int digits=0;
+//         int specialCha=0;
+        
+//         for (int i = 0; i < ch.length; i++) {
+//             if(ch[i]>='A' && ch[i]<='Z'){
+//                 if(ch[i]=='A' || ch[i]=='E' || ch[i]=='I' || ch[i]=='O' || ch[i]=='U')
+//                 vowels++;
+//                 else
+//                 consonant++;
+//             }
+//             else if(ch[i]>='0' && ch[i]<='9') {
+//                 digits++; 
+//             }
+//             else{ 
+//                 specialCha++;
+//             }
+//         }
+//         System.out.println("vowels: "+vowels);
+//         System.out.println("consonant: "+consonant);
+//         System.out.println("digits: "+digits);
+//         System.out.println("specialCha: "+specialCha);
+//     }
+//     public static void main(String[] args) {
+//         Scanner scan = new Scanner(System.in);
+//         System.out.println("Enter String with number and Special character: ");
+//         String n = scan.nextLine();
+//         countChracter(n);
+//     }
+// }
+
+
+
+
+
+
