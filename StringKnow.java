@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 import javax.net.ssl.SSLContext;
@@ -385,8 +386,6 @@ import javax.print.DocFlavor.STRING;
 
 
 
-
-
 // //.......Lower case string to upper case string conversion (A=65, a-97)
 
 // class StringKnow{
@@ -437,6 +436,7 @@ import javax.print.DocFlavor.STRING;
 
 //     }
 // }
+
 
 
 
@@ -610,4 +610,82 @@ import javax.print.DocFlavor.STRING;
 
 
 
+// //...check unique element exist or not......
 
+// class StringKnow {
+//     static boolean uniqueElement(String s) {
+//         char[] ch = s.toCharArray();
+//         boolean check = false;
+//         for (int i = 0; i < ch.length; i++) {
+//             for (int j = i+1; j < ch.length; j++) {
+//                 if(ch[i]==ch[j]) {
+//                     check = true;
+//                 }
+//             }
+//         }
+//         return check;
+//     }
+//     public static void main(String[] args) {
+//         Scanner scan = new Scanner(System.in);
+//         System.out.println("Enter any Character: ");
+//         String str = scan.nextLine();
+//         System.out.println("is unique element exist: "+uniqueElement(str));
+//     }
+// }
+
+
+
+
+
+// //....first maximum occuring character.......
+
+// class StringKnow {
+//     static void maxOccurr(String s) {
+//         s = s.replace(" ", "");
+//         int arr[] = new int[127];
+//         for (int i = 0; i < s.length(); i++) {
+//             arr[s.charAt(i)]++;             //Apple  (i=0) -> arr[chraAt(0)] -> arr[A] -> arr[65] -> 0(initially) -> 0++ -> 1
+//         }
+
+//         int max = Integer.MIN_VALUE;
+//         int min = Integer.MAX_VALUE;
+//         char chMax = ' ';
+//         char chMin = ' ';
+//         for (int i = 0; i < s.length(); i++) {
+//             if(max < arr[s.charAt(i)] ) {           //maximum occurence
+//                 max = arr[s.charAt(i)];
+//                 chMax = s.charAt(i);
+//             }
+
+//             if(min > arr[s.charAt(i)] ) {           //minimum occurence
+//                 min = arr[s.charAt(i)];
+//                 chMin = s.charAt(i);
+//             }
+
+//         }
+//         System.out.println("Max occurence: "+chMax);
+//         System.out.println("min occurence: "+chMin);
+//         // return ch;
+//     }
+//     public static void main(String[] args) {
+//         Scanner scan = new Scanner(System.in);
+//         System.out.println("Enter: ");
+//         String str = scan.nextLine();
+//         maxOccurr(str);
+//         // System.out.println("Max occuring character: "+maxOccurr(str));
+//     }
+// }
+
+
+
+
+
+
+class StringKnow{
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int n = scan.nextInt();
+        String str = "n";
+
+    }
+}
