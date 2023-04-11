@@ -684,8 +684,21 @@ import javax.print.DocFlavor.STRING;
 class StringKnow{
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        int n = scan.nextInt();
-        String str = "n";
+        String s = scan.nextLine();
+        String ss = s;
+        char[] ch = s.toCharArray();   
+        String sss = "";     
+
+        for(int i=ch.length-1; i>=0; i--) {
+            sss += ch[i];
+        }
+
+        if(sss.equals(ss)){
+            System.out.println("palim");
+        }
+        else{
+            System.out.println("Not pali");
+        }
 
     }
 }
