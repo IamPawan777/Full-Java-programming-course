@@ -681,24 +681,64 @@ import javax.print.DocFlavor.STRING;
 
 
 
-class StringKnow{
-    public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        String s = scan.nextLine();
-        String ss = s;
-        char[] ch = s.toCharArray();   
-        String sss = "";     
+// //........sort the string's alphabets....
 
-        for(int i=ch.length-1; i>=0; i--) {
-            sss += ch[i];
-        }
+// class StringKnow{
+//     static String sortAlpha(String s) {
+//         char[] ch = s.toCharArray();
+//         char temp;
+//         for (int i = 0; i < ch.length; i++) {
+//             for (int j = i+1; j < ch.length; j++) {
+//                 if(ch[i] > ch[j]) {
+//                    temp = ch[i];
+//                    ch[i] = ch[j];
+//                    ch[j] = temp;
+//                 }
+//             }
+//         }
+//         return new String(ch);
+//     }
+//     public static void main(String[] args) {
+//         String str = "pawan bisht";
+//         System.out.println("Sorted string: "+sortAlpha(str));
+//     }
+// }
 
-        if(sss.equals(ss)){
-            System.out.println("palim");
-        }
-        else{
-            System.out.println("Not pali");
-        }
 
-    }
+
+
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class StringKnow
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner scan = new Scanner(System.in);
+		int n = scan.nextInt();
+		int x, y;
+		for(int i=0; i<n; i++) {
+            int a=0, b=0;
+		    x=scan.nextInt();
+		    y=scan.nextInt();
+		   b = y*2;
+		    a = x * x;
+		    if(a==b) {
+		        System.out.println("YES");
+		    }
+            else if(a>b/2) {
+		        System.out.println("NO");
+
+            }
+
+		    else {
+		        System.out.println("Yes");
+		    }
+		}
+	}
 }

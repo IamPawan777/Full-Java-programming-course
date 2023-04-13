@@ -1,1 +1,7 @@
-if no is prime never divide...if n=7 now 'i' also '7'
+ if(a<b) {
+		        System.out.println("YES");
+		    }
+		    if(a>b) {
+		        System.out.println("NO");
+		    }
+		}
