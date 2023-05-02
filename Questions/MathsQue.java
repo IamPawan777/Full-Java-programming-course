@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 //.....number in the input is prime or not.........
 //.......Fibonacci series..........
 //........palindrome Number.......
@@ -158,6 +160,65 @@
 
 
 
+
+
+// //......palimdrom array  [1, 2, 3, 2, 1]..........
+
+// class MathsQue {
+//     static boolean primeCheck(int ar[]) {
+//         boolean ch = true;                  //palimdrom
+//         for(int i=0; i<ar.length/2; i++) {
+//             if(ar[i] != ar[ar.length-i-1]) {                 //not palimdrom
+//                 ch = false;
+//                 break;
+//             }
+//         }
+//         if(ch==true)                         //palimdrom
+//             return true;
+//         else 
+//             return false;
+//     }
+//     public static void main(String[] args) {
+//         int[] ar = {1, 2, 3, 3, 2, 1};
+
+//         boolean store = primeCheck(ar);
+//         if(store == true) {
+//             System.out.println("palimdrom no");
+//         }
+//         else {
+//             System.out.println("Not palimdrom");
+//         }
+//     }
+// }
+
+
+
+
+
+
+// //......palimdrome number......
+
+// class MathsQue {
+//     public static void main(String[] args) {
+//         int n = 1331;
+//         int store = n;
+//         int sum=0;
+//         while(n>0) {
+//             int rem = n%10;
+//             sum = sum*10+rem;
+//             n/=10;
+//         }
+//         if(sum == store) System.out.println("palimdrom");
+//         else  System.out.println("not palimdrom");
+
+//     }
+// }
+
+
+
+
+
+
 // //.....count total numbers of digit in any number.......
 
 // import java.util.*;
@@ -257,6 +318,29 @@
 //         System.out.println(sum);
 //     }
 // }
+
+
+
+
+// class MathsQue {
+//     public static void main(String[] args) {
+//         Scanner scan = new Scanner(System.in);
+//         int n = scan.nextInt();
+//         long f = fact(n);
+//         System.out.println("Factorial: "+f);
+//         scan.close();
+//     }
+
+//     static int fact(int n) {
+//         if(n<=0) {
+//             return 1;               // mainly return from here
+//         }
+//         else {
+//             return n*fact(n-1);
+//         }
+//     }
+// }
+
 
 
 
@@ -849,44 +933,44 @@
 
 
 
-//........positive number placed in starting and negative number placed after that..........
+// //........positive number placed in starting and negative number placed after that..........
 
-class MathsQue {
-    public static void main(String[] args) {
-        java.util.Scanner scan = new java.util.Scanner(System.in);
-        System.out.println("How Much: ");
-        int n = scan.nextInt();
+// class MathsQue {
+//     public static void main(String[] args) {
+//         java.util.Scanner scan = new java.util.Scanner(System.in);
+//         System.out.println("How Much: ");
+//         int n = scan.nextInt();
 
-        System.out.println("Enter: ");
-        int[] arr = new int[n];
+//         System.out.println("Enter: ");
+//         int[] arr = new int[n];
 
-        for(int i=0; i<n; i++) {
-            arr[i] = scan.nextInt();
-        }
+//         for(int i=0; i<n; i++) {
+//             arr[i] = scan.nextInt();
+//         }
 
-        int arr2[] = new int[n];
-        int ind = 0;
+//         int arr2[] = new int[n];
+//         int ind = 0;
 
-        for (int i = 0; i < n; i++) {
-            if(arr[i]>=0) {
-                arr2[ind] = arr[i];
-                ind++;
-            }
-       }
-        for (int i = 0; i < n; i++) {
-            if(arr[i]<0) {
-                arr2[ind] = arr[i];
-                ind++;
-            }
-        }
+//         for (int i = 0; i < n; i++) {
+//             if(arr[i]>=0) {
+//                 arr2[ind] = arr[i];
+//                 ind++;
+//             }
+//        }
+//         for (int i = 0; i < n; i++) {
+//             if(arr[i]<0) {
+//                 arr2[ind] = arr[i];
+//                 ind++;
+//             }
+//         }
 
-        for (int i = 0; i < arr2.length; i++) {
-            System.out.print(arr2[i]+" ");
-        }
+//         for (int i = 0; i < arr2.length; i++) {
+//             System.out.print(arr2[i]+" ");
+//         }
 
         
-    }
-}
+//     }
+// }
 
 
 
@@ -1024,3 +1108,50 @@ class MathsQue {
 
 
 
+
+
+
+
+// //.......reversal an array.....
+
+// class MathsQue {
+//     public static void main(String[] args) {
+//         int[] arr = {2,5,8,12,23};
+
+//         for(int i=0; i<arr.length/2; i++) {
+//             int temp = arr[i];
+//             arr[i] = arr[arr.length-i-1];
+//             arr[arr.length-i-1] = temp;
+//         }
+
+//         for (int i = 0; i < arr.length; i++) {
+//             System.out.print(arr[i]+" ");
+//         }
+//     }
+// }
+
+
+
+
+
+
+
+//......missing number in an array.......
+
+class MathsQue {
+    public static void main(String[] args) {
+        int[] arr = {1, 3, 5, 4, 6};
+        int n = arr.length;
+        
+        int sumNatural = (n+1) * (n+2) / 2;               //....sum of natural no {n(n+1)/2..}...bcz one more number are here (missing no) that's why 'n+1'
+        
+        int sum = 0; 
+        for(int i=0; i<n; i++) {
+            sum += arr[i];
+        }
+
+        int mis_Num = sumNatural - sum;
+        System.out.println(mis_Num);
+
+    }
+}

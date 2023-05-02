@@ -707,38 +707,25 @@ import javax.print.DocFlavor.STRING;
 
 
 
-/* package codechef; // don't place package name! */
 
-import java.util.*;
-import java.lang.*;
 import java.io.*;
+import java.util.*;
 
-/* Name of the class has to be "Main" only if the class is public. */
-class StringKnow
-{
-	public static void main (String[] args) throws java.lang.Exception
-	{
-		// your code goes here
-		Scanner scan = new Scanner(System.in);
-		int n = scan.nextInt();
-		int x, y;
-		for(int i=0; i<n; i++) {
-            int a=0, b=0;
-		    x=scan.nextInt();
-		    y=scan.nextInt();
-		   b = y*2;
-		    a = x * x;
-		    if(a==b) {
-		        System.out.println("YES");
-		    }
-            else if(a>b/2) {
-		        System.out.println("NO");
+public class StringKnow {
 
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner scan = new Scanner(System.in);
+        int n = scan.nextInt();
+        while(n>0) {
+           int a = scan.nextInt();
+            int b = scan.nextInt();
+            int sum = 0;
+            for(int i = a+1; i<b; i++) {
+                sum += i;
             }
-
-		    else {
-		        System.out.println("Yes");
-		    }
-		}
-	}
+            System.out.println(sum);
+           n--; 
+        }
+    }
 }
