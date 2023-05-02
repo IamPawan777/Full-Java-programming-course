@@ -1136,22 +1136,76 @@ import java.util.Scanner;
 
 
 
-//......missing number in an array.......
+// //......missing number in an array.......
+
+// class MathsQue {
+//     public static void main(String[] args) {
+//         int[] arr = {1, 3, 5, 4, 6};
+//         int n = arr.length;
+        
+//         int sumNatural = (n+1) * (n+2) / 2;               //....sum of natural no {n(n+1)/2..}...bcz one more number are here (missing no) that's why 'n+1'
+        
+//         int sum = 0; 
+//         for(int i=0; i<n; i++) {
+//             sum += arr[i];
+//         }
+
+//         int mis_Num = sumNatural - sum;
+//         System.out.println(mis_Num);
+
+//     }
+// }
+
+
+
+
+
+
+// //......finding duplicate element........
+
+// class MathsQue {
+//     public static void main(String[] args) {
+//         int[] arr = {1,3,4,7,4,2,3};                //3, 4
+//         for(int i=0; i<arr.length; i++) {
+//             for (int j = i+1; j < arr.length; j++) {
+//                 if(arr[i] == arr[j]) {
+//                     System.out.println(arr[i]);
+//                 }
+//             }
+//         }
+//     }
+// }
+
+
+
+
+
+// //......finding first duplicate element........
 
 class MathsQue {
+    static int repetingVal(int[] a) {
+        for (int i = 0; i < a.length; i++) {
+            for (int j = i+1; j < a.length; j++) {
+                if(a[i]==a[j]) {
+                    return a[i];        // if 1st repeating value match then return...further iteration will not work 
+                }
+            }
+        }
+        return -1;          //if there will be no repeated value;
+    }
     public static void main(String[] args) {
-        int[] arr = {1, 3, 5, 4, 6};
-        int n = arr.length;
-        
-        int sumNatural = (n+1) * (n+2) / 2;               //....sum of natural no {n(n+1)/2..}...bcz one more number are here (missing no) that's why 'n+1'
-        
-        int sum = 0; 
-        for(int i=0; i<n; i++) {
-            sum += arr[i];
+        Scanner scan = new Scanner(System.in);
+        System.out.println("size: ");
+        int n = scan.nextInt();
+
+        System.out.println("enter element: ");
+        int[] ar = new int[n];
+        for (int i = 0; i < ar.length; i++) {
+            ar[i] = scan.nextInt();
         }
 
-        int mis_Num = sumNatural - sum;
-        System.out.println(mis_Num);
-
+        System.out.println("1st repeting value: "+repetingVal(ar));
+        
     }
 }
+
