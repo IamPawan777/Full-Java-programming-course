@@ -405,3 +405,98 @@
 //         System.out.print("palimdrom");
 //     }
 // }
+
+
+
+
+
+
+// //..........check palimdrom number or not..........
+
+// class Arrayss {
+//     public static void main(String[] args) {
+//         int n = 13731;
+//         int store = n;
+//         int sum = 0;
+//         while(n>0) {
+//             int rem = n%10;
+//             sum = sum*10 + rem;
+//             n = n/10;
+//         }
+//         if(sum == store) {
+//             System.out.println("palimdrom no");
+//         }
+//         else {
+//             System.out.println("not palimdrom..");
+//         }
+//     }
+// }
+
+
+
+
+
+// //..........reversal of an array..........
+
+// class Arrayss {
+//     public static void main(String[] args) {
+//         int[] arr = {3,-7,1,9,0,-3};
+
+//         for (int i = 0; i < arr.length/2; i++) {
+//             int temp = arr[i];
+//             arr[i] = arr[arr.length-i-1];
+//             arr[arr.length-i-1] = temp;
+//         }
+
+//         for (int i = 0; i < arr.length; i++) {
+//             System.out.print(arr[i]+" ");
+//         }
+//     }
+// }
+
+
+
+
+
+
+
+// //..........missing number in an array........
+
+// class Arrayss {
+//     public static void main(String[] args) {
+//         int[] ar = {1,4,2,5};
+//         int n = ar.length;
+        
+//         int sumNatural = (n+1)*(n+2) / 2;               //one number exter which is missing
+
+//         int sum=0;
+//         for (int i = 0; i < ar.length; i++) {
+//             sum += ar[i];
+//         }
+
+//         int  missing = sumNatural - sum;
+//         System.out.println(missing);
+//     }
+// }
+
+
+
+
+
+
+
+// //...........duplicate element print...........
+
+// class Arrayss {
+//     public static void main(String[] args) {
+//         int[] ar = {4,1,7,3,1,5,3};
+
+//         for (int i = 0; i < ar.length; i++) {
+//             for(int j=i+1; j < ar.length; j++) {
+//                 if(ar[i] == ar[j]) {
+//                     System.out.print(ar[i]+" ");
+//                 }
+//             }
+//         }
+//     }
+// }
