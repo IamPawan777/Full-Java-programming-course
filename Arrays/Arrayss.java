@@ -352,30 +352,56 @@
 
 
 
-//.........positive element one side....negative element another side....
+// //.........positive element one side....negative element another side....
 
-class Arrayss {
-    public static void main(String[] args) {
-        int[] arr = {-2,3,2,-1,0,4,-3};
-        int n=7;
-        int[] arr2 = new int[n];
-        int ind = 0;
+// class Arrayss {
+//     public static void main(String[] args) {
+//         int[] arr = {-2,3,2,-1,0,4,-3};
+//         int n=7;
+//         int[] arr2 = new int[n];
+//         int ind = 0;
         
-        for (int i = 0; i < n; i++) {
-            if(arr[i] >= 0) {
-                arr2[ind] = arr[i];
-                ind++;
-            }
-        }
-        for (int i = 0; i < n; i++) {
-            if(arr[i] < 0) {
-                arr2[ind] = arr[i];
-                ind++;
-            }
-        }
-        for (int i = 0; i < n; i++) {
-            System.out.print(arr2[i] + " ");
-        }
+//         for (int i = 0; i < n; i++) {
+//             if(arr[i] >= 0) {
+//                 arr2[ind] = arr[i];
+//                 ind++;
+//             }
+//         }
+//         for (int i = 0; i < n; i++) {
+//             if(arr[i] < 0) {
+//                 arr2[ind] = arr[i];
+//                 ind++;
+//             }
+//         }
+//         for (int i = 0; i < n; i++) {
+//             System.out.print(arr2[i] + " ");
+//         }
 
-    }
-}
+//     }
+// }
+
+
+
+
+
+
+
+
+// //......check palimdromic array or not............
+
+// class Arrayss {
+//     public static void main(String[] args) {
+//         int[] ar = {1, 2, 3, 2, 1};
+//         boolean ch = true;
+
+//         for (int i = 0; i < ar.length/2; i++) {
+//             if(ar[i] != ar[ar.length-1-i]) {
+//                 ch = false;
+//                 System.out.print("not palimdrom");
+//                 break;
+//             }
+//         }
+//         if(ch == true)
+//         System.out.print("palimdrom");
+//     }
+// }
