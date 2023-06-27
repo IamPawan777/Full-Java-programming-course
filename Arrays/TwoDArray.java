@@ -1,8 +1,8 @@
-// //...traversal by for each loop......
+//...traversal by for each loop......
 
 // public class TwoDArray {
 //     public static void main(String[] args) {
-//         int[][] arr = {{2,4,6}, {4,1,9,8}, {9,1,3,}, {7,4}};
+//         int[][] arr = {{2,4,6}, {4,1,9,8}, {9,1,3,}, {7}};
 //         for(int i[] : arr) {                    //line important
 //             for(int j : i) {
 //                 System.out.print(j+" ");
@@ -12,7 +12,7 @@
 //     }
 // }
 
-//or
+// or
 
 // class TwoDArray {
 //     public static void main(String[] args) {
@@ -30,15 +30,17 @@
 
 
 
+
+
 // //.....swaping element in 2D matrix.........
 
 // class TwoDArray {
 //     static void swapEle(int arr[][]) {
-//         for (int i = 0; i < arr.length; i++) {
+//         for (int i = 0; i < arr.length; i++) {                       //responsible for row
 //             int leftCol = 0;
 //             int rightCol = arr[i].length-1;
 
-//             while(leftCol < rightCol) {
+//             while(leftCol < rightCol) {                  //responsible for column
 //                 int temp = arr[i][leftCol];
 //                 arr[i][leftCol] = arr[i][rightCol];
 //                 arr[i][rightCol] = temp;
@@ -119,7 +121,8 @@
 
 
 
-// //......rotation of an array......
+
+// //......rotation 90degree of an array......
 
 // class TwoDArray {
 
@@ -132,11 +135,11 @@
 //             }
 //         }
 
-//         for (int i = 0; i < ar.length; i++) {
+//         for (int i = 0; i < ar.length; i++) {                    //resposible for row
 //             int left = 0;
 //             int right = ar[i].length-1;
 
-//             while(left < right) {
+//             while(left < right) {                                //for column
 //                 int temp = ar[i][left];
 //                 ar[i][left] = ar[i][right];
 //                 ar[i][right] = temp;
@@ -160,3 +163,95 @@
 
 //     }
 // }
+
+
+
+
+ 
+
+
+// //...........rotation 180 degree........
+
+// class TwoDArray {
+//     static void swapping(int[][] ar) {
+//         for (int k = 0; k < 2; k++) {          // two times rotation 
+            
+//             for (int i = 0; i < ar.length; i++) {
+//                 for (int j = i; j < ar[i].length; j++) {
+//                 int temp = ar[i][j];
+//                 ar[i][j] = ar[j][i];
+//                 ar[j][i] = temp;
+//             }
+//             }
+//             for (int i = 0; i < ar.length; i++) {
+//                 int leftco = 0;
+//                 int rightco = ar[i].length-1;
+//                 while(leftco<rightco) {
+//                     int temp = ar[i][leftco];
+//                     ar[i][leftco] = ar[i][rightco];
+//                     ar[i][rightco] = temp;
+//                     leftco++;  rightco--;
+//                 }
+//             }
+//         }
+//     }
+//     public static void main(String[] args) {
+//         int[][] ar = {{1,2,3,4},{5,6,7,8},{9,10,11,12},{13,14,15,16}};
+
+//         for (int i = 0; i < ar.length; i++) {
+//             for (int j = 0; j < ar[i].length; j++) {
+//                 System.out.print(ar[i][j]+" ");
+//             }
+//             System.out.println();
+//         }
+
+//         swapping(ar);
+        
+//          for (int i = 0; i < ar.length; i++) {
+//             for (int j = 0; j < ar[i].length; j++) {
+//                 System.out.print(ar[i][j]+" ");
+//             }
+//             System.out.println();
+//         }
+//     }
+// }
+
+
+
+
+
+//...........prifix sum..........
+
+import java.util.*;
+ 
+class TwoDArray {
+    static int findPrifixSum(int[][] arr, int r1, int c1, int r2, int c2) {
+        int sum = 0;
+        for (int i = r1; i <= r2; i++) {
+            for (int j = c1; j <= c2; j++) {
+                sum += arr[i][j];
+            }            
+        }
+        return sum;
+    }
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+
+        int[][] arr = {{1,1,1,1},
+                       {1,1,1,1},
+                       {1,1,1,1},
+                       {1,1,1,1}};
+
+        System.out.println("first coodinate: ");
+        int r1 = scan.nextInt();    
+        int c1 = scan.nextInt();
+
+        System.out.println("second coodinate: ");
+        int r2 = scan.nextInt();
+        int c2 = scan.nextInt();
+
+        int result = findPrifixSum(arr, r1, c1, r2, c2);
+
+        System.out.println("Sum is: "+result);
+    }
+}
