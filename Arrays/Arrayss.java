@@ -505,25 +505,46 @@
 
 
 
+// //........prifix sum for only one index.........
+
+// import java.util.Scanner;
+
+// class Arrayss {
+//     static int prifixSum(int[] arr, int ind) {
+//         int sum = 0;
+//         for (int i = 0; i <= ind; i++) {
+//             sum += arr[i];
+//         }
+//     return sum;
+//     }
+//     public static void main(String[] args) {
+//         int[] arr = {2,4,6,8,10};
+//         Scanner scan = new Scanner(System.in);
+//         System.out.println("at index: ");
+//         int index = scan.nextInt();
+
+//         int sum = prifixSum(arr, index);
+//         System.out.println(sum);
+//     }
+// }
+
+
+
+
+
+
+
+
 //........prifix sum.........
 
 import java.util.Scanner;
 
 class Arrayss {
-    static int prifixSum(int[] arr, int ind) {
-        int sum = 0;
-        for (int i = 0; i <= ind; i++) {
-            sum += arr[i];
-        }
-    return sum;
-    }
     public static void main(String[] args) {
         int[] arr = {2,4,6,8,10};
-        Scanner scan = new Scanner(System.in);
-        System.out.println("at index: ");
-        int index = scan.nextInt();
-
-        int sum = prifixSum(arr, index);
-        System.out.println(sum);
+        for (int i = 1; i < arr.length; i++) {
+            arr[i] = arr[i] + arr[i-1];
+            System.out.print(arr[i]+" ");
+        }
     }
 }

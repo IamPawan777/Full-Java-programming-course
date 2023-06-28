@@ -220,20 +220,76 @@
 
 
 
-//...........prifix sum..........
+// //...........prifix sum only single index..........
+
+// import java.util.*;
+ 
+// class TwoDArray {
+//     static int findPrifixSum(int[][] arr, int r1, int c1, int r2, int c2) {
+//         int sum = 0;
+//         for (int i = r1; i <= r2; i++) {
+//             for (int j = c1; j <= c2; j++) {
+//                 sum += arr[i][j];
+//             }            
+//         }
+//         return sum;
+//     }
+//     public static void main(String[] args) {
+//         Scanner scan = new Scanner(System.in);
+
+//         int[][] arr = {{1,1,1,1},
+//                        {1,1,1,1},
+//                        {1,1,1,1},
+//                        {1,1,1,1}};
+
+//         System.out.println("first coodinate: ");
+//         int r1 = scan.nextInt();    
+//         int c1 = scan.nextInt();
+
+//         System.out.println("second coodinate: ");
+//         int r2 = scan.nextInt();
+//         int c2 = scan.nextInt();
+
+//         int result = findPrifixSum(arr, r1, c1, r2, c2);
+
+//         System.out.println("Sum is: "+result);
+//     }
+// }
+
+
+
+
+
+
+
+//...........prifix sum. optimized approch (the complexity is reduced).........
 
 import java.util.*;
  
 class TwoDArray {
-    static int findPrifixSum(int[][] arr, int r1, int c1, int r2, int c2) {
-        int sum = 0;
-        for (int i = r1; i <= r2; i++) {
-            for (int j = c1; j <= c2; j++) {
-                sum += arr[i][j];
-            }            
+    static void prifix_Sum_Matrix(int[][] a) {
+        for(int i=0; i<a.length; i++) {         //row wise prifix sum
+            for (int j = 1; j < a[0].length; j++) {
+                a[i][j] += a[i][j-1];
+            }
         }
-        return sum;
+        for(int i=0; i<a.length; i++) {         //column wise prifix sum
+            for (int j = 1; j < a[0].length; j++) {
+                a[j][i] += a[j-1][i];
+            }
+        }
     }
+    
+    static int findPrifixSum(int[][] ar, int r1, int c1, int r2, int c2){
+        int total_region=0, up_region=0, left_region=0, repet_region=0, result=0;
+        total_region = ar[r2][c2];
+        up_region = ar[r1-1][c2];
+        left_region = ar[r2][c1-1];
+        repet_region = ar[r1-1][c1-1];
+        result = total_region - up_region - left_region + repet_region;
+        return result;
+    }
+
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
@@ -250,8 +306,10 @@ class TwoDArray {
         int r2 = scan.nextInt();
         int c2 = scan.nextInt();
 
+        
+        prifix_Sum_Matrix(arr);
         int result = findPrifixSum(arr, r1, c1, r2, c2);
-
         System.out.println("Sum is: "+result);
+
     }
 }
