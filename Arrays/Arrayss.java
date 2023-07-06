@@ -533,18 +533,237 @@
 
 
 
+// //........prifix sum on different array.........
+
+// import java.util.*;
+// class Arrayss {
+
+//     static void printArray(int[] arr) {
+//         for (int i = 0; i < arr.length; i++) {
+//             System.out.print(arr[i]+" ");
+//         }
+//         System.out.println();
+//     }
+
+//     static int[] prifixSum(int[] arr) {
+//         int[] prifix = new int[arr.length];
+//         prifix[0] = arr[0];                                  //......**......
+//         for (int i = 1; i < arr.length; i++) {
+//             prifix[i] = arr[i] + prifix[i-1];   
+//         }
+//         return prifix;
+//     }
+
+//     public static void main(String[] args) {
+//         Scanner scan = new Scanner(System.in);
+//         System.out.println("Enter size: ");
+//         int n = scan.nextInt();
+
+//         int[] arr = new int[n];
+//         System.out.println("Enter element: ");
+//         for (int i = 0; i < arr.length; i++) {
+//             arr[i] = scan.nextInt();
+//         }
+//         printArray(arr);
+
+//         int[] prifixArr = prifixSum(arr);
+//         printArray(prifixArr);
+
+//     }
+// }
 
 
-//........prifix sum.........
+// or
 
-import java.util.Scanner;
+
+// //........prifix sum on same array (optimized).........
+
+// class Arrayss {
+//     static void printArray(int[] arr) {
+//         for (int i = 0; i < arr.length; i++) {
+//             System.out.print(arr[i]+" ");
+//         }
+//         System.out.println();
+//     }
+
+//     static int[] prifixArray(int[] arr) {
+//         for (int i = 1; i < arr.length; i++) {
+//             arr[i] = arr[i] + arr[i-1];
+//         }
+//         return arr;
+//     }
+
+//     public static void main(String[] args) {
+//         int[] arr = {2,4,6,8,10};
+        
+//         printArray(arr);
+//         int[] prifix = prifixArray(arr);
+//         printArray(prifix);
+
+//     }
+// }
+
+
+
+
+
+
+// //.......sum of elements in index in between (not optimized).....
+
+// import java.util.*;
+// class Arrayss {
+//     static int returnSum(int[] arr, int l, int r) {
+//         int sum = 0;
+//         for (int i = l; i <= r; i++) {
+//             sum += arr[i];
+//         }
+//         return sum;
+//     }
+//     public static void main(String[] args) {
+//         int[] arr = {2, 6, 7, 10, 16, 21};
+//         Scanner scan = new Scanner(System.in);
+//         System.out.println("enter l index: ");
+//         int l = scan.nextInt();
+//         System.out.println("enter r index: ");
+//         int r = scan.nextInt();
+
+//         int sum = returnSum(arr, l, r);
+//         System.out.println("Sum is: "+sum);
+//     }
+// }
+
+
+// or
+
+
+// //........ sum of elements but index start from '1'  (sum of index 1 to n; not start index from 0)........
+
+// import java.util.*;
+// class Arrayss {
+
+//     static void print(int[] arr) {                          //....print
+//         for (int i = 0; i < arr.length; i++) {
+//             System.out.print(arr[i]+" ");
+//         }
+//         System.out.println();
+//     }
+
+//     static int[] prifixArray(int[] arr) {                   //......prifix sum.....
+//         for (int i = 1; i < arr.length; i++) {
+//             arr[i] += arr[i-1];             
+//         }
+//         return arr;
+//     }
+//     public static void main(String[] args) {
+//         Scanner scan = new Scanner(System.in);
+//         // int[] n = {2,5,3,6,10};
+//         System.out.println("enter size: ");
+//         int n = scan.nextInt();
+         
+//         int[] arr = new int[n+1];                //one index extra bcz 0th index always exist
+//         System.out.println("Enter element: ");
+//         for (int i = 1; i <= n; i++) {
+//             arr[i] = scan.nextInt();
+//         }
+        
+//         int[] prifixSum = prifixArray(arr);
+//         // System.out.println("prifix sum Array is: ");
+//         // print(prifixSum);
+
+//         System.out.println("left index: ");
+//         int l = scan.nextInt();     
+//         System.out.println("right index: ");
+//         int r = scan.nextInt();
+//         int ans =  prifixSum[r] - prifixSum[l-1];               //.......***.....
+//         System.out.println("Sum is: "+ans);
+//     }
+// }
+
+
+
+// //.......suffix array.......
+
+// import java.util.*;
+// class Arrayss {
+//     static void print(int ar[]) {
+//         for (int i = 0; i < ar.length; i++) {
+//             System.out.print(ar[i]+" ");
+//         }
+//         System.out.println();
+//     }
+
+//     static int[] suffixAr(int[] ar) {
+//         int n = ar.length-1;
+//         for (int i = n-1; i >= 0; i--) {
+//             ar[i] += ar[i+1];
+//         }
+//         return ar;
+//     }
+
+//     public static void main(String[] args) {
+//         int[] arr = {2,3,1,4,5};
+//         int[] suffix = suffixAr(arr);
+//         print(suffix);
+//     }
+// }
+
+
+
+
+
+
+// //......check parition prefix and suffix equal or not.....
+
+// import java.util.*;
+
+// class Arrayss {
+//     static int sum(int[] ar) {
+//         int sum = 0;
+//         for (int i = 0; i < ar.length; i++) {
+//             sum += ar[i];
+//         }
+//         return sum;
+//     }
+
+//     static boolean checkPreSuff(int[] arr) {
+//         int sum = sum(arr);
+//         int prefSum = 0;
+//         for (int i = 0; i < arr.length; i++) {
+//             prefSum += arr[i];
+//             int suffixSum = sum - prefSum;
+//             if(suffixSum == prefSum){
+//                 return true;
+//             }
+//         }
+//         return false;
+//     }
+
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         System.out.println("Enter size: ");
+//         int n = sc.nextInt();
+
+//         int[] arr = new int[n];
+//         System.out.println("Enter element: ");
+//         for (int i = 0; i < arr.length; i++) {
+//             arr[i] = sc.nextInt();
+//         }
+
+//         boolean x = checkPreSuff(arr);
+//         System.out.println(x);
+//         // print(arr);
+
+//     }
+// } 
+
+
 
 class Arrayss {
     public static void main(String[] args) {
-        int[] arr = {2,4,6,8,10};
-        for (int i = 1; i < arr.length; i++) {
-            arr[i] = arr[i] + arr[i-1];
-            System.out.print(arr[i]+" ");
+        int a=2;
+        int n=2;
+        for (int i = 0; i < n; a++) {
+            System.out.println(i);
         }
     }
 }

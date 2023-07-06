@@ -267,26 +267,30 @@
 import java.util.*;
  
 class TwoDArray {
-    static void prifix_Sum_Matrix(int[][] a) {
-        for(int i=0; i<a.length; i++) {         //row wise prifix sum
-            for (int j = 1; j < a[0].length; j++) {
+    static void prifix_Sum_Matrix(int[][] a) {              //pre processing matrix
+       
+        for(int i=0; i<a.length; i++) {        //for row    //row wise prifix sum
+            for (int j = 1; j < a[0].length; j++) {             //for column
                 a[i][j] += a[i][j-1];
             }
         }
-        for(int i=0; i<a.length; i++) {         //column wise prifix sum
-            for (int j = 1; j < a[0].length; j++) {
-                a[j][i] += a[j-1][i];
+        for (int j = 0; j < a.length; j++) {           //for column ......//column wise prifix sum
+            for(int i = 1; i < a[0].length; i++) {        //for row
+                a[i][j] += a[i-1][j];
             }
         }
     }
     
     static int findPrifixSum(int[][] ar, int r1, int c1, int r2, int c2){
-        int total_region=0, up_region=0, left_region=0, repet_region=0, result=0;
-        total_region = ar[r2][c2];
-        up_region = ar[r1-1][c2];
-        left_region = ar[r2][c1-1];
-        repet_region = ar[r1-1][c1-1];
-        result = total_region - up_region - left_region + repet_region;
+        int total_regionSum=0, up_regionSum=0, left_regionSum=0, repet_regionSum=0, result=0;
+        total_regionSum = ar[r2][c2];
+        if(r1>=1)                                       //if condition is use for solving 0th index
+            up_regionSum = ar[r1-1][c2];
+        if(c1>=1)
+            left_regionSum = ar[r2][c1-1];
+        if(r1>=1 && c1>=1)
+            repet_regionSum = ar[r1-1][c1-1];
+        result = total_regionSum - up_regionSum - left_regionSum + repet_regionSum;
         return result;
     }
 
