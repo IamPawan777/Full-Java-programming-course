@@ -1,3 +1,5 @@
+//....add are delete element from 'front' and 'rear' end....
+
 import java.util.*;
 
 class ArrayDeq {
@@ -15,6 +17,9 @@ class ArrayDeq {
         ad1.offer(232323);                  //value may be insert or not also it is not mandatory
         System.out.println(ad1);
 
-        System.out.println(ad1.contains(23));                   
+        System.out.println(ad1.contains(23));   
+        System.out.println(ad1.peekFirst());            //retrive front element
+        System.out.println(ad1.pollLast());              //retrive last but dlt
+        System.out.println(ad1);             
         }
 }
