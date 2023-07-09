@@ -1,3 +1,27 @@
+import java.util.ArrayList;
+
+/**    Mandatory import file " java.util.* ";
+ * 
+ * obj.add(element);                add new object..
+ * obj.add(index, object)           add new object at specific index
+ * obj.addAll(obj2)                 add new object's in another object
+ * obj.size()                       return size of list
+ * obj.get(index)                   return element
+ * obj.indexOf(element)             return index                     
+ ** obj.set(index, element)         (modifie value) add new element but replace
+ * obj.contains(element)            return boolean
+ * obj.contains(Integer.valueOf(element))      return boolean
+ * obj.indexOf(element)             return index of element
+ * obj.ensureCapacity(min_size)         atleast occupy size 
+ * obj.clear()                      clear the list
+ * obj.remove(index)                delete value by index
+ * obj.remove(Integer.valueOf(element))      delete value by value
+ * Collections.sort(obj);
+ */
+
+
+
+
 // //......standerd way......
 
 // import java.util.*;
@@ -75,38 +99,119 @@
 
 
 
-//........contains(), indexOf(), size(), ensureCapacity(), trimToSize(), clear()
+// //........contains(), indexOf(), size(), ensureCapacity(), trimToSize(), clear()
 
-import java.util.*;
+// import java.util.*;
 
-// import javax.xml.transform.Source;
+// // import javax.xml.transform.Source;
 
-class ArrayLi {
-    public static void main(String[] args) {
-        ArrayList ar1 = new ArrayList();
-        ar1.add(10);
-        ar1.add(20);
-        ar1.add(30);
-        System.out.println(ar1);
+// class ArrayLi {
+//     public static void main(String[] args) {
+//         ArrayList ar1 = new ArrayList();
+//         ar1.add(10);
+//         ar1.add(20);
+//         ar1.add(30);
+//         System.out.println(ar1);
         
-        System.out.println( ar1.contains(200 ));        //return boolean value
+//         System.out.println( ar1.contains(200 ));        //return boolean value
 
-        int index = ar1.indexOf(20);
-        System.out.println("index: "+index);
+//         int index = ar1.indexOf(20);
+//         System.out.println("index: "+index);
 
-        System.out.println("size of array: "+ar1.size());        
+//         System.out.println("size of array: "+ar1.size());        
 
-        ar1.ensureCapacity(10);                 //minimum 10 size occupy
-        System.out.println("capacity:"+ar1);
-        ar1.trimToSize();               //...after minimum capacity occupy..by ensureCapacity() method trim the number of element we have
-        System.out.println("capacity ofter trime: "+ar1.size());
+//         ar1.ensureCapacity(10);                 //minimum 10 size occupy
+//         System.out.println("capacity:"+ar1);
+//         ar1.trimToSize();               //...after minimum capacity occupy..by ensureCapacity() method trim the number of element we have
+//         System.out.println("capacity ofter trime: "+ar1.size());
 
-        ar1.clear();
-        System.out.println(ar1);
-    }
-}
-
-
+//         ar1.clear();
+//         System.out.println(ar1);
+//     }
+// }
 
 
 
+
+// //.........reverse array............
+
+// import java.util.*;
+// class ArrayLi {
+//     static void reverseList(List<Float> lis) {
+//         int i=0, j=lis.size()-1;
+//         while(i < j) {
+//             Float temp = lis.get(i);
+//             lis.set(i, lis.get(j));
+//             lis.set(j, temp);
+//             i++; j--;
+//         }
+//     }
+//     public static void main(String[] args) {
+//         List<Float> li = new ArrayList<>();
+//         li.add(23.2f);
+//         li.add(12.1124f);        
+//         li.add(.4f);
+//         li.add(3f);        
+
+//         System.out.println(li);   
+//         System.out.println(li.indexOf(3f));             //return index
+//         System.out.println(li.get(0));                  //return value
+
+//         reverseList(li);
+//         System.out.println(li);
+//     }
+// }
+
+
+// or
+
+
+// import java.util.*; 
+
+// class ArrayLi {
+//     public static void main(String[] args) {
+//         ArrayList<Integer> li = new ArrayList<>();
+//         li.add(23);
+//         li.add(44);
+//         li.add(99);
+//         li.add(53);
+
+//         Collections.reverse(li);
+        
+//         for (Integer i : li) {
+//             System.out.print(i+" ");
+//         }
+//     }
+// }
+
+
+
+
+
+// //.......sort an array "ascending and desceding".....
+
+// import java.util.*;
+
+// class ArrayLi {
+//     public static void main(String[] args) {
+//     List<String> li = new ArrayList<>();
+//     li.add("pawan");        
+//     li.add("kamal");        
+//     li.add("aman");        
+//     li.add("kiran");        
+//     li.add("zeaden");        
+//     li.add("preety");        
+
+//     Collections.sort(li);               //ascending
+//     for(String i : li) {
+//         System.out.print(i+" ");
+//     }
+//     System.out.println();
+
+//     Collections.sort(li, Collections.reverseOrder());    //descending
+//     for(String i : li) {
+//         System.out.print(i+" ");
+//     }
+        
+//     }
+// }
