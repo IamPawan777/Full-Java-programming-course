@@ -387,7 +387,7 @@
 
 
 
-// //......check palimdromic array or not............
+//......check palimdromic array or not............
 
 // class Arrayss {
 //     public static void main(String[] args) {
@@ -411,7 +411,8 @@
 
 
 
-// //..........check palimdrom number or not..........
+
+//..........check palimdrom number or not..........
 
 // class Arrayss {
 //     public static void main(String[] args) {
@@ -436,7 +437,9 @@
 
 
 
-// //..........reversal of an array..........
+
+
+//..........reversal of an array..........
 
 // class Arrayss {
 //     public static void main(String[] args) {
@@ -485,7 +488,9 @@
 
 
 
-// //...........duplicate element print...........
+
+
+// // //...........duplicate element print...........
 
 // class Arrayss {
 //     public static void main(String[] args) {
@@ -505,7 +510,9 @@
 
 
 
-// //........prifix sum for only one index.........
+
+
+//........prifix sum for only one index.........
 
 // import java.util.Scanner;
 
@@ -527,6 +534,8 @@
 //         System.out.println(sum);
 //     }
 // }
+
+
 
 
 
@@ -633,6 +642,7 @@
 // }
 
 
+
 // or
 
 
@@ -681,7 +691,7 @@
 
 
 
-// //.......suffix array.......
+//.......suffix array.......
 
 // import java.util.*;
 // class Arrayss {
@@ -706,6 +716,7 @@
 //         print(suffix);
 //     }
 // }
+
 
 
 
@@ -757,13 +768,14 @@
 // } 
 
 
-
+import java.util.*;
 class Arrayss {
+    static void maxElement(int[] arr) {
+        Arrays.sort(arr);
+        System.out.println(arr[arr.length-1]);
+    }
     public static void main(String[] args) {
-        int a=2;
-        int n=2;
-        for (int i = 0; i < n; a++) {
-            System.out.println(i);
-        }
+       int[] arr = {41,8,76,7,9};
+       maxElement(arr);
     }
 }
