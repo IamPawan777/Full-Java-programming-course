@@ -335,7 +335,7 @@
 //     static void printStuff(int[][] arr) {
 //         int positive=0, negative=0, even=0, odd=0, zero=0;
 //         for (int i = 0; i < arr.length; i++) {
-//             for (int j = 0; j < arr.length; j++) {
+//             for (int j = 0; j < arr[0].length; j++) {
 //                 if(arr[i][j] > 0){
 //                     positive++;
 //                 }
@@ -368,7 +368,7 @@
 //         System.out.println("Enter element");
         
 //         for (int i = 0; i < arr.length; i++) {
-//             for (int j = 0; j < arr.length; j++) {
+//             for (int j = 0; j < arr[0].length; j++) {
 //                 arr[i][j] = scan.nextInt();
 //             }
 //         }
@@ -387,7 +387,7 @@
 // class TwoDArray {
 //     static void printStuff(int[][] arr) {   
 //        for (int i = 0; i < arr.length; i++) {
-//             for (int j = i+1; j < arr.length; j++) {
+//             for (int j = i+1; j < arr[0].length; j++) {
 //                 System.out.print(arr[i][j]+" ");
 //             }
 //             System.out.println();
@@ -402,7 +402,7 @@
 //         System.out.println("Enter element");
         
 //         for (int i = 0; i < arr.length; i++) {
-//             for (int j = 0; j < arr.length; j++) {
+//             for (int j = 0; j < arr[0].length; j++) {
 //                 arr[i][j] = scan.nextInt();
 //             }
 //         }
@@ -417,17 +417,96 @@
 
 
 
-// print the elements of both the diagonals.........
+// // print the elements of both the diagonals.........
+
+// import java.util.Scanner;
+// class TwoDArray {
+//     static void printStuff(int[][] arr) {   
+//        for (int i = 0; i < arr.length; i++) {
+//             for (int j = 0; j < arr[i].length; j++) {
+//                 if(i==j || i+j == arr.length-1) {
+//                     System.out.print(arr[i][j]+" ");
+//                 }
+//             }
+//        }
+//     }
+//     public static void main(String[] args) {
+//         Scanner scan = new Scanner(System.in);
+//         System.out.println("Enter Number of rows & column: ");
+//         int n = scan.nextInt();        
+//         int m = scan.nextInt();
+//         int[][] arr = new int[n][m];
+//         System.out.println("Enter element");
+        
+//         for (int i = 0; i < arr.length; i++) {
+//             for (int j = 0; j < arr[i].length; j++) {
+//                 arr[i][j] = scan.nextInt();
+//             }
+//         }
+//         printStuff(arr);
+//     }
+// }
+
+
+
+
+
+
+// // print the largest element.........
+
+// import java.util.Scanner;
+// class TwoDArray {
+//     static void printStuff(int[][] arr) {   
+//         int maxValue = Integer.MIN_VALUE;
+//         for (int i = 0; i < arr.length; i++) {
+//             for (int j = 0; j < arr[i].length; j++) {
+//                 if(arr[i][j] > maxValue) {
+//                     maxValue = arr[i][j];
+//                 }
+//             }
+//         }
+//         System.out.println("max value is: "+maxValue);
+//     }
+
+//     public static void main(String[] args) {
+//         Scanner scan = new Scanner(System.in);
+//         System.out.println("Enter Number of rows & column: ");
+//         int n = scan.nextInt();        
+//         int m = scan.nextInt();
+//         int[][] arr = new int[n][m];
+//         System.out.println("Enter element");
+        
+//         for (int i = 0; i < arr.length; i++) {
+//             for (int j = 0; j < arr[i].length; j++) {        //....always "arr[i].length" write not "arr.length"
+//                 arr[i][j] = scan.nextInt();
+//             }
+//         }
+//         printStuff(arr);
+//     }
+// }
+
+
+
+
+
+//...displays the elements of middle row and the elements of middle column (matrix in odd dimantion)
 
 import java.util.Scanner;
 class TwoDArray {
     static void printStuff(int[][] arr) {   
-       for (int i = 0; i < arr.length; i++) {
-            for (int j = 0; j < arr.length; j++) {
-                
+        int value = 0,i,j;
+        for ( i = 0; i < arr.length; i++) {
+            for ( j = 0; j < arr[i].length; j++) {
+                if(j == (arr.length-1)/2 ) {
+                    System.out.print(arr[i][j]+" ");
+                }
+                if(i == (arr.length-1)/2 && i != j) {
+                    System.out.print(arr[i][j]+" ");
+                }
             }
-       }
+        }
     }
+
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter Number of rows & column: ");
@@ -437,15 +516,10 @@ class TwoDArray {
         System.out.println("Enter element");
         
         for (int i = 0; i < arr.length; i++) {
-            for (int j = 0; j < arr.length; j++) {
+            for (int j = 0; j < arr[i].length; j++) {        //....always "arr[i].length" write not "arr.length"
                 arr[i][j] = scan.nextInt();
             }
         }
         printStuff(arr);
     }
 }
-
-
-
-
-
