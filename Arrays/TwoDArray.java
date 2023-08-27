@@ -320,3 +320,132 @@
 // }
 
 
+
+// /*
+// print the following:
+//     number of positive numbers
+//     number of negative numbers
+//     number of odd numbers
+//     number of even numbers
+//     number of 0.
+// */
+
+// import java.util.Scanner;
+// class TwoDArray {
+//     static void printStuff(int[][] arr) {
+//         int positive=0, negative=0, even=0, odd=0, zero=0;
+//         for (int i = 0; i < arr.length; i++) {
+//             for (int j = 0; j < arr.length; j++) {
+//                 if(arr[i][j] > 0){
+//                     positive++;
+//                 }
+//                 if(arr[i][j] < 0){
+//                     negative++;
+//                 }
+//                 if(arr[i][j] % 2 == 0) {
+//                     even++;
+//                 }
+//                 if(arr[i][j] % 2 != 0){
+//                     odd++;
+//                 }
+//                 if(arr[i][j] == 0) {
+//                     zero++;              
+//                 }
+//             }        
+//         }
+//             System.out.print("positive: "+ positive+"\n");                
+//             System.out.print("Negative: "+ negative+"\n");             
+//             System.out.print("Even: "+ even+"\n");
+//             System.out.print("Odd: "+ odd+"\n");
+//             System.out.print("Zero: "+ zero+"\n");
+//     }
+//     public static void main(String[] args) {
+//         Scanner scan = new Scanner(System.in);
+//         System.out.println("Enter Number of rows & column: ");
+//         int n = scan.nextInt();        
+//         int m = scan.nextInt();
+//         int[][] arr = new int[n][m];
+//         System.out.println("Enter element");
+        
+//         for (int i = 0; i < arr.length; i++) {
+//             for (int j = 0; j < arr.length; j++) {
+//                 arr[i][j] = scan.nextInt();
+//             }
+//         }
+//         printStuff(arr);
+//     }
+// }
+
+
+
+
+
+
+// // print the elements above the first diagonal.....
+
+// import java.util.Scanner;
+// class TwoDArray {
+//     static void printStuff(int[][] arr) {   
+//        for (int i = 0; i < arr.length; i++) {
+//             for (int j = i+1; j < arr.length; j++) {
+//                 System.out.print(arr[i][j]+" ");
+//             }
+//             System.out.println();
+//        }
+//     }
+//     public static void main(String[] args) {
+//         Scanner scan = new Scanner(System.in);
+//         System.out.println("Enter Number of rows & column: ");
+//         int n = scan.nextInt();        
+//         int m = scan.nextInt();
+//         int[][] arr = new int[n][m];
+//         System.out.println("Enter element");
+        
+//         for (int i = 0; i < arr.length; i++) {
+//             for (int j = 0; j < arr.length; j++) {
+//                 arr[i][j] = scan.nextInt();
+//             }
+//         }
+//         printStuff(arr);
+//     }
+// }
+
+
+
+
+
+
+
+
+// print the elements of both the diagonals.........
+
+import java.util.Scanner;
+class TwoDArray {
+    static void printStuff(int[][] arr) {   
+       for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr.length; j++) {
+                
+            }
+       }
+    }
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter Number of rows & column: ");
+        int n = scan.nextInt();        
+        int m = scan.nextInt();
+        int[][] arr = new int[n][m];
+        System.out.println("Enter element");
+        
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr.length; j++) {
+                arr[i][j] = scan.nextInt();
+            }
+        }
+        printStuff(arr);
+    }
+}
+
+
+
+
+

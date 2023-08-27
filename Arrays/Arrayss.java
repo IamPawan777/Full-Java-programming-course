@@ -768,14 +768,24 @@
 // } 
 
 
+
+
+
+
+
+
 import java.util.*;
+
 class Arrayss {
-    static void maxElement(int[] arr) {
-        Arrays.sort(arr);
-        System.out.println(arr[arr.length-1]);
+    static int[] pri(int[] arr) {
+        int[] ar = new int[arr.length];
+        for (int i = 0; i < arr.length; i++) {
+            
+        }
+        return 
     }
     public static void main(String[] args) {
-       int[] arr = {41,8,76,7,9};
-       maxElement(arr);
+        int[] arr = {2,4,1,6,7,2};
+        pri(arr);
     }
 }
