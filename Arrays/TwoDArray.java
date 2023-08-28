@@ -310,7 +310,6 @@
 //         System.out.println("second coodinate: ");
 //         int r2 = scan.nextInt();
 //         int c2 = scan.nextInt();
-
         
 //         prifix_Sum_Matrix(arr);
 //         int result = findPrifixSum(arr, r1, c1, r2, c2);
@@ -318,6 +317,9 @@
 
 //     }
 // }
+
+
+
 
 
 
@@ -375,6 +377,8 @@
 //         printStuff(arr);
 //     }
 // }
+
+
 
 
 
