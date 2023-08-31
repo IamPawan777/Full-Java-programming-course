@@ -774,18 +774,3 @@
 
 
 
-import java.util.*;
-
-class Arrayss {
-    static int[] pri(int[] arr) {
-        int[] ar = new int[arr.length];
-        for (int i = 0; i < arr.length; i++) {
-            
-        }
-        return 
-    }
-    public static void main(String[] args) {
-        int[] arr = {2,4,1,6,7,2};
-        pri(arr);
-    }
-}

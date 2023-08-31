@@ -132,50 +132,27 @@
 
 
 
-//.......square root....by binary search......
-
-import java.util.*;
-
-class Binary {
-    static int squareRoot(int num) {
-        int low=0, high=num, result=-1;
-        while(low<=high) {
-            int mid = (low+high)/2;
-            if(mid*mid == num) {
-                return mid;                 //if perfect root present
-            }
-            else if(mid*mid < num){
-                low = mid+1;
-                result = mid;              //if not a perfect root number store floor value
-            }
-            else if(mid*mid > num){
-                high = mid-1;
-            }
-        }
-        return result;
-    }
-    public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        System.out.println("Enter number which you want to square root: ");
-        int num = scan.nextInt();
-
-        int store = squareRoot(num);
-        System.out.println("Square root is: "+store);
-    }
-}
-
-
-//.........or............
-
+// //.......square root....by binary search......
 
 // import java.util.*;
 
 // class Binary {
 //     static int squareRoot(int num) {
-//         double square = Math.sqrt(num);             
-//         int floor = (int)Math.floor(square);        //..if perfect square root not persent then floor value return
-        
-//         return floor;
+//         int low=0, high=num, result=-1;
+//         while(low<=high) {
+//             int mid = (low+high)/2;
+//             if(mid*mid == num) {
+//                 return mid;                 //if perfect root present
+//             }
+//             else if(mid*mid < num){
+//                 low = mid+1;
+//                 result = mid;              //if not a perfect root number store floor value
+//             }
+//             else if(mid*mid > num){
+//                 high = mid-1;
+//             }
+//         }
+//         return result;
 //     }
 //     public static void main(String[] args) {
 //         Scanner scan = new Scanner(System.in);
@@ -186,3 +163,26 @@ class Binary {
 //         System.out.println("Square root is: "+store);
 //     }
 // }
+
+
+//.........or............
+
+
+import java.util.*;
+
+class Binary {
+    static int squareRoot(int num) {
+        double square = Math.sqrt(num);             
+        int floor = (int)Math.floor(square);        //..if perfect square root not persent then floor value return
+        
+        return floor;
+    }
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter number which you want to square root: ");
+        int num = scan.nextInt();
+
+        int store = squareRoot(num);
+        System.out.println("Square root is: "+store);
+    }
+}
