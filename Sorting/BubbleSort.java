@@ -33,16 +33,36 @@
 
 
 
+
+
+//....check in every iteration array......
+
 class BubbleSort {
     public static void main(String[] args) {
-        int arr[] = {1,2,3,4,5,6,7};
-        int k = 2;
+        int arr[] = {3,5,1,6,0};
+        int pass = -1;
+        
+        for(int i=0; i<arr.length; i++) {
+            boolean check = false;
+            for (int j = 0; j < arr.length-1-i; j++) {
+                if(arr[j] < arr[j+1]) {
+                    int temp = arr[j+1];
+                    arr[j+1] = arr[j];
+                    arr[j] = temp;
+                    check = true;
+                    pass++;
+                }
+            }//....inner for...
+            if(check == false) {
+                break;
+            }
+            System.out.println(i+1 + ".. iteration");
+            for(int k=0; k<arr.length; k++) {               //...in every iteration array is...
+                System.out.print(arr[k]+" ");            
+            }
+            System.out.println();
+        }  //...outer loop...
 
-        for (int i = 1; i < k; i++) {
-            // for (int j = 0; j < arr.length; j++) {
-                arr[j] = arr[arr.length-1];
-                a
-            // }
-        }
+        System.out.print("Total number of iteration: "+pass);
     }
 }
