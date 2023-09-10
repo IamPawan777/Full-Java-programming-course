@@ -237,7 +237,7 @@ import java.util.Scanner;
 
 
 
-// //....second minimal element in an array...
+//....second minimal element in an array...
 
 // class MathsQue2 {
 //     static int max(int[] a) {
@@ -281,34 +281,35 @@ import java.util.Scanner;
 
 
 
-//.......1st repeting value.........
 
-class MathsQue2 {
-    static int repetingVal(int[] a) {
-        for (int i = 0; i < a.length; i++) {
-            for (int j = i+1; j < a.length; j++) {
-                if(a[i]==a[j]){
-                    return a[i];        // if 1st repeating value match then return...further iteration will not work 
-                }
-            }
-        }
-        return -1;          //if there will be no repeated value;
-    }
-    public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        System.out.println("size: ");
-        int n = scan.nextInt();
+// //.......1st repeting value.........
 
-        System.out.println("enter element: ");
-        int[] ar = new int[n];
-        for (int i = 0; i < ar.length; i++) {
-            ar[i] = scan.nextInt();
-        }
+// class MathsQue2 {
+//     static int repetingVal(int[] a) {
+//         for (int i = 0; i < a.length; i++) {
+//             for (int j = i+1; j < a.length; j++) {
+//                 if(a[i]==a[j]){
+//                     return a[i];        // if 1st repeating value match then return...further iteration will not work 
+//                 }
+//             }
+//         }
+//         return -1;          //if there will be no repeated value;
+//     }
+//     public static void main(String[] args) {
+//         Scanner scan = new Scanner(System.in);
+//         System.out.println("size: ");
+//         int n = scan.nextInt();
 
-        System.out.println("1st repeting value: "+repetingVal(ar));
+//         System.out.println("enter element: ");
+//         int[] ar = new int[n];
+//         for (int i = 0; i < ar.length; i++) {
+//             ar[i] = scan.nextInt();
+//         }
+
+//         System.out.println("1st repeting value: "+repetingVal(ar));
         
-    }
-}
+//     }
+// }
 
 
 

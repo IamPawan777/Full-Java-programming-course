@@ -770,6 +770,62 @@
 
 
 
+// /*Given an array sorted in increasing order of size n and an integer x, find if there exists a
+// pair in the array whose absolute difference is exactly x. */
+
+// import java.util.Scanner;
+
+// class Arrayss {
+//     public static void main(String[] args) {
+//         Scanner scan = new Scanner(System.in);
+//         System.out.println("Enter size: ");
+//         int n = scan.nextInt();
+
+//         int[] arr = new int[n];
+//         System.out.println("Enter element: ");
+//         for (int i = 0; i < arr.length; i++) {
+//             arr[i] = scan.nextInt();
+//         }
+
+//         System.out.println("difference: ");
+
+//         int diff = scan.nextInt();
+//         for (int i = 0; i < arr.length-2; i++) {
+//             for (int j = i+1; j < arr.length-1; j++) {
+//                 int d1 = arr[j] - arr[i];
+//                 int d2 = arr[j+1] - arr[j];
+//                 if(d1+d2 == diff )
+//                     System.out.println("YES");
+//                     return;                                         //..new things.....
+//             }
+//         }
+//         System.out.println("NO");        
+//     }
+// }
+
+
+
+
+
+
+
+
+import java.util.Scanner;
+
+class Arrayss {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter size: ");
+        int n = scan.nextInt();
+
+        int[] arr = new int[n];
+        System.out.println("Enter element: ");
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = scan.nextInt();
+        }      
+    }
+}
+
 
 
 
