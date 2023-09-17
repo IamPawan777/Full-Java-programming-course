@@ -762,7 +762,7 @@ import java.util.Scanner;
 
 
 
-// //.......occurrences of any element x........
+// //.......how many time occurrences of any element x........
 
 // import java.util.Scanner;
 
@@ -791,7 +791,7 @@ import java.util.Scanner;
 
 
 
-// //..........last occurrence of an element.........
+// //..........last occurrence of an element....O(n).....
 
 // class MathsQue {
 //     static int occurrence(int[] a, int e) {
@@ -1180,32 +1180,62 @@ import java.util.Scanner;
 
 
 
-// //......finding first duplicate element........
+// // //......finding first duplicate element........
 
-class MathsQue {
-    static int repetingVal(int[] a) {
-        for (int i = 0; i < a.length; i++) {
-            for (int j = i+1; j < a.length; j++) {
-                if(a[i]==a[j]) {
-                    return a[i];        // if 1st repeating value match then return...further iteration will not work 
-                }
-            }
-        }
-        return -1;          //if there will be no repeated value;
-    }
-    public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        System.out.println("size: ");
-        int n = scan.nextInt();
+// class MathsQue {
+//     static int repetingVal(int[] a) {
+//         for (int i = 0; i < a.length; i++) {
+//             for (int j = i+1; j < a.length; j++) {
+//                 if(a[i]==a[j]) {
+//                     return a[i];        // if 1st repeating value match then return...further iteration will not work 
+//                 }
+//             }
+//         }
+//         return -1;          //if there will be no repeated value;
+//     }
+//     public static void main(String[] args) {
+//         Scanner scan = new Scanner(System.in);
+//         System.out.println("size: ");
+//         int n = scan.nextInt();
 
-        System.out.println("enter element: ");
-        int[] ar = new int[n];
-        for (int i = 0; i < ar.length; i++) {
-            ar[i] = scan.nextInt();
-        }
+//         System.out.println("enter element: ");
+//         int[] ar = new int[n];
+//         for (int i = 0; i < ar.length; i++) {
+//             ar[i] = scan.nextInt();
+//         }
 
-        System.out.println("1st repeting value: "+repetingVal(ar));
+//         System.out.println("1st repeting value: "+repetingVal(ar));
         
-    }
-}
+//     }
+// }
+
+
+
+
+
+
+// //.........swap without third varible.........
+
+// class MathsQue {
+//     public static void main(String[] args) {
+//         int a = 12;
+//         int b = 27;
+        
+//         a = a*b;
+//         b = a/b;
+//         a = a/b;
+
+//         //..or..
+
+//         // a = a+b;
+//         // b = a-b;
+//         // a = a-b;
+//         System.out.println("a: "+a+"\nb: "+b);
+//     }
+// }
+
+
+
+
+
 

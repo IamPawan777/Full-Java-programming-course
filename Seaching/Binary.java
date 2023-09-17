@@ -46,7 +46,7 @@
 
 
 
-// //........lower bound ( 1st occurence )......but the complexity is O(n)........
+// //........lower bound ( 1st occurence )....... higher bound ( last occurence ).....but the complexity is O(n)........
 
 // import java.util.Scanner;
 
@@ -83,20 +83,21 @@
 // }
 
 
-//....or.......by binary search.....complexity is O(log n)........
+//....or.......by binary search............. O(log n)........
 
 
 // import java.util.Scanner;
 
 // public class Binary {
 //     static int binarySearch(int[] arr, int target) {
-//        int low = 0, high = arr.length-1, mid = 0, index = -1;
+//        int low = 0, high = arr.length-1, mid = 0, result = -1;
        
 //        while(low <= high) {
 //         mid = (low+high) / 2;
 //         if(arr[mid] == target) {
-//             index = mid;
-//             high = mid-1;
+//             result = mid;
+//             low = mid+1;                           //...last occurence or lower bound...
+//             // high = mid-1;                       //...1st occurence or lower bound...
 //         }
 //         else if(arr[mid]<target){
 //             low = mid+1;
@@ -105,7 +106,7 @@
 //             high = mid-1;
 //         }
 //        }
-//        return index;
+//        return result;
 //     }
 
 //     public static void main(String[] args) {
@@ -114,7 +115,7 @@
 //         int n =  scan.nextInt();
 //         int[] arr = new int[n];
 
-//         System.out.println("Enter elements");
+//         System.out.println("Enter elements (sorted manner)");
 //         for (int i = 0; i < arr.length; i++) {
 //             arr[i] = scan.nextInt();
 //         }
@@ -168,21 +169,33 @@
 //.........or............
 
 
-import java.util.*;
+// import java.util.*;
 
-class Binary {
-    static int squareRoot(int num) {
-        double square = Math.sqrt(num);             
-        int floor = (int)Math.floor(square);        //..if perfect square root not persent then floor value return
+// class Binary {
+//     static int squareRoot(int num) {
+//         double square = Math.sqrt(num);             
+//         int floor = (int)Math.floor(square);        //..if perfect square root not persent then floor value return
         
-        return floor;
-    }
-    public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        System.out.println("Enter number which you want to square root: ");
-        int num = scan.nextInt();
+//         return floor;
+//     }
+//     public static void main(String[] args) {
+//         Scanner scan = new Scanner(System.in);
+//         System.out.println("Enter number which you want to square root: ");
+//         int num = scan.nextInt();
 
-        int store = squareRoot(num);
-        System.out.println("Square root is: "+store);
+//         int store = squareRoot(num);
+//         System.out.println("Square root is: "+store);
+//     }
+// }
+
+
+
+
+class Binary  {
+    public static void main(String[] args) {
+        // Demo obj = new Demo();
+        boolean b = true;
+        System.out.println();
+
     }
 }

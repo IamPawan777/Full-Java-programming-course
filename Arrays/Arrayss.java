@@ -463,7 +463,7 @@
 
 
 
-// //..........missing number in an array........
+//..........missing number in an array........
 
 // class Arrayss {
 //     public static void main(String[] args) {
@@ -808,25 +808,76 @@
 
 
 
+// /*......rotate an arrray..space complexity O(n) | O(n).
+// int[] arr = [1,2,3,4,5]    k=2;
+// rotateArr = [4,5, 1,2,3]
+// */
+
+// class Arrayss {
+//     public static void main(String[] args) {
+//         int[] arr = {1,2,3,4,5};
+//         int n = arr.length;
+//         int k = 4;                      //number of rotation
+//         int[] newArr = new int[n];
+//         int j = 0;
+
+//         k = k % n;                      //...when we rotate an array(k) = array size..(get same array)
+//         for (int i = n-k; i < n; i++) {
+//             newArr[j++] = arr[i]; 
+//         }
+//         for(int i=0; i <= n-k-1; i++) {
+//             newArr[j++] = arr[i];
+//         }
+//         System.out.println("new array is: ");
+//         for (int i = 0; i < newArr.length; i++) {
+//             System.out.print(newArr[i]+" ");
+//         }
+//     }
+// }
 
 
-import java.util.Scanner;
+//.............or...............
+
+
+// /*......rotate an arrray in place..space complexity O(n) | O(1).....Inplace.....
+
+// class Arrayss {
+//     static void reverse(int[] arr, int i, int j) {
+//         while(i<j) {
+//             int temp = arr[i];
+//             arr[i] = arr[j];
+//             arr[j] = temp;
+//             i++;
+//             j--;
+//         }
+//     }
+//     static void printArray(int[] ar) {
+//         for (int i = 0; i < ar.length; i++) {
+//             System.out.print(ar[i]+" ");
+//         }
+//     }
+//     public static void main(String[] args) {
+//         int[] arr = {1,2,3,4,5};
+//         int n = arr.length;
+//         int k = 223;                          //number of rotation
+//         k= k % n;                   // 3 times rotate
+        
+//         reverse(arr, 0, n-k-1);
+//         reverse(arr, n-k, n-1);
+//         reverse(arr, 0, n-1);
+//         printArray(arr);
+//     }
+// }
+
+
+
+
+
+
+///........check the number present in array or not......
 
 class Arrayss {
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        System.out.println("Enter size: ");
-        int n = scan.nextInt();
-
-        int[] arr = new int[n];
-        System.out.println("Enter element: ");
-        for (int i = 0; i < arr.length; i++) {
-            arr[i] = scan.nextInt();
-        }      
+        
     }
 }
-
-
-
-
-
