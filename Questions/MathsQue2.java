@@ -345,3 +345,124 @@ import java.util.Scanner;
         
 //     }
 // }
+
+
+
+
+
+
+// //......predict whether it is a power of two or not.....
+
+// class MathsQue2 {
+//     static int changeToBinary(int n) {                  //change to binary
+//         int pow=1;
+//         int ans = 0;
+//         while(n>0) {
+//             int rem = n%2;
+//             ans = ans+rem*pow;
+//             n = n/2;
+//             pow = pow*10;
+//         }
+//         return ans;
+//     }
+//     static boolean check2Power(int n) {                 //...more then 1 '1' false... || ...if one '1' true i.e. 2 power ...
+//         int ans = changeToBinary(n);
+
+//         String str = String.valueOf(ans);
+//         int count=0;
+//         for(int i=0; i<str.length(); i++) {
+//             if(str.charAt(i) == '1') {
+//                 count++;
+//             }
+//         }
+//         if(count == 1) {
+//             return true;
+//         }
+//         return false;
+//     }
+//     public static void main(String[] args) {
+//         int n = 64;
+//         System.out.println(check2Power(n));
+//     }
+// }
+
+
+
+
+
+
+// //...odd or even number cheack.....by bit manupulation.
+
+// class MathsQue2 {
+//     static void checkOddEven(int n) {
+//         // if(n%2 == 0) {
+//         //     System.out.println("Even no");
+//         // }
+//         // else
+//         //     System.out.println("Odd no");
+//         if((n&1) == 1) {                       //(check unit digit)0011 & 0001 = 0001      
+//             System.out.println("Odd no");
+//         }
+//         else
+//             System.out.println("even no");
+//     }
+//     public static void main(String[] args) {
+//         int n = 3;
+//         checkOddEven(n);
+//     }
+// }
+
+
+
+
+// (number of 1's is binary fome) count the number of set bits in that number without using an extra space.
+
+// public class MathsQue2
+// {   public static int countSetBits(int n){
+//         int count = 0;
+//         while (n > 0) {
+//             count += n & 1;
+//             n = n>>1;
+//         }
+//         return count;
+//     }
+// 	public static void main(String[] args) {
+// 		 int number = 15;
+//         int answer = countSetBits(number);
+//         System.out.println("The number of set bits are: " + answer);
+// 	}
+// }
+
+
+
+
+
+import java.util.Scanner;
+
+
+public class MathsQue2
+{  public static int findOddOccuring(int[] arr)
+    {
+        int xor = 0;
+        for (int i: arr) {
+            xor = xor ^ i;
+        }
+        return xor;
+    }
+	public static void main(String[] args) {
+		int n;  
+        Scanner sc=new Scanner(System.in);  
+        System.out.print("Enter the number of elements you want to store: ");  
+        //reading the number of elements from the that we want to enter  
+        n=sc.nextInt();  
+        //creates an array in the memory of length 10  
+        int[] array = new int[10];  
+        System.out.println("Enter the elements of the array: ");  
+        for(int i=0; i<n; i++)  
+        {  
+        //reading array elements from the user   
+            array[i]=sc.nextInt();  
+        }
+     System.out.println("The odd occurring element is " + findOddOccuring(array));
+	}
+}

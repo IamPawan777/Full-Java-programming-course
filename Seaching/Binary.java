@@ -191,11 +191,126 @@
 
 
 
-class Binary  {
-    public static void main(String[] args) {
-        // Demo obj = new Demo();
-        boolean b = true;
-        System.out.println();
 
+// //....array, efficiently count the total number of 1’s in it..
+
+// class Binary {
+//     static int oneOccurence(int[] ar, int low, int high) {
+//         while(low <= high) {
+//             int mid = low + (high-low) / 2;
+//             if(ar[mid] == 1) {
+//                 high = mid-1;
+//             }
+//             else if(ar[mid] == 0) {
+//                 low = mid+1;
+//             }
+//         }
+//         return (ar.length-low);
+//     }
+//     public static void main(String[] args) {
+//         int[] arr = {0,0,0,0,1,1};
+//         int n = oneOccurence(arr, 0, arr.length-1);
+//         System.out.println("n: "+n);
+//     }
+// }
+
+
+
+
+
+
+// //....array containing duplicates, count occurrences of a given number...........
+
+// class Binary {
+//     static int firstOccure(int[] ar, int target) {                    //...find first occurence
+//         int low = 0, high = ar.length-1, firstOccurance = -1;
+//         while(low <= high) {
+//             int mid = low + (high-low) / 2;
+//             if(ar[mid] == target) {
+//                 firstOccurance = mid;
+//                 high = mid-1;
+//             }
+//             else if(ar[mid] < target) {
+//                 low = mid+1;
+//             }
+//             else {
+//                 high = mid-1;
+//             }            
+//         }
+//         return firstOccurance;
+//     }
+
+//     static int lastOccure(int[] ar, int target) {                     //...find last occurence
+//         int low = 0, high = ar.length-1, lastOccurance = -1;
+//         while(low <= high) {
+//             int mid = low + (high-low) / 2;
+//             if(ar[mid] == target) {
+//                 lastOccurance = mid;
+//                 low = mid+1;
+//             }
+//             else if(ar[mid] < target) {
+//                 low = mid+1;
+//             }
+//             else {
+//                 high = mid-1;
+//             }            
+//         }
+//         return lastOccurance;
+//     }
+
+
+
+//     public static void main(String[] args) {
+//         int[] arr = {2, 6, 6, 8, 9, 9, 9};
+//         int target = 9;                              //Target 5 occurs 3 times
+//         int fn = firstOccure(arr, target);    
+//         int ln = lastOccure(arr, target);
+
+//         int total = ln-fn+1;
+
+//         if(ln == -1 && fn == -1)  
+//             System.out.println("target does't exist");
+//         else 
+//             System.out.println("Target "+target+" occurs "+total+" times");
+//     }
+// }
+
+
+
+
+
+// //.....return true if num is a perfect square or false otherwise.....
+
+// class Binary {
+//     static boolean checkSquare(int n) {
+//         int low = 0, high = n;
+//         while(low <= high) {
+//             int mid = low + (high-low) / 2;
+//             if(mid*mid == n)
+//                 return true;
+//             else if(mid*mid < n) 
+//                 low = mid+1;
+//             else
+//                 high = mid-1;
+//         }
+//         return false;
+//     }
+//     public static void main(String[] args) {
+//         int num = 1;
+//         boolean bool = checkSquare(num);
+//         System.out.println(bool);
+//     }
+// }
+
+
+
+
+
+
+class Binary {
+    public static void main(String[] args) {
+        int num = 5;
+        int b = num<<1;
+        System.out.println(b);
     }
 }
