@@ -1,3 +1,7 @@
 {
-    "java.debug.settings.onBuildFailureProceed": true
+    "java.debug.settings.onBuildFailureProceed": false
+        // "code-runner.runInTerminal": true
 }
+//  {
+//     "java.debug.settings.onBuildFailureProceed": true
+// }

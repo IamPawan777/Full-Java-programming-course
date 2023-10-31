@@ -874,10 +874,41 @@
 
 
 
-///........check the number present in array or not......
+///........check the number's present in array or not......
 
-class Arrayss {
+import java.util.Scanner;
+
+class HelloWorld {
     public static void main(String[] args) {
-        
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Total no: ");
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+
+        System.out.println("Enter element: ");
+        for(int i=0; i<n; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        int[] freq = new int[100005];           //frequncy arr;
+        for(int i : arr) {
+            freq[i]++;                          //or ( freq[arr[i]]++ )..important line
+        }
+
+        System.out.println("Total quaries: ");
+        int noQuaries = sc.nextInt();
+
+
+        while(noQuaries > 0) {
+            System.out.println("enter no to be search.....");
+            int number = sc.nextInt();
+            if(freq[number] > 0){
+                System.out.println("Yes");
+            }
+            else{
+                System.out.println("no");
+            }
+            noQuaries--;
+        }
     }
 }

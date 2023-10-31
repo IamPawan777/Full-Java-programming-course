@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 /**    Mandatory import file " java.util.* ";
  * 
  * obj.add(element);                add new object..
@@ -41,7 +39,7 @@ import java.util.ArrayList;
 
 
 
-// // ....add() ....add data..and can add specific index......
+// // ....add() ....add data at Rear end..and can add specific index but not recommended......
 
 // import java.util.*;
 
@@ -67,7 +65,7 @@ import java.util.ArrayList;
 
 
 
-// //.........addAll() ........add another collection..and add another collection in specific index....
+//.........addAll() ........add another collection..and add another collection in specific index....
 
 // import java.util.ArrayList;
 
@@ -215,3 +213,117 @@ import java.util.ArrayList;
         
 //     }
 // }
+
+
+
+
+
+
+//.......change LinkedList to ArrayList.........
+
+// import java.util.*;
+
+// class ArrayLi {
+//     public static void main(String[] args) {
+//         LinkedList<String> lii = new LinkedList<>();
+//         ArrayList<String> li = new ArrayList<>(lii);
+//         li.add("pawan");        
+//         li.add("kamal");        
+//         li.add("aman");        
+//         li.add("kiran");        
+//         li.add("zeaden");        
+//         li.add("preety");        
+
+//         for(String i : li) {
+//             System.out.print(i+" ");
+//         }   
+//     }
+// }
+
+
+
+
+
+
+// //.......change Collection to Array.........
+
+// import java.util.*;
+
+// class ArrayLi {
+//     public static void main(String[] args) {
+//         List<Integer> li = new ArrayList<>();
+//         li.add(111);        
+//         li.add(22);        
+//         li.add(444);        
+//         li.add(999);        
+//         li.add(111);        
+//         li.add(5);        
+            
+
+//         // Object[] arr = li.toArray();
+//         //.....or..... 
+//         // Integer[] arr = new Integer[li.size()];
+//         // Object[] arr = new Object[li.size()];
+//         int[] arr = new int[li.size()];
+//         for (int i = 0; i < li.size(); i++) {
+//             arr[i] = li.get(i);
+//         }
+
+//         for(int i=0; i<arr.length; i++) {
+//             System.out.print(arr[i]+" ");
+//         } 
+//         //.....or..... 
+//         // for (Object o : arr) {
+//         //     System.out.print(o+" ");
+//         // }  
+//     }
+// }
+
+
+
+
+
+
+
+
+// //...change array to collection....
+
+
+// import java.util.*;
+// public class ArrayLi {
+//     public static void main (String[] args) {
+
+// 		int[] input = new int[]{1,2,3,4};
+// 		List<Integer> output = new ArrayList<>();		
+// 		for (int i : input) {
+//     		output.add(i);
+// 		}
+// 	    System.out.println(output);
+// 	}
+// }
+
+
+
+
+import java.util.*;
+class ArrayLi {
+    public static void main(String[] args) {
+        List<Integer> li = new ArrayList<>(12);
+        li.add(11);
+        li.add(90);
+        li.add(67);
+        li.add(3);
+        System.out.println(li);
+
+        ArrayList<Integer> lii = new ArrayList<>();
+        lii.add(23);
+        lii.add(67);
+        lii.add(20);
+        lii.add(2);
+        lii.add(11);
+
+        System.out.println(lii);
+        li.retainAll(lii);
+        System.out.println(li);
+    }
+}

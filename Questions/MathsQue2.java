@@ -436,33 +436,77 @@ import java.util.Scanner;
 
 
 
+//.....target element first and last occurence in an array....
+// //..........O(n).......
+// import java.util.Scanner;
 
+// public class MathsQue2  {
+// 	public static void main(String[] args) {
+// 		int[] arr = {5, 7, 7, 8, 8, 10};
+//         int target = 87;
+
+//         int[] ar = new int[]{-1,-1};
+//         int ind = 0;
+
+//         for (int i = 0; i < arr.length; i++) {
+//             if(arr[i] == target)
+//                 ar[ind++] = i;
+//         }
+
+//         for (int i = 0; i < ar.length; i++) {
+//             System.out.print(ar[i]+" ");
+//         }
+// 	}
+// }
+
+//..........O(log(n)).......
 import java.util.Scanner;
 
-
-public class MathsQue2
-{  public static int findOddOccuring(int[] arr)
-    {
-        int xor = 0;
-        for (int i: arr) {
-            xor = xor ^ i;
+public class MathsQue2  {
+    
+    public static int[] occurence(int[] ar, int target) {
+        int[] arr = new int[]{-1,-1};
+        int low = 0, high = ar.length-1;
+        int ans = 0;
+        while(low<=high) {
+            int mid = low + (high-low)/2;
+            if(ar[mid] == target){
+                ans = mid;
+                high = mid-1;
+            }
+            else if(ar[mid] > target)
+                high = mid-1;
+            else
+                low = mid+1;
         }
-        return xor;
+        arr[0] = ans;
+
+
+        low = 0;
+        high = ar.length-1;
+        while(low<=high) {
+            int mid = low + (high-low)/2;
+            if(ar[mid] == target){
+                ans = mid;
+                low = mid+1;
+            }
+            else if(ar[mid] > target)
+                high = mid-1;
+            else
+                low = mid+1;
+        }
+        arr[1] = ans;
+        return arr;
     }
 	public static void main(String[] args) {
-		int n;  
-        Scanner sc=new Scanner(System.in);  
-        System.out.print("Enter the number of elements you want to store: ");  
-        //reading the number of elements from the that we want to enter  
-        n=sc.nextInt();  
-        //creates an array in the memory of length 10  
-        int[] array = new int[10];  
-        System.out.println("Enter the elements of the array: ");  
-        for(int i=0; i<n; i++)  
-        {  
-        //reading array elements from the user   
-            array[i]=sc.nextInt();  
+		int[] arr = {5, 7, 7, 8, 8, 10};
+        int target = 8;
+
+        int[] ar = occurence(arr, target);
+
+        for(int i=0; i<ar.length; i++) {
+            System.out.print(ar[i]+" ");
         }
-     System.out.println("The odd occurring element is " + findOddOccuring(array));
+
 	}
 }

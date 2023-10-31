@@ -1,4 +1,5 @@
-// ...HashSet not maintain the order but LinkedHashSet maintain the order.......
+// ...HashSet not maintain the order but 
+//....LinkedHashSet maintain the order and unique as well.......
 
 import java.util.*;
 
@@ -7,6 +8,7 @@ public class LinkedHashSe {
         LinkedHashSet lhs = new LinkedHashSet();
         lhs.add(22);
         lhs.add(33);
+        lhs.add(11);
         lhs.add(44);
         lhs.add(55);
         lhs.add(66);

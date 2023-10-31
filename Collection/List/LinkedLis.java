@@ -82,7 +82,7 @@
 //         ll1.add(22);
 //         ll1.add(55);
 //         ll1.add(15);
-//         ll1.add(34);
+//         ll1.add(34);  
 //         ll1.add("pw");
 //         ll1.add('z');
 
@@ -103,7 +103,7 @@
 //         System.out.println(ll1.poll());                 //return 1st value....but remove 1st element permanently
 //         System.out.println(ll1);
 
-//         ll1.push("OM");                     //push at biggining
+//         ll1.push("OM");                     //push at begining
 //         System.out.println(ll1);
 
 //         ll1.pop();                              //pop biggining element
@@ -117,20 +117,45 @@
 
 
 
+// //......reverse array......
+
+// import java.util.*;
+
+// class LinkedLis {
+//     static void reverseList(List<String> l) {
+//         int i=0, j=l.size()-1;
+//         while(i<j) {
+//             String temp = l.get(i);
+//             l.set(i, l.get(j));
+//             l.set(j, temp);
+//             i++; j--;
+//         }
+//     }
+//     public static void main(String[] args) {
+//         List<String> li = new LinkedList<>();
+//         li.add("mohan");
+//         li.add("zeaden");
+//         li.add("preeti");
+//         li.add("naveen");
+//         li.add("kamal");
+
+//         System.out.println(li);
+//         reverseList(li);
+//         for (String s : li) {
+//             System.out.print(s+" ");
+//         }
+
+//     }
+// }
+
+
+
+
 //......reverse array......
 
 import java.util.*;
 
 class LinkedLis {
-    static void reverseList(List<String> l) {
-        int i=0, j=l.size()-1;
-        while(i<j) {
-            String temp = l.get(i);
-            l.set(i, l.get(j));
-            l.set(j, temp);
-            i++; j--;
-        }
-    }
     public static void main(String[] args) {
         List<String> li = new LinkedList<>();
         li.add("mohan");
@@ -139,8 +164,7 @@ class LinkedLis {
         li.add("naveen");
         li.add("kamal");
 
-        System.out.println(li);
-        reverseList(li);
+        Integer x = li.element();
         for (String s : li) {
             System.out.print(s+" ");
         }
