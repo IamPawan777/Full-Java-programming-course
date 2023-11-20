@@ -85,7 +85,7 @@
 // public class ExceptionHandling {
 //     public static void main(String[] args) {
 //        int val = -1;
-//        try(Scanner sc= new Scanner(System.in)) {
+//        try(Scanner sc= new Scanner(System.in)) {             //...try with resource...
 //            val = sc.nextInt();      //automatically close...  
 //        } 
 
@@ -99,7 +99,7 @@
 
 
 
-// //...throws excetion......ducking the exception.....but one time try-catch use....
+// //...throws excetion......ducking the exception.....but atleast one time try-catch use....
 
 // import java.util.InputMismatchException;
 
@@ -134,7 +134,7 @@
 
 
 
-//.......throw keyword......but create Exception object bcz catch black get Exception object......
+// //.......throw keyword......but create Exception object bcz catch black get Exception object......
 
 // public class ExceptionHandling {
 //     public static void main(String[] args) {
@@ -159,7 +159,7 @@
 // }
 
 
-//............or.........
+// // ............or.........
 
 // public class ExceptionHandling {
 //     public static void main(String[] args) {
@@ -213,30 +213,30 @@
 
 
 
-//..........custom exception........
+// //..........custom exception........
 
-class MyException extends Exception {
-    MyException() {
-        System.out.println("......Pawan........");
-    }
-}
+// class MyException extends Exception {
+//     MyException() {
+//         System.out.println("......Pawan........");
+//     }
+// }
 
-class ExceptionHandling {
-    public static void main(String[] args) {
-        int b=-9;
-        try {
-            if(b<0) {
-                MyException o = new MyException();
-                throw o;
-            }
-            int res = 8/b;
-            System.out.println(res);
-        }
-        catch(NullPointerException e){
-            System.out.println(e);
-        }
-        catch(MyException e){
-            System.out.println(e.getMessage());
-        }
-    }
-}
+// class ExceptionHandling {
+//     public static void main(String[] args) {
+//         int b=-9;
+//         try {
+//             if(b<0) {
+//                 MyException o = new MyException();
+//                 throw o;
+//             }
+//             int res = 8/b;
+//             System.out.println(res);
+//         }
+//         catch(NullPointerException e){
+//             System.out.println(e);
+//         }
+//         catch(MyException e){
+//             System.out.println(e.getMessage());
+//         }
+//     }
+// }
