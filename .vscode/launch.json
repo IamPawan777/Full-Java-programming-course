@@ -4,8 +4,20 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-        
-
+        {
+            "type": "java",
+            "name": "SerialDeSerial",
+            "request": "launch",
+            "mainClass": "IOOperation.SerialDeSerial",
+            "projectName": "Java With DSA_78fb9ee4"
+        },
+        {
+            "type": "java",
+            "name": "FileHandling",
+            "request": "launch",
+            "mainClass": "IOOperation.FileHandling",
+            "projectName": "Java With DSA_78fb9ee4"
+        },
         {
             "type": "java",
             "name": "ExceptionHandling",

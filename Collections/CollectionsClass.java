@@ -16,7 +16,7 @@ public class CollectionsClass {
 
     System.out.println(li);
 
-    Collections.sort(li);
+    Collections.sort(li); 
     
     // Collections.rotate(li,2);
     
