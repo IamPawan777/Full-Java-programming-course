@@ -6,6 +6,76 @@
     "configurations": [
         {
             "type": "java",
+            "name": "recursion",
+            "request": "launch",
+            "mainClass": "recursion",
+            "projectName": "Java With DSA_78fb9ee4"
+        },
+        {
+            "type": "java",
+            "name": "LinkedList",
+            "request": "launch",
+            "mainClass": "LinkedList.LinkedList",
+            "projectName": "Java With DSA_78fb9ee4"
+        },
+        {
+            "type": "java",
+            "name": "Basics",
+            "request": "launch",
+            "mainClass": "LinkedList.Basics",
+            "projectName": "Java With DSA_78fb9ee4"
+        },
+        {
+            "type": "java",
+            "name": "StudentClass",
+            "request": "launch",
+            "mainClass": "UserDefine.StudentClass",
+            "projectName": "Java With DSA_78fb9ee4"
+        },
+        {
+            "type": "java",
+            "name": "Student",
+            "request": "launch",
+            "mainClass": "UserDefine.Student",
+            "projectName": "Java With DSA_78fb9ee4"
+        },
+        {
+            "type": "java",
+            "name": "Binary",
+            "request": "launch",
+            "mainClass": "Binary",
+            "projectName": "Java With DSA_78fb9ee4"
+        },
+        {
+            "type": "java",
+            "name": "TwoDArray",
+            "request": "launch",
+            "mainClass": "TwoDArray",
+            "projectName": "Java With DSA_78fb9ee4"
+        },
+        {
+            "type": "java",
+            "name": "MathsQue2",
+            "request": "launch",
+            "mainClass": "MathsQue2",
+            "projectName": "Java With DSA_78fb9ee4"
+        },
+        {
+            "type": "java",
+            "name": "MathsQue",
+            "request": "launch",
+            "mainClass": "MathsQue",
+            "projectName": "Java With DSA_78fb9ee4"
+        },
+        {
+            "type": "java",
+            "name": "OtherStuff",
+            "request": "launch",
+            "mainClass": "OtherStuff",
+            "projectName": "Java With DSA_78fb9ee4"
+        },
+        {
+            "type": "java",
             "name": "SerialDeSerial",
             "request": "launch",
             "mainClass": "IOOperation.SerialDeSerial",

@@ -13,6 +13,8 @@ import java.util.Scanner;
 //........matrix multiplication.......
 ///.........number of charactor in String.......
 /*........patters Question......*/
+/*........prefix and suffix array eqaul or not......*/
+
 
 
 
@@ -1214,7 +1216,7 @@ import java.util.Scanner;
 
 
 
-// //.........swap without third varible.........
+// //.........swap without third varible........
 
 // class MathsQue {
 //     public static void main(String[] args) {
@@ -1233,6 +1235,144 @@ import java.util.Scanner;
 //         System.out.println("a: "+a+"\nb: "+b);
 //     }
 // }
+
+
+
+
+
+//..........suffix and prefix array equal or not.........
+
+// class MathsQue {
+//     static int[] prefixArr(int[] arr){
+//         int[] pre = new int[arr.length];
+//         pre[0] = arr[0];
+//         for (int i=1; i<arr.length; i++) {
+//             pre[i] = arr[i]+pre[i-1] ;
+//         }
+//         return pre;
+//     }
+//     static int[] suffixArr(int[] arr){
+//         int[] suff = new int[arr.length];
+//         suff[arr.length-1] = arr[arr.length-1];
+//         for(int i=arr.length-2; i>=0; i--) {
+//             suff[i] = arr[i]+suff[i+1]; 
+//         }
+//         return suff;
+//     }
+//     static boolean check(int[] a) {
+//         int[] pre = prefixArr(a);
+//         int[] suff = suffixArr(a);
+       
+//         for (int i = 0; i < pre.length-1; i++) {
+//             if(pre[i] == suff[i+1]) {
+//                 return true;
+//             }
+//         }
+//         return false;
+//     }
+
+//     public static void main(String[] args) {
+//         int[] arr = {1,1,1,1,1,1};
+//         System.out.println(check(arr));
+
+
+//     }
+// }
+
+// //..........without suffix and prefix array......
+
+// class MathsQue {
+//     static int sum(int[] arr){
+//         int tSum = 0;
+//         for(int i:arr) {
+//             tSum += i;
+//         }
+//         return tSum;
+//     }
+//     static boolean check(int[] a) {
+//         int tSum = sum(a);
+//         int preSum = 0;
+//         for (int i=0; i<a.length; i++) {
+//             preSum += a[i];                         // prefix sum
+//             int suffSum = tSum - preSum;            // suffix sum
+//             if(preSum == suffSum){
+//                 return true;
+//             }
+//         }
+//         return false;
+//     }
+
+//     public static void main(String[] args) {
+//         int[] arr = {4,1,3,5,3};
+//         System.out.println(check(arr));
+
+
+    // }
+// }
+
+
+
+
+
+
+
+// //........print all sub arrays.........
+
+// class MathsQue{
+//     public static void main(String[] args) {
+//         int[] arr = {1,2,3,4};
+//         int n = arr.length;
+//         for (int subSize = 1; subSize <= n; subSize++) {
+//             for (int start = 0; start <= n-subSize; start++) {              // 1 size k 4 sub array
+//                 int end = start + subSize-1;
+//                 System.out.print("[");
+//                 for (int i = start; i <= end; i++) {
+//                     System.out.print(+arr[i]+" ");
+//                 }
+//                 System.out.print("]");
+//                 System.out.println();
+//             }
+            
+//         }
+//     }
+// }
+
+
+
+
+
+
+// Maximum Difference between Two Elements such that Larger Element Appears...
+//..Input : arr = {2, 3, 10, 6, 4, 8, 1}
+//.. Output : 8    (Explanation: 10 - 2 = 8)
+
+// class MathsQue {
+//     static int maxDiff(int[] arr) {
+//         int ans = 0;
+//         int max = Integer.MIN_VALUE;
+//         for(int i=0; i<arr.length; i++) {
+//             for (int j = i+1; j < arr.length; j++) {
+//                 if(arr[j]>arr[i]){
+//                     ans = arr[j] - arr[i];
+//                 }
+//                 if(max<ans) {
+//                     max = ans;
+//                 }
+//             }
+//         }
+
+//         return max;
+//     }
+//     public static void main(String[] args) {
+//         int[] arr = {2, 3, 10, 6, 4, 8, 1};
+//         System.out.println(maxDiff(arr));
+
+//     }
+// }
+
+
+
+
 
 
 

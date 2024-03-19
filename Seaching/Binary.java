@@ -306,11 +306,82 @@
 
 
 
+// //..... Minimum Difference element is an array............
+
+// import java.util.*;
+// class Binary {
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         System.out.println("How much element: ");
+//         int n = sc.nextInt();
+//         System.out.println("Enter element: ");
+//         int[] ele = new int[n];
+
+//         for (int i = 0; i < ele.length; i++) {
+//             ele[i] = sc.nextInt();
+//         }
+        
+//         System.out.println("Enter key element: ");
+//         int key = sc.nextInt();
+//         int val = mini_Difference(ele, key);        
+//         System.out.println("Minimum difference with:"+val);
+//     }
+
+//     static int mini_Difference(int[] arr, int k) {
+//         int low = 0;
+//         int high = arr.length-1;
+//         while (low <= high) {
+//             int mid = low + (high-low)/2;
+
+//             if(arr[mid] == k)   return arr[mid];
+//             else if(arr[mid] < k)     low =mid+1;
+//             else    high = mid-1;
+//         }                                              //..got neighboring element......
+
+//         int diff1 = Math.abs(arr[low] - k);
+//         int diff2 = Math.abs(arr[high] - k);
+
+//         if(diff1 < diff2) {
+//             return arr[low];
+//         }
+//         return arr[high];
+//     }
+// }
+
+
+
+
+// binary search by recursion............
 
 class Binary {
+    static int binarySearch(int[] arr, int k, int lo, int high) {
+            // if (lo>high)
+            //     return -1;
+            // int mid = lo+(high-lo)/2;
+            // if(arr[mid]==k)
+            //     return mid;
+            // else if(arr[mid] < k)
+            //     return binarySearch(arr, k, mid+1, high);
+            // else 
+            //     return binarySearch(arr, k, lo, mid-1);
+        
+        // this not recursion.......    
+            while(lo<=high) {
+                int mid = lo + (high-lo)/2;
+                if(arr[mid] == k)
+                    return 1;
+                if(arr[mid] < k)
+                    return binarySearch(arr, k, mid+1, high);
+                else
+                    return binarySearch(arr, k, lo, mid-1);
+            }
+        return 0;
+    }
     public static void main(String[] args) {
-        int num = 5;
-        int b = num<<1;
-        System.out.println(b);
+        int[] arr = {2,5,9,12,33,77,120};
+        int k = 91;
+        int high = arr.length-1;
+        int ind = binarySearch(arr, k, 0, high);
+        System.out.println("Index: "+ind);
     }
 }

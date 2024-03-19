@@ -459,54 +459,138 @@ import java.util.Scanner;
 // 	}
 // }
 
-//..........O(log(n)).......
-import java.util.Scanner;
+// //..........O(log(n)).......
+// import java.util.Scanner;
 
-public class MathsQue2  {
+// public class MathsQue2  {
     
-    public static int[] occurence(int[] ar, int target) {
-        int[] arr = new int[]{-1,-1};
-        int low = 0, high = ar.length-1;
-        int ans = 0;
-        while(low<=high) {
-            int mid = low + (high-low)/2;
-            if(ar[mid] == target){
-                ans = mid;
-                high = mid-1;
-            }
-            else if(ar[mid] > target)
-                high = mid-1;
-            else
-                low = mid+1;
-        }
-        arr[0] = ans;
+//     public static int[] occurence(int[] ar, int target) {
+//         int[] arr = new int[]{-1,-1};
+//         int low = 0, high = ar.length-1;
+//         int ans = 0;
+//         while(low<=high) {
+//             int mid = low + (high-low)/2;
+//             if(ar[mid] == target){
+//                 ans = mid;
+//                 high = mid-1;
+//             }
+//             else if(ar[mid] > target)
+//                 high = mid-1;
+//             else
+//                 low = mid+1;
+//         }
+//         arr[0] = ans;
 
 
-        low = 0;
-        high = ar.length-1;
-        while(low<=high) {
-            int mid = low + (high-low)/2;
-            if(ar[mid] == target){
-                ans = mid;
-                low = mid+1;
-            }
-            else if(ar[mid] > target)
-                high = mid-1;
-            else
-                low = mid+1;
-        }
-        arr[1] = ans;
-        return arr;
-    }
-	public static void main(String[] args) {
-		int[] arr = {5, 7, 7, 8, 8, 10};
-        int target = 8;
+//         low = 0;
+//         high = ar.length-1;
+//         while(low<=high) {
+//             int mid = low + (high-low)/2;
+//             if(ar[mid] == target){
+//                 ans = mid;
+//                 low = mid+1;
+//             }
+//             else if(ar[mid] > target)
+//                 high = mid-1;
+//             else
+//                 low = mid+1;
+//         }
+//         arr[1] = ans;
+//         return arr;
+//     }
+// 	public static void main(String[] args) {
+// 		int[] arr = {5, 7, 7, 8, 8, 10};
+//         int target = 8;
 
-        int[] ar = occurence(arr, target);
+//         int[] ar = occurence(arr, target);
 
-        for(int i=0; i<ar.length; i++) {
-            System.out.print(ar[i]+" ");
-        }
+//         for(int i=0; i<ar.length; i++) {
+//             System.out.print(ar[i]+" ");
+//         }
 
-	}
-}
+// 	}
+// }
+
+
+
+
+
+
+
+
+// ///.........palindromic array or not......O(log n)....
+
+// class MathsQue2 {
+//     static boolean checkArr(int[] arr) {
+//         int low = 0;
+//         int high = arr.length-1;
+
+//         while(low<=high) {
+//             if(arr[low] == arr[high]){
+//                 low++;
+//                 high--;
+//             }
+//             else{
+//                 return false;
+//             }
+//         }
+//         return true;
+//     }
+//     public static void main(String[] args) {
+//         int[] arr = {2,3,4,6,4,3,2};
+
+//         boolean ch =  checkArr(arr);
+//         System.out.println(ch);
+//     }
+// }
+
+
+
+// //........palimdrom number or not.....(reversal of num)...
+
+// class MathsQue2 {
+//     static boolean check(int num) {
+//         int store = num;
+//         int sum = 0;
+//         while(num!=0) {
+//             int rem = num%10;
+//             sum = sum*10 + rem;
+//             num /= 10;
+//         }
+//         if(store == sum){
+//             return true;
+//         }
+//         return false;
+//     }
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         System.out.println("Enter num: ");
+//         int num = sc.nextInt();
+//         System.out.println(check(num));
+//     }
+// }
+
+
+
+
+// //...........missing number............
+
+// class MathsQue2 {
+//     static int checkNo(int[] arr){
+//         int sum = 0;
+//         int highest = 0;
+//         for (int i=0; i<arr.length; i++) {
+//             sum += arr[i];
+//             if(highest < arr[i]){
+//                 highest = arr[i];
+//             }
+//         }
+//         int sumNN = (highest*(highest+1))/2;                // sum of natural number.
+//         int miss = sumNN-sum;
+//         return miss ;
+//     }
+//     public static void main(String[] args) {
+//         int[] arr = {1,2,3,4, 6};
+//         System.out.println(checkNo(arr));
+//     }
+// }

@@ -72,13 +72,78 @@
 
 
 
-//....check in every iteration array......
+// //....check in every iteration array......
 
+// class BubbleSort {
+//     public static void main(String[] args) {
+//         int a = 28;
+//         int b = a>>3;
+
+//         System.out.print("Total number of iteration: "+" "+ b);
+//     }
+// }
+
+
+
+
+
+// //....move zeros at the end...........
+
+// class BubbleSort {
+//     static void moveZero(int[] arr) {
+//         int n = arr.length;
+//         for(int i=0; i<n-1; i++) {
+//             boolean flag = false;                       // for better efficincy........
+//             for(int j=0; j<n-i-1; j++) {
+//                 if(arr[j] == 0 && arr[j+1] != 0) {
+//                     int temp = arr[j];
+//                     arr[j] = arr[j+1];
+//                     arr[j+1] = temp;
+//                     flag = true;
+//                 }
+//             }
+//             if(flag == false) break;
+//         }
+
+//         // for(int i=0; i<arr.length; i++) {               // print
+//         //     System.out.print(arr[i]+" ");
+//         // }
+//     }
+//     public static void main(String[] args) {
+//         int[] arr = {0,2,1,0,6,1,0,1};
+//         moveZero(arr);
+//         for(int i=0; i<arr.length; i++) {            // print
+//             System.out.print(arr[i]+" ");
+//         }
+//     }
+// }
+
+
+
+
+
+
+// sort string................
 class BubbleSort {
-    public static void main(String[] args) {
-        int a = 28;
-        int b = a>>3;
+    static void sortString(String[] arr, int n) {
+        for(int i=0; i<n-1; i++) {
+            for(int j=0; j<n-i-1; j++){
+                if(arr[j].compareTo(arr[j+1]) > 0){
+                    String t = arr[j];
+                    arr[j] = arr[j+1];
+                    arr[j+1] = t;
+                }
+            }
+        }
 
-        System.out.print("Total number of iteration: "+" "+ b);
+        for(int i=0; i<arr.length; i++) {            // print
+            System.out.print(arr[i]+" ");
+        }
+    }
+    public static void main(String[] args) {
+        // int arr[] = {3,8,1,6,3,6};
+        String arr[] = {"string", "two", "is", "this"};
+        int n = arr.length;
+        sortString(arr, n);
     }
 }

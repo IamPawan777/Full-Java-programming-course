@@ -493,37 +493,184 @@
 
 
 
-//...displays the elements of middle row and the elements of middle column (matrix in odd dimantion)
+// //...displays the elements of middle row and the elements of middle column (matrix in odd dimantion)
 
-import java.util.Scanner;
+// import java.util.Scanner;
+// class TwoDArray {
+//     static void printStuff(int[][] arr) {   
+//         int value = 0,i,j;
+//         for ( i = 0; i < arr.length; i++) {
+//             for ( j = 0; j < arr[i].length; j++) {
+//                 if(j == (arr.length-1)/2 ) {
+//                     System.out.print(arr[i][j]+" ");
+//                 }
+//                 if(i == (arr.length-1)/2 && i != j) {
+//                     System.out.print(arr[i][j]+" ");
+//                 }
+//             }
+//         }
+//     }
+
+//     public static void main(String[] args) {
+//         Scanner scan = new Scanner(System.in);
+//         System.out.println("Enter Number of rows & column: ");
+//         int n = scan.nextInt();        
+//         int m = scan.nextInt();
+//         int[][] arr = new int[n][m];
+//         System.out.println("Enter element");
+        
+//         for (int i = 0; i < arr.length; i++) {
+//             for (int j = 0; j < arr[i].length; j++) {        //....always "arr[i].length" write not "arr.length"
+//                 arr[i][j] = scan.nextInt();
+//             }
+//         }
+//         printStuff(arr);
+//     }
+// }
+
+
+
+
+//................tranpose...............
+
+// class TwoDArray {
+//     public static void main(String[] args) {
+//         int[][] arr = {{1,2,3},{4,5,6},{7,8,9}};
+//         for (int i = 0; i < arr.length; i++) {
+//             for (int j = 0; j < arr.length; j++) {
+//                 System.out.print(arr[i][j]+" ");
+//             }
+//             System.out.println();
+//         }
+//         for (int i = 0; i < arr.length; i++) {
+//             for (int j = 0; j <= i; j++) {
+//                 int temp = arr[i][j];
+//                 arr[i][j] = arr[j][i];
+//                 arr[j][i] = temp;
+//             }  
+//         }
+        
+//         System.out.println();
+//          for (int i = 0; i < arr.length; i++) {
+//             for (int j = 0; j < arr.length; j++) {
+//                 System.out.print(arr[i][j]+" ");
+//             }
+//             System.out.println();
+//         }
+//     }
+// }
+
+
+
+
+
+// //..........wave from print.................
+
+// class TwoDArray {
+//     public static void main(String[] args) {
+//         int[][] arr = {{1,2,3,4},{5,6,7,8},{9,10,11,12},{13,14,15,16}};
+
+//         for(int i=0; i<arr.length; i++) {
+//             if(i%2 == 0){
+//                 for(int j=0; j<arr[0].length; j++){
+//                     System.out.print(arr[j][i] + " ");
+//                 }
+//             }            
+//             if(i%2 != 0){
+//                 for(int j=arr[0].length-1; j>=0; j--){
+//                     System.out.print(arr[j][i] + " ");
+//                 }
+//             }
+//         }
+
+//     }
+// }
+
+
+
+
+
+
+// //.......print spiral order..............
+
+// class TwoDArray {
+//     static void spiralArr(int[][] arr) {
+//         int top = 0, bottom = arr.length-1;
+//         int left = 0, right = arr[0].length-1;
+       
+
+//         while (top <= bottom && left <= right) {
+//             for(int j=left; j<=right; j++) {
+//                 System.out.print(arr[top][j]+" ");
+//             }
+//             top++;
+//             for(int i=top; i<=bottom; i++) {
+//                 System.out.print(arr[i][right]+" ");
+//             }
+//             right--;
+//             for(int j=right; j>=left && top <= bottom; j--) {
+//                 System.out.print(arr[bottom][j]+" ");
+//             }
+//             bottom--;
+//             for(int i=bottom; i>=top && left <= right; i--) {
+//                 System.out.print(arr[i][left]+" ");
+//             }
+//             left++;
+//         }
+//     }
+//     public static void main(String[] args) {
+//         int[][] a = {{1,2,3,4},{5,6,7,8},{9,10,11,12}};
+//         spiralArr(a);
+//     }
+// }
+
+
+
+
+
+
+//.....spiral matrix..............
+
 class TwoDArray {
-    static void printStuff(int[][] arr) {   
-        int value = 0,i,j;
-        for ( i = 0; i < arr.length; i++) {
-            for ( j = 0; j < arr[i].length; j++) {
-                if(j == (arr.length-1)/2 ) {
-                    System.out.print(arr[i][j]+" ");
-                }
-                if(i == (arr.length-1)/2 && i != j) {
-                    System.out.print(arr[i][j]+" ");
-                }
+    static int[][] spiralArr(int n) {
+        int[][] arr = new int[n][n];
+
+        int top = 0, bottom = arr.length-1;
+        int left = 0, right = arr[0].length-1;
+        int num = 1;
+
+        while (top <= bottom && left <= right) {
+            for(int j=left; j<=right; j++) {
+                arr[top][j] = num++;
             }
+            top++;
+            for(int i=top; i<=bottom; i++) {
+                arr[i][right] = num++;
+            }
+            right--;
+            for(int j=right; j>=left && top <= bottom; j--) {
+                arr[bottom][j] = num++;
+            }
+            bottom--;
+            for(int i=bottom; i>=top && left <= right; i--) {
+                arr[i][left] = num++;
+            }
+            left++;
         }
+        return arr;
     }
 
-    public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        System.out.println("Enter Number of rows & column: ");
-        int n = scan.nextInt();        
-        int m = scan.nextInt();
-        int[][] arr = new int[n][m];
-        System.out.println("Enter element");
-        
+    static void print(int[][] arr) {
         for (int i = 0; i < arr.length; i++) {
-            for (int j = 0; j < arr[i].length; j++) {        //....always "arr[i].length" write not "arr.length"
-                arr[i][j] = scan.nextInt();
+            for (int j = 0; j < arr[0].length; j++) {
+                System.out.print(arr[i][j]+" ");
             }
+            System.out.println();
         }
-        printStuff(arr);
+    }
+    public static void main(String[] args) {
+        int n = 4;
+        int[][] a = spiralArr(n);
+        print(a);
     }
 }

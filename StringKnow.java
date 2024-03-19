@@ -136,7 +136,7 @@ import javax.print.DocFlavor.STRING;
 
 
 
-// //...Some methods......
+//...Some methods......
 
 // class StringKnow {
 //     public static void main(String[] args) {
@@ -708,24 +708,27 @@ import javax.print.DocFlavor.STRING;
 
 
 
-import java.io.*;
-import java.util.*;
+// import java.io.*;
+// import java.util.*;
 
-public class StringKnow {
+// public class StringKnow {
 
-    public static void main(String[] args) {
-        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
-        Scanner scan = new Scanner(System.in);
-        int n = scan.nextInt();
-        while(n>0) {
-           int a = scan.nextInt();
-            int b = scan.nextInt();
-            int sum = 0;
-            for(int i = a+1; i<b; i++) {
-                sum += i;
-            }
-            System.out.println(sum);
-           n--; 
-        }
-    }
-}
+//     public static void main(String[] args) {
+//         /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+//         Scanner scan = new Scanner(System.in);
+//         int n = scan.nextInt();
+//         while(n>0) {
+//            int a = scan.nextInt();
+//             int b = scan.nextInt();
+//             int sum = 0;
+//             for(int i = a+1; i<b; i++) {
+//                 sum += i;
+//             }
+//             System.out.println(sum);
+//            n--; 
+//         }
+//     }
+// }
+
+
+
