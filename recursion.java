@@ -404,31 +404,31 @@
 
 
 
-// //....binary Search.............
+// // //....binary Search.............
 
-public class recursion{
-    static boolean fun(int[]arr, int key, int low, int high){
-            if(low>high)
-                return false;
-        // while(low<=high) {
+// public class recursion{
+//     static boolean fun(int[]arr, int key, int low, int high){
+//             if(low>high)
+//                 return false;
+//         // while(low<=high) {
             
-            int mid = low + (high-low)/2;
-            if(arr[mid] == key)
-                return true;
-            if(arr[mid] < key)
-                return fun(arr, key, mid+1, high);
-            else
-                return fun(arr, key, low, mid-1);
-        // }
-    // return false;
-    }
-    public static void main(String[] args) {    
-        int[] arr = {2,6,1,76,3,6,2};
-        int key = 6;
-        boolean ind = fun(arr,key, 0, arr.length-1);
-        System.out.println(key+" present at index: "+ind);
-    }
-}
+//             int mid = low + (high-low)/2;
+//             if(arr[mid] == key)
+//                 return true;
+//             if(arr[mid] < key)
+//                 return fun(arr, key, mid+1, high);
+//             else
+//                 return fun(arr, key, low, mid-1);
+//         // }
+//     // return false;
+//     }
+//     public static void main(String[] args) {    
+//         int[] arr = {2,6,1,76,3,6,2};
+//         int key = 6;
+//         boolean ind = fun(arr,key, 0, arr.length-1);
+//         System.out.println(key+" present at index: "+ind);
+//     }
+// }
 
 
 
@@ -552,3 +552,231 @@ public class recursion{
 //         System.out.println(palim(str, 0, str.length()-1));
 //     }
 // }
+
+
+
+
+// // all subset of string...........
+// import java.util.*;
+// class recursion {
+//     static void subSets(String arr, int ind, String temp, List<String> ans) {
+//         if(ind == arr.length()){
+//             if(!temp.isEmpty())
+//             ans.add(temp);
+//             return;
+//         }
+//         subSets(arr, ind+1, temp, ans);
+//         temp += arr.charAt(ind);
+//         subSets(arr, ind+1, temp, ans);
+//     }
+//     static void disp(List<String> ans) {
+//         System.out.println(ans);
+//     }
+//     public static void main(String[] args) {
+//         String arr =  "abc";
+//         String sum = "";
+//         List<String> ans = new ArrayList<>();
+//         subSets(arr, 0, sum, ans);
+//         disp(ans);
+//     }
+// }
+
+
+
+
+
+// //........... sum of subsets....
+// import java.util.*;
+// class recursion {
+//     static void subSets(int[] arr, int ind, int temp, List<Integer> ans) {
+//         if(ind ==arr.length){
+//             ans.add(temp);
+//             return;
+//         }
+//         subSets(arr, ind+1, temp, ans);
+//         subSets(arr, ind+1, temp+arr[ind], ans);
+//     }
+//     static void disp(List<Integer> ans) {
+//         System.out.println(ans);
+//     }
+//     public static void main(String[] args) {
+//         int[] arr = {1,2,3};
+//         int sum = 0;
+//         List<Integer> ans = new ArrayList<>();
+//         subSets(arr, 0, sum, ans);
+//         disp(ans);
+//     }
+// }
+
+
+
+
+
+
+// // target present or not.............
+// class recursion {
+//     static boolean find(int[] a, int i, int tar) {
+//         if(tar == 0)
+//             return true;
+//         if (i == a.length) 
+//             return false;
+//         return find(a, i+1, tar) || find(a, i+1, tar-a[i]);
+        
+//     }
+//     public static void main(String[] args) {
+//         int[]  a = {2,4,5,9,10};
+//         int target = 8;
+//         System.out.println(find(a, 0, target));
+//     }
+// }
+
+
+
+
+
+
+// // with repetition how much time target present..........
+// class recursion {
+//     static int find(int[] a, int i, int tar) {
+//         if(tar == 0)
+//             return 1;
+//         if (i == a.length || tar<0) 
+//             return 0;
+//         return find(a, i+1, tar) + find(a, i, tar-a[i]);
+        
+//     }
+//     public static void main(String[] args) {
+//         int[]  a = {2,3,4};         // 2,4---2,2,2----3,3
+//         int target = 6;
+//         System.out.println(find(a, 0, target));
+//     }
+// }
+
+
+
+
+
+// // permutation
+// import java.util.*;
+
+// class recursion{
+//     static void permute(int[] arr, List<Integer> temp, List<List<Integer>> ans, boolean[] visit){
+//         if(visit.length == temp.size()){
+//             ans.add(new ArrayList<>(temp));
+//             return;
+//         }
+//         for (int i = 0; i < visit.length; i++) {
+//             if(visit[i] == false){
+//                 visit[i]= true;
+//                 temp.add(arr[i]);
+//                 permute(arr, temp, ans, visit);
+//                 visit[i]= false;
+//                 temp.remove(temp.size()-1);
+//             }
+//         }
+//     }
+//     public static void main(String[] args) {
+//         int[] arr = {1,2,3};
+//         List<Integer> temp = new ArrayList<>();
+//         List<List<Integer>> ans = new ArrayList<>();
+//         boolean[] visit = new boolean[arr.length]; 
+//         // List<Integer> visit = new ArrayList<>(Collections.nCopies(arr.length, 0));
+        
+//         permute(arr, temp, ans, visit);
+
+//         // for (int i = 0; i < ans.size(); i++) {
+//             // for (int j = 0; j < ans.get(i).size(); j++) {
+//             for(List<Integer> per : ans) {
+//                 // System.err.print(ans.get(i).get(j));
+//                 System.out.println(per);
+//             }
+//             // System.out.println();
+//         // }
+//     }
+// }
+
+
+
+
+//or
+
+
+
+// import java.util.*;
+
+// class recursion{
+//     static void permute(int[] arr, List<List<Integer>> ans, int ind) {
+//         if(ind == arr.length){
+//             List<Integer> temp = new ArrayList<>();
+//             for(int i : arr)
+//                 temp.add(i);
+//             ans.add(temp);
+//         }
+//         for (int i = ind; i < arr.length; i++) {
+//             int temp = arr[i];
+//             arr[i] = arr[ind];
+//             arr[ind] = temp;
+//             permute(arr, ans, ind+1);
+//             int temp2 = arr[i];
+//             arr[i] = arr[ind];
+//             arr[ind] = temp2;
+//         }
+//     }
+//     public static void main(String[] args) {
+//         int[] arr = {1,2,3};
+//         List<List<Integer>> ans = new ArrayList<>();
+
+//         permute(arr, ans, 0);
+//         for(List<Integer> i : ans) {
+//             System.out.println(i);
+//         }
+//     }
+// }
+
+
+
+
+
+// // frog Jumps....min cost.....
+// class recursion{
+//     static int minCost(int[] stones, int n, int jump){
+//         if (jump==n-1) return 0;
+
+//         int p1 = Math.abs(stones[jump] - stones[jump+1]) + minCost(stones, n, jump+1);
+//         if(jump == n-2) return p1;
+//         int p2 = Math.abs(stones[jump] - stones[jump+2]) + minCost(stones, n, jump+2);
+
+//         return Math.min(p1, p2);
+//     }
+//     public static void main(String[] args) {
+//         int[] stones = {10,30,40,20};
+//         System.out.println("Minimum cost: "+minCost(stones, stones.length, 0));
+//     }
+// }
+
+
+
+
+
+
+
+// keypad combinations..........**
+class recursion{
+    static void combinations(String dig, String[] kp, String res, int ind){
+        if(dig.length() == ind){
+            System.out.print(res+" ");
+            return;
+        }
+
+        int currNum = dig.charAt(ind)-'0';
+        String currChoice = kp[currNum];
+        for (int i = 0; i < currChoice.length(); i++) {
+            combinations(dig, kp, res+currChoice.charAt(i), ind+1);            
+        }
+    }
+    public static void main(String[] args) {
+        String dig = "253";
+        String[] kp = {"", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
+        combinations(dig, kp, "", 0);
+    }
+}

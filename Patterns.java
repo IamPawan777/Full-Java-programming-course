@@ -1,4 +1,4 @@
-//......1......
+// // ......1......
 // public class Patterns {
 //     public static void main(String[] args) {
 //         int n = 5;
@@ -46,7 +46,7 @@
 
 
 
-//..........4........
+// // ..........4........
 // public class Patterns {
 //     public static void main(String[] args) {
 //        int n=5;
@@ -144,7 +144,7 @@
 
 
 
-//..........9.......
+// // ..........9.......
 // public class Patterns {
 //     public static void main(String[] args) {
 //        int n=5;
@@ -506,17 +506,17 @@
 
 
 
-class Patterns {
-    public static void main(String[] args) {
-        int n=5;
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-                if(i==(n-1)/2 || j==(n-1)/2)
-                    System.out.print("*");
-                else    
-                    System.out.print(" ");
-            }
-            System.out.println();
-        }
-    }
-}
+// class Patterns {
+//     public static void main(String[] args) {
+//         int n=5;
+//         for (int i = 0; i < n; i++) {
+//             for (int j = 0; j < n; j++) {
+//                 if(i==(n-1)/2 || j==(n-1)/2)
+//                     System.out.print("*");
+//                 else    
+//                     System.out.print(" ");
+//             }
+//             System.out.println();
+//         }
+//     }
+// }

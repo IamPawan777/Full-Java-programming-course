@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "InterviewProb",
+            "request": "launch",
+            "mainClass": "InterviewProb",
+            "projectName": "Java With DSA_78fb9ee4"
+        },
+        {
+            "type": "java",
             "name": "recursion",
             "request": "launch",
             "mainClass": "recursion",

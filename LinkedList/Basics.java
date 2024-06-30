@@ -29,14 +29,13 @@
 //         Node forth = new Node(4);
 //         Node fivth = new Node(55);
 //         Node sixth = new Node(6);
-
         
 //         first.next = second;
 //         second.next = third;
 //         third.next = forth;
 //         forth.next = fivth;
 //         fivth.next = sixth;
-//         // sixth.next = null;              //...automatically.optional.......
+//         // sixth.next = null;              //...automatically...optional.......
 
 //         disp(head);
 //         System.out.println();
@@ -52,8 +51,7 @@
 
 
 
-
-// //..........dynamically insertes element.......Insert at end & biggning ...
+// //..2........dynamically insertes element.......Insert at end & biggning ...
 // package LinkedList;
 
 // public class Basics {
@@ -127,8 +125,6 @@
 //         ll.disp();
 //     }    
 // }
-
-
 
 
 
@@ -213,8 +209,61 @@
 //         ll.printNodes();
 //         System.out.println("Head: "+ll.head.data);
 //         System.out.println("Tail: "+ll.tail.data);
+//     }
+// }
 
 
+
+
+// // insert at "end" using recursion............
+
+// package LinkedList;
+// class Basics {
+//     static Node head, tail;
+//     static class Node{
+//         int data;
+//         Node next;
+//         Node(int data) {
+//             this.data = data;
+//         }
+//     }
+
+//     // static void insertEnd(int data) {
+//     //     Node temp = new Node(data);
+//     //     if(head == null){
+//     //         head = temp;
+//     //     }
+//     //     else {
+//     //         tail.next = temp;
+//     //     }
+//     //     tail = temp;
+//     // }
+
+//     static Node insertEnd(Node head, int data){
+//         if(head == null)
+//             return new Node(data);
+//         head.next = insertEnd(head.next, data);
+//         return head;
+//     }
+
+    
+//     static void print(Node head){
+//         Node temp = head;
+//         if(temp == null)
+//             return;
+//         System.out.print(temp.data+" ");
+//         print(head.next);
+//     }
+
+//     public static void main(String[] args) {
+//         head = insertEnd(head, 12);
+//         head = insertEnd(head, 77);
+//         head = insertEnd(head, 2);
+//         head = insertEnd(head, 98);
+//         head = insertEnd(head, 65);
+//         head = insertEnd(head, 653);
+
+//         print(head);
 //     }
 // }
 
@@ -314,7 +363,7 @@
 //         ll.insertEnd(88);
 //         ll.disp();
         
-//         ll.insertMid(6, 100);     
+//         ll.insertMid(2, 100);     
 
 
 //         ll.disp();
@@ -387,7 +436,7 @@
 //         ll.insertEnd(88);
 //         ll.disp();      
 
-//         System.out.println(ll.getElement(6));
+//         System.out.println(ll.getElement(1));
 //         // System.out.println("Size"+ll.size);
 
 //     }
@@ -395,6 +444,52 @@
 // }
 
 
+
+
+
+
+// //..print array and insert at tail......
+
+// package LinkedList;
+
+// class Basics {
+//     Node head = null, tail = null;              // no need to write null
+//     class Node{
+//         int data;
+//         Node next;
+//         Node(int data) {
+//             this.data = data;
+//         }
+//     }
+    
+//     void insertTail(int[] val) {
+//         for (int i = 0; i < val.length; i++) {
+//             if(head == null){
+//                 head = new Node(val[i]);
+//                 tail = head;
+//             }
+//             else{
+//                 tail.next = new Node(val[i]);
+//                 tail = tail.next;
+//             } 
+//         }
+//     }
+
+//     void disp() {
+//         Node temp = head;
+//         while(temp != null){
+//             System.out.print(temp.data+" ");
+//             temp = temp.next;
+//         }
+//     }
+//     public static void main(String[] args) {
+//         Basics ob = new Basics();
+        
+//         int[] arr = {2,45,6,9,11};
+//         ob.insertTail(arr);
+//         ob.disp();
+//     }
+// }
 
 
 
@@ -476,16 +571,17 @@
 //         ll.disp();
 //         System.out.println(ll.size);
 
-//         ll.deleteNode(0);
+//         ll.deleteNode(5);
 //         ll.disp();
-//         System.out.println(ll.size);
+//         System.out.println("Size:"+ll.size);
 //         System.out.println("head: "+ll.head.data);
 //         System.out.println("tail: "+ll.tail.data);
-
-
-
 //     }
 //  }
+
+
+
+
 
 
 
@@ -713,6 +809,7 @@
 //         System.out.print("Head: "+ll.head.data+" ");
 //         System.out.println("tail: "+ll.tail.data);
 // System.out.println();
+
 //         ll.reverseLL();
 //         ll.print();
 //         System.out.print("Head: "+ll.head.data+" ");
@@ -725,6 +822,88 @@
 //     }
 // }
 
+
+
+
+
+////////// practics.................
+
+// package LinkedList;
+
+// class Basics {
+//     Node head, tail;
+//      class Node{
+//         int data;
+//         Node next;
+//         Node(int data) {
+//             this.data = data;
+//         }
+//     }
+
+//      void insertMid(int data) {
+//         Node node  = new Node(data);
+//         if(head == null){
+//             head = node;
+//         }
+//         else {
+//             tail.next = node;
+//         }
+//         tail = node;
+//     }
+    
+//      void deleteNode(int posi) {
+//         Node curr = head;
+//         Node pre = null;
+
+//         if(posi == 1) {
+//             head = curr.next;
+//             curr.next = null;
+//             return;
+//         }
+//         while(posi-- != 1){
+//             pre = curr;
+//             curr = curr.next;
+//         }
+//         pre.next = curr.next;
+//         curr.next = null;
+
+//         if(pre.next == null)
+//             tail = pre;
+
+//     }
+
+//      void traverse(Node temp) {
+//         if(temp == null)
+//             return;
+//         System.out.print(temp.data+" ");
+//         traverse(temp.next);
+//     }
+
+//     public static void main(String[] args) {
+//         Basics b = new Basics();
+        
+//         b.insertMid(11);
+//         b.insertMid(78);
+//         b.insertMid(1);
+//         b.insertMid(90);
+//         b.insertMid(233);
+//         // System.out.println("head "+head.data);
+//         System.out.println();
+//         b.traverse(b.head);
+
+//         System.out.println("head "+b.tail.data);
+
+//         b.deleteNode(1) ;
+// System.out.println();
+//         // insertMid(4, 2222, head, tail);
+//         b.traverse(b.head);
+//         System.out.println("head "+b.tail.data);
+
+
+
+
+//     }
+// }
 
 
 
@@ -788,67 +967,247 @@
 
 
 
-///......detect cycle value.(Floyd's cycle detection (2 pointer)(Hare-tortoise algo.))...............
+// ///......detect cycle value.(Floyd's cycle detection (2 pointer)(Hare-tortoise algo.))...............
+
+// package LinkedList;
+
+// class Basics {
+//     Node head;
+//     Node tail;
+    
+//     class Node{
+//         int data;
+//         Node next;
+//         Node(int data) {
+//             this.data = data;
+//         }
+//     }
+//     void insert(int val) {
+//         Node node = new Node(val);
+//         if(head == null)    head = node;
+//         else {
+//             tail.next = node;
+//         }
+//         tail = node;
+
+//     }
+//     void print() {
+//         Node temp = head;
+//         while(temp != null) {
+//             System.out.print(temp.data+" ");
+//             temp = temp.next;
+//         }
+//         System.out.println();
+//     }
+
+//     void detectCycle() {
+//         Node slow = head, fast = head;
+//         boolean che = false;
+//         while(slow!=null && fast!=null && fast.next!=null) {
+//             slow = slow.next;
+//             fast = fast.next.next;
+//             if(slow == fast) {
+//                 che = true;
+//                 break;
+//             }
+//         }
+//         if(che == true) {
+//             System.out.println("cycle present...");
+//         }
+//         else {
+//             System.out.println("cycle not present...");
+//         }
+//     }
+//     public static void main(String[] args) {
+//         Basics ll = new Basics();
+//         ll.insert(12);
+//         ll.insert(23);
+//         ll.insert(22);
+//         ll.insert(88);
+//         ll.print();
+        
+//         ll.tail.next = ll.head;         //make cycle...........
+//         ll.detectCycle();
+//         // ll.print();
+//     }
+// }
+
+
+
+
+
+
+
+// delete nth tail node if tail node present...............(also can solve by slow-fast poinster (leetcode 19))
 
 package LinkedList;
 
-class Basics {
-    Node head;
-    Node tail;
-    
-    class Node{
-        int data;
-        Node next;
-        Node(int data) {
-            this.data = data;
+public class Basics {
+        static Node head = null, tail = null;
+        static class Node{
+                int data;
+                Node next;
+                Node(int data) {
+                        this.data = data;
+                }
         }
-    }
-    void insert(int val) {
-        Node node = new Node(val);
-        if(head == null)    head = node;
-        else {
-            tail.next = node;
-        }
-        tail = node;
 
-    }
-    void print() {
-        Node temp = head;
-        while(temp != null) {
-            System.out.print(temp.data+" ");
-            temp = temp.next;
+        static void insert(int data) {
+                Node node = new Node(data);
+                if(head == null){
+                        head = node;
+                }
+                else{
+                        tail.next = node;
+                }
+                tail = node;
         }
-        System.out.println();
-    }
 
-    void detectCycle() {
-        Node slow = head, fast = head;
-        boolean che = false;
-        while(slow!=null && fast!=null && fast.next!=null) {
-            slow = slow.next;
-            fast = fast.next.next;
-            if(slow == fast) {
-                che = true;
-                break;
-            }
+        static void disp() {
+                Node temp = head;
+                while(temp != null){
+                        System.out.print(temp.data+" ");
+                        temp = temp.next;
+                }
+
         }
-        if(che == true) {
-            System.out.println("cycle present...");
+        static int listSize() {
+                Node temp = head;
+                int size =  0;
+                while(temp != null){
+                        size++;
+                        temp = temp.next;
+                }
+                return size;
         }
-        else {
-            System.out.println("cycle not present...");
+        // static void deleteTail(int pos) {                       // <- this is the code
+        //         int size = listSize();
+        //         int newpos = size-pos+1;                        // now delete from stating position
+
+        //         Node pre = null;
+        //         Node curr = head;
+        //         while(newpos-- != 1) {
+        //                 pre = curr;
+        //                 curr = curr.next;
+        //         }
+        //         if (pos == size){                                       // (edge case) when last node dlt form end
+        //                 head = head.next;
+        //                 return;
+        //         }
+        //         pre.next = curr.next;
+        //         curr.next = null;
+        // }
+//   or....
+        static void deleteTail(int k){
+                Node slow = head;
+                Node fast = head;
+
+                while(k-- != 0) {
+                        fast = fast.next;
+                }
+                if(fast == null){
+                        head = head.next;
+                        return ;
+                }
+                while(fast.next != null) {
+                        slow = slow.next;
+                        fast = fast.next;
+                }
+                slow.next = slow.next.next;
         }
-    }
-    public static void main(String[] args) {
-        Basics ll = new Basics();
-        ll.insert(12);
-        ll.insert(23);
-        ll.insert(22);
-        ll.insert(88);
-        ll.print();
+
+        public static void main(String[] args) {
+                insert(12);
+                insert(56);
+                insert(6);
+                insert(34);
+                insert(3);
+                disp();
+                
+                deleteTail(5);
+                System.out.println();
+
+                disp();
+        }
         
-        ll.tail.next = ll.head;         //make cycle...........
-        ll.detectCycle();
-        // ll.print();
-    }
 }
+
+
+
+
+
+// // rotate list with k times...........
+
+// package LinkedList;
+
+// class Basics {
+//         static Node head = null, tail = null;
+//         static class Node{
+//                 int data;
+//                 Node next;
+//                 Node(int data) {
+//                         this.data = data;
+//                 }
+//         }
+
+//         static void insert(int data){
+//                 Node node = new Node(data);
+//                 if(head == null)
+//                         head = node;
+//                 else
+//                         tail.next = node;
+//                 tail = node;
+//         }
+
+//         static Node rotate( int k ){
+
+//                 Node temp = head;
+//                 int size = 0;
+//                 while(temp != null){
+//                         size++;
+//                         temp = temp.next;
+//                 }
+
+//                 k = k % size;
+//                 if(k == 0)      return head;
+//                 int point = size - k;
+                
+
+//                 Node curr = head;
+//                 Node pre = null;
+//                 while(point-- != 0){
+//                         pre = curr;
+//                         curr = curr.next;
+//                 }
+//                 pre.next = null;
+
+//                 Node newtail = curr;
+
+//                 while(newtail.next != null) {
+//                         newtail = newtail.next;
+//                 }
+//                 newtail.next = head;
+//                 return curr;
+//         }
+//         public static void main(String[] args) {
+//                 insert(23);
+//                 insert(45);
+//                 insert(11);
+//                 insert(2);
+//                 insert(20);
+
+//                 Node temp = head;
+//                 while (temp!=null) {
+//                         System.out.print(temp.data+" ");
+//                         temp = temp.next;
+//                 }
+//                 System.out.println();
+                
+//                 Node n = rotate(2);
+//                 Node temp2 = n;
+//                 while (temp2!=null) {
+//                         System.out.print(temp2.data+" ");
+//                         temp2 = temp2.next;
+//                 }
+//         }
+// }

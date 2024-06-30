@@ -629,48 +629,87 @@
 
 
 
-//.....spiral matrix..............
+// //.....spiral matrix..............
 
+// class TwoDArray {
+//     static int[][] spiralArr(int n) {
+//         int[][] arr = new int[n][n];
+
+//         int top = 0, bottom = arr.length-1;
+//         int left = 0, right = arr[0].length-1;
+//         int num = 1;
+
+//         while (top <= bottom && left <= right) {
+//             for(int j=left; j<=right; j++) {
+//                 arr[top][j] = num++;
+//             }
+//             top++;
+//             for(int i=top; i<=bottom; i++) {
+//                 arr[i][right] = num++;
+//             }
+//             right--;
+//             for(int j=right; j>=left && top <= bottom; j--) {
+//                 arr[bottom][j] = num++;
+//             }
+//             bottom--;
+//             for(int i=bottom; i>=top && left <= right; i--) {
+//                 arr[i][left] = num++;
+//             }
+//             left++;
+//         }
+//         return arr;
+//     }
+
+//     static void print(int[][] arr) {
+//         for (int i = 0; i < arr.length; i++) {
+//             for (int j = 0; j < arr[0].length; j++) {
+//                 System.out.print(arr[i][j]+" ");
+//             }
+//             System.out.println();
+//         }
+//     }
+//     public static void main(String[] args) {
+//         int n = 4;
+//         int[][] a = spiralArr(n);
+//         print(a);
+//     }
+// }
+
+
+
+import java.util.*;
 class TwoDArray {
-    static int[][] spiralArr(int n) {
-        int[][] arr = new int[n][n];
-
-        int top = 0, bottom = arr.length-1;
-        int left = 0, right = arr[0].length-1;
-        int num = 1;
-
-        while (top <= bottom && left <= right) {
-            for(int j=left; j<=right; j++) {
-                arr[top][j] = num++;
-            }
-            top++;
-            for(int i=top; i<=bottom; i++) {
-                arr[i][right] = num++;
-            }
-            right--;
-            for(int j=right; j>=left && top <= bottom; j--) {
-                arr[bottom][j] = num++;
-            }
-            bottom--;
-            for(int i=bottom; i>=top && left <= right; i--) {
-                arr[i][left] = num++;
-            }
-            left++;
-        }
-        return arr;
-    }
-
-    static void print(int[][] arr) {
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = 0; j < arr[0].length; j++) {
-                System.out.print(arr[i][j]+" ");
-            }
-            System.out.println();
+    static void disp(int[][] ar, int n){
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                System.out.print(ar[i][j]+" ");
+            }     
+            System.out.println();       
         }
     }
+
+    static void lowerTringle (int[][] ar, int n) {
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                if (i==j || i>j) {
+                    System.out.print(ar[i][j]+" ");
+                }
+            } 
+            System.out.println();       
+        }
+    }
+
     public static void main(String[] args) {
-        int n = 4;
-        int[][] a = spiralArr(n);
-        print(a);
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter length: ");
+        int n = scan.nextInt();
+        int[][] arr = new int[n][n];
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                arr[i][j] = scan.nextInt();
+            }            
+        }
+        lowerTringle(arr, n);
+        // disp(arr, n);
     }
 }

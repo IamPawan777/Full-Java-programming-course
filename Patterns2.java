@@ -1,4 +1,4 @@
-//.............1.......
+// // .............1.......
 
 // class Patterns2 {
 //     public static void main(String[] args) {
@@ -56,7 +56,7 @@
 
 
 
-//.........3.........
+// // .........3.........
 
 // class Patterns2 {
 //     public static void main(String[] args) {

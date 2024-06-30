@@ -594,3 +594,59 @@ import java.util.Scanner;
 //         System.out.println(checkNo(arr));
 //     }
 // }
+
+
+
+
+// maxima and minima element in an arr............
+// class Demo {
+class MathsQue2 {
+    static class Pair{
+        int min;
+        int max;
+    }
+    public static Pair getMinMax(int[] arr, int i, int j) {
+        Pair min_max = new Pair();
+        Pair mmL = new Pair();
+        Pair mmR = new Pair();
+        // base case
+        if(i==j) {
+            min_max.min = arr[i];
+            min_max.max = arr[j];
+            return min_max;
+        }
+        else if (i==j-1) {
+            if(arr[i]<arr[j]){
+                min_max.min = arr[i];
+                min_max.max = arr[j];
+            }
+            else {
+                min_max.min = arr[j];
+                min_max.max = arr[i];
+            }
+            return min_max;
+        }
+        //big problem..divide
+        else {
+            int mid = i+(j-i)/2;
+            mmL = getMinMax(arr, i, mid);                   // left side
+            mmR = getMinMax(arr, mid+1, j);                 // right side
+            if(mmL.min < mmR.min)                           // combine from l and r... min
+                min_max.min = mmL.min;
+            else
+                min_max.min = mmR.min;
+            if(mmL.max < mmR.max)                       //max
+                min_max.max = mmR.max;
+            else
+                min_max.max = mmL.max;
+            return min_max; 
+        }
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {3,7,12,99,2,1,34,12};
+        Pair min_max = getMinMax(arr, 0, arr.length-1);
+        System.out.println("Mininum: "+min_max.min);
+        System.out.println("Maximum: "+min_max.max);
+    }
+}

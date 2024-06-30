@@ -732,3 +732,23 @@ import javax.print.DocFlavor.STRING;
 
 
 
+
+
+
+class StringKnow {
+    static int diff(String s) {
+        int s1 = 0, s2 = 0;
+        for (int i = 0; i < s.length(); i++) {
+            if(s.charAt(i) == '#')    
+                s1++;
+            else   
+                s2++;
+        }
+        return Math.abs(s2-s1);
+    }
+    public static void main(String[] args) {
+        String str= "#***###*";
+        int valu = diff(str);
+        System.out.println(valu);
+    }
+}

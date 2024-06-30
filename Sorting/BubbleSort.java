@@ -123,27 +123,31 @@
 
 
 
-// sort string................
-class BubbleSort {
-    static void sortString(String[] arr, int n) {
-        for(int i=0; i<n-1; i++) {
-            for(int j=0; j<n-i-1; j++){
-                if(arr[j].compareTo(arr[j+1]) > 0){
-                    String t = arr[j];
-                    arr[j] = arr[j+1];
-                    arr[j+1] = t;
-                }
-            }
-        }
+// // sort string................
+// class BubbleSort {
+//     static void sortString(String[] arr, int n) {
+//         for(int i=0; i<n-1; i++) {
+//             for(int j=0; j<n-i-1; j++){
+//                 if(arr[j].compareTo(arr[j+1]) > 0){
+//                     String t = arr[j];
+//                     arr[j] = arr[j+1];
+//                     arr[j+1] = t;
+//                 }
+//             }
+//         }
 
-        for(int i=0; i<arr.length; i++) {            // print
-            System.out.print(arr[i]+" ");
-        }
-    }
-    public static void main(String[] args) {
-        // int arr[] = {3,8,1,6,3,6};
-        String arr[] = {"string", "two", "is", "this"};
-        int n = arr.length;
-        sortString(arr, n);
-    }
-}
+//         for(int i=0; i<arr.length; i++) {            // print
+//             System.out.print(arr[i]+" ");
+//         }
+//     }
+//     public static void main(String[] args) {
+//         // int arr[] = {3,8,1,6,3,6};
+//         String arr[] = {"string", "two", "is", "this"};
+//         int n = arr.length;
+//         sortString(arr, n);
+//     }
+// }
+
+
+
+

@@ -351,37 +351,37 @@
 
 
 
-// binary search by recursion............
+// // binary search by recursion............
 
-class Binary {
-    static int binarySearch(int[] arr, int k, int lo, int high) {
-            // if (lo>high)
-            //     return -1;
-            // int mid = lo+(high-lo)/2;
-            // if(arr[mid]==k)
-            //     return mid;
-            // else if(arr[mid] < k)
-            //     return binarySearch(arr, k, mid+1, high);
-            // else 
-            //     return binarySearch(arr, k, lo, mid-1);
+// class Binary {
+//     static int binarySearch(int[] arr, int k, int lo, int high) {
+//             // if (lo>high)
+//             //     return -1;
+//             // int mid = lo+(high-lo)/2;
+//             // if(arr[mid]==k)
+//             //     return mid;
+//             // else if(arr[mid] < k)
+//             //     return binarySearch(arr, k, mid+1, high);
+//             // else 
+//             //     return binarySearch(arr, k, lo, mid-1);
         
-        // this not recursion.......    
-            while(lo<=high) {
-                int mid = lo + (high-lo)/2;
-                if(arr[mid] == k)
-                    return 1;
-                if(arr[mid] < k)
-                    return binarySearch(arr, k, mid+1, high);
-                else
-                    return binarySearch(arr, k, lo, mid-1);
-            }
-        return 0;
-    }
-    public static void main(String[] args) {
-        int[] arr = {2,5,9,12,33,77,120};
-        int k = 91;
-        int high = arr.length-1;
-        int ind = binarySearch(arr, k, 0, high);
-        System.out.println("Index: "+ind);
-    }
-}
+//         // this not recursion.......    
+//             while(lo<=high) {
+//                 int mid = lo + (high-lo)/2;
+//                 if(arr[mid] == k)
+//                     return 1;
+//                 if(arr[mid] < k)
+//                     return binarySearch(arr, k, mid+1, high);
+//                 else
+//                     return binarySearch(arr, k, lo, mid-1);
+//             }
+//         return 0;
+//     }
+//     public static void main(String[] args) {
+//         int[] arr = {2,5,9,12,33,77,120};
+//         int k = 91;
+//         int high = arr.length-1;
+//         int ind = binarySearch(arr, k, 0, high);
+//         System.out.println("Index: "+ind);
+//     }
+// }
