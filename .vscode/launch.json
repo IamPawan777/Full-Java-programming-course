@@ -6,6 +6,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CircularLL",
+            "request": "launch",
+            "mainClass": "CircularLL",
+            "projectName": "Java With DSA_78fb9ee4"
+        },
+        {
+            "type": "java",
+            "name": "Basics",
+            "request": "launch",
+            "mainClass": "Basics",
+            "projectName": "Java With DSA_78fb9ee4"
+        },
+        {
+            "type": "java",
+            "name": "CircularLL",
+            "request": "launch",
+            "mainClass": "LinkedList.CircularLL",
+            "projectName": "Java With DSA_78fb9ee4"
+        },
+        {
+            "type": "java",
+            "name": "DoublyLL",
+            "request": "launch",
+            "mainClass": "LinkedList.DoublyLL",
+            "projectName": "Java With DSA_78fb9ee4"
+        },
+        {
+            "type": "java",
             "name": "InterviewProb",
             "request": "launch",
             "mainClass": "InterviewProb",

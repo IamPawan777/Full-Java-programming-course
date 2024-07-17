@@ -276,100 +276,100 @@
 // //..........dynamically insertes element.......Insert at mid / end / start ...
 // package LinkedList;
 
-// public class Basics {
-//     static class Node {
-//         int data;
-//         Node next;
-//         public Node(int data) {
-//             this.data = data;
-//         }        
-//     }
+public class Basics {
+    static class Node {
+        int data;
+        Node next;
+        public Node(int data) {
+            this.data = data;
+        }        
+    }
 
-//     static class ImplementLL {
-//         Node head = null;
-//         Node tail = null;
+    static class ImplementLL {
+        Node head = null;
+        Node tail = null;
         
-//         void insertEnd(int val) {
-//             Node temp = new Node(val);
-//             if(head == null){                   //..for first node. (empty list ).
-//                 head = temp;
-//             }
-//             else {
-//                 tail.next = temp;
-//             }
-//             tail = temp;
-//         }
-//         void insertHead(int val) {
-//             Node node = new Node(val);
-//             if(head == null) {              //empty list
-//                 tail = node;
-//             }
-//             else {
-//                 node.next = head;
-//             }
-//             head = node;
-//         }
+        void insertEnd(int val) {
+            Node temp = new Node(val);
+            if(head == null){                   //..for first node. (empty list ).
+                head = temp;
+            }
+            else {
+                tail.next = temp;
+            }
+            tail = temp;
+        }
+        void insertHead(int val) {
+            Node node = new Node(val);
+            if(head == null) {              //empty list
+                tail = node;
+            }
+            else {
+                node.next = head;
+            }
+            head = node;
+        }
         
-//         void insertMid(int position, int val) {
-//             if(position == 0) {                 //..beginning
-//                 insertHead(val);
-//                 return;
-//             }
-//             else if(position == size()) {            //..end
-//                 insertEnd(val);
-//                 return;
-//             }
-//             else if(position < 0 || position > size()) {
-//                 System.out.println("Wrong position ");
-//                 return;
-//             }
+        void insertMid(int position, int val) {
+            if(position == 0) {                 //..beginning
+                insertHead(val);
+                return;
+            }
+            else if(position == size()) {            //..end
+                insertEnd(val);
+                return;
+            }
+            else if(position < 0 || position > size()) {
+                System.out.println("Wrong position ");
+                return;
+            }
 
-//             Node temp = head;                   // mid
-//             int ind = 0;
-//             while(ind < position-1) {
-//                 temp = temp.next;
-//                 ind++;
-//             }
-//             Node node = new Node(val);
-//             node.next = temp.next;
-//             temp.next = node;            
-//         }
+            Node temp = head;                   // mid
+            int ind = 0;
+            while(ind < position-1) {
+                temp = temp.next;
+                ind++;
+            }
+            Node node = new Node(val);
+            node.next = temp.next;
+            temp.next = node;            
+        }
         
        
-//         void disp() {                       // display linked list.....
-//             Node temp = head;                   
-//             while (temp!=null) {
-//                 System.out.print(temp.data + " ");
-//                 temp = temp.next;
-//             }
-//             System.out.println();
-//         }
-//         int size() {
-//             Node temp = head;
-//             int count = 0;
-//             while(temp!=null) {
-//                 count++;
-//                 temp = temp.next;
-//             }
-//             return count;
-//         }
-//     }
-//     public static void main(String[] args) {
-//         ImplementLL ll = new ImplementLL();
-//         ll.insertEnd(23);
-//         ll.insertEnd(9);
-//         ll.insertEnd(94);
-//         ll.insertEnd(923);
-//         ll.insertEnd(88);
-//         ll.disp();
+        void disp() {                       // display linked list.....
+            Node temp = head;                   
+            while (temp!=null) {
+                System.out.print(temp.data + " ");
+                temp = temp.next;
+            }
+            System.out.println();
+        }
+        int size() {
+            Node temp = head;
+            int count = 0;
+            while(temp!=null) {
+                count++;
+                temp = temp.next;
+            }
+            return count;
+        }
+    }
+    public static void main(String[] args) {
+        ImplementLL ll = new ImplementLL();
+        ll.insertEnd(23);
+        ll.insertEnd(9);
+        ll.insertEnd(94);
+        ll.insertEnd(923);
+        ll.insertEnd(88);
+        ll.disp();
         
-//         ll.insertMid(2, 100);     
+        ll.insertMid(2, 100);     
 
 
-//         ll.disp();
-//         // System.out.println(ll.tail.data);
-//     }
-// }
+        ll.disp();
+        // System.out.println(ll.tail.data);
+    }
+}
 
 
 
@@ -1038,99 +1038,99 @@
 
 
 
-// delete nth tail node if tail node present...............(also can solve by slow-fast poinster (leetcode 19))
+// // delete nth tail node if tail node present...............(also can solve by slow-fast poinster (leetcode 19))
 
-package LinkedList;
+// package LinkedList;
 
-public class Basics {
-        static Node head = null, tail = null;
-        static class Node{
-                int data;
-                Node next;
-                Node(int data) {
-                        this.data = data;
-                }
-        }
+// public class Basics {
+//         static Node head = null, tail = null;
+//         static class Node{
+//                 int data;
+//                 Node next;
+//                 Node(int data) {
+//                         this.data = data;
+//                 }
+//         }
 
-        static void insert(int data) {
-                Node node = new Node(data);
-                if(head == null){
-                        head = node;
-                }
-                else{
-                        tail.next = node;
-                }
-                tail = node;
-        }
+//         static void insert(int data) {
+//                 Node node = new Node(data);
+//                 if(head == null){
+//                         head = node;
+//                 }
+//                 else{
+//                         tail.next = node;
+//                 }
+//                 tail = node;
+//         }
 
-        static void disp() {
-                Node temp = head;
-                while(temp != null){
-                        System.out.print(temp.data+" ");
-                        temp = temp.next;
-                }
+//         static void disp() {
+//                 Node temp = head;
+//                 while(temp != null){
+//                         System.out.print(temp.data+" ");
+//                         temp = temp.next;
+//                 }
 
-        }
-        static int listSize() {
-                Node temp = head;
-                int size =  0;
-                while(temp != null){
-                        size++;
-                        temp = temp.next;
-                }
-                return size;
-        }
-        // static void deleteTail(int pos) {                       // <- this is the code
-        //         int size = listSize();
-        //         int newpos = size-pos+1;                        // now delete from stating position
+//         }
+//         static int listSize() {
+//                 Node temp = head;
+//                 int size =  0;
+//                 while(temp != null){
+//                         size++;
+//                         temp = temp.next;
+//                 }
+//                 return size;
+//         }
+//         // static void deleteTail(int pos) {                       // <- this is the code
+//         //         int size = listSize();
+//         //         int newpos = size-pos+1;                        // now delete from stating position
 
-        //         Node pre = null;
-        //         Node curr = head;
-        //         while(newpos-- != 1) {
-        //                 pre = curr;
-        //                 curr = curr.next;
-        //         }
-        //         if (pos == size){                                       // (edge case) when last node dlt form end
-        //                 head = head.next;
-        //                 return;
-        //         }
-        //         pre.next = curr.next;
-        //         curr.next = null;
-        // }
-//   or....
-        static void deleteTail(int k){
-                Node slow = head;
-                Node fast = head;
+//         //         Node pre = null;
+//         //         Node curr = head;
+//         //         while(newpos-- != 1) {
+//         //                 pre = curr;
+//         //                 curr = curr.next;
+//         //         }
+//         //         if (pos == size){                                       // (edge case) when last node dlt form end
+//         //                 head = head.next;
+//         //                 return;
+//         //         }
+//         //         pre.next = curr.next;
+//         //         curr.next = null;
+//         // }
+// //   or....
+//         static void deleteTail(int k){
+//                 Node slow = head;
+//                 Node fast = head;
 
-                while(k-- != 0) {
-                        fast = fast.next;
-                }
-                if(fast == null){
-                        head = head.next;
-                        return ;
-                }
-                while(fast.next != null) {
-                        slow = slow.next;
-                        fast = fast.next;
-                }
-                slow.next = slow.next.next;
-        }
+//                 while(k-- != 0) {
+//                         fast = fast.next;
+//                 }
+//                 if(fast == null){
+//                         head = head.next;
+//                         return ;
+//                 }
+//                 while(fast.next != null) {
+//                         slow = slow.next;
+//                         fast = fast.next;
+//                 }
+//                 slow.next = slow.next.next;
+//         }
 
-        public static void main(String[] args) {
-                insert(12);
-                insert(56);
-                insert(6);
-                insert(34);
-                insert(3);
-                disp();
+//         public static void main(String[] args) {
+//                 insert(12);
+//                 insert(56);
+//                 insert(6);
+//                 insert(34);
+//                 insert(3);
+//                 disp();
                 
-                deleteTail(5);
-                System.out.println();
+//                 deleteTail(5);
+//                 System.out.println();
 
-                disp();
-        }
+//                 disp();
+//         }
         
-}
+// }
 
 
 
@@ -1211,3 +1211,4 @@ public class Basics {
 //                 }
 //         }
 // }
+
