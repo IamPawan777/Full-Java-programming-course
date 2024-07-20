@@ -194,78 +194,112 @@
 
 
 
-//.........map for employee class.....if we have duplicate keys.........
+// //.........map for employee class.....if we have duplicate keys.........
 
-import java.util.*;
-import java.util.Map.*;
+// import java.util.*;
+// import java.util.Map.*;
 
-class EmpId {                       //get id.....
-    int id;
-    EmpId(int id) {
-        this.id = id;
-    }
-    public String toString() {
-        return id+" ";
-    }
-    public int hashCode(){                  //..(resposible encription)...if we have duplicate keys...{ (capacity)k % key) }
-        return id;
-    }
-    public boolean equals(Object o){
-        if(o instanceof EmpId) {
-            EmpId i= (EmpId)o;
-            if (i.id ==this.id) {
-                return true;
-            } 
-            else {
-                return false;
+// class EmpId {                       //get id.....
+//     int id;
+//     EmpId(int id) {
+//         this.id = id;
+//     }
+//     public String toString() {
+//         return id+" ";
+//     }
+//     public int hashCode(){                  //..(resposible encription)...if we have duplicate keys...{ (capacity)k % key) }
+//         return id;
+//     }
+//     public boolean equals(Object o){
+//         if(o instanceof EmpId) {
+//             EmpId i= (EmpId)o;
+//             if (i.id ==this.id) {
+//                 return true;
+//             } 
+//             else {
+//                 return false;
+//             }
+//         }
+//         return false;
+//     }
+// }
+
+
+// class EmpName {                       //get value............
+//     String name;
+//     EmpName(String name){
+//         this.name = name;
+//     }
+//     public String toString() {
+//         return name;
+//     }
+// }
+// class HashMapCl {
+//     public static void main(String[] args) {
+//         EmpId id1 = new EmpId(101);
+//         EmpId id2 = new EmpId(101);
+//         EmpId id3 = new EmpId(23);
+//         EmpName name1 = new EmpName("Ram");
+//         EmpName name2 = new EmpName("jojo");
+//         EmpName name3 = new EmpName("ishan");
+
+//         HashMap<EmpId, EmpName> h = new HashMap<>();                    ///...HashMap
+//         h.put(id1, name1);
+//         h.put(id2, name2);
+//         h.put(id3, name3);
+
+//         // HashMap<EmpId, EmpName> obj2 = new HashMap<>();
+//         // HashMap<EmpId, EmpName> obj3 = new HashMap<>();
+
+//         for (Map.Entry<EmpId, EmpName> s : h.entrySet()) {              //...generic is required
+//             System.out.println(s.getKey()+" "+s.getValue());
+//         }
+// //or...................
+//         // Set<Map.Entry<EmpId, EmpName>> ss=h.entrySet();
+//         // Iterator itr = ss.iterator();
+//         // while(itr.hasNext()){
+//         //     Map.Entry e = (Entry)itr.next();
+//         //     System.out.println(e.getKey()+"  "+e.getValue());
+//         // }
+
+
+//     }
+// }
+
+
+
+
+
+// highest frequency of element in an array.............
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class HashMapCl {
+    static void findMostFreqad(int[] a) {
+        Map<Integer, Integer> mp = new HashMap<>();
+        for(var i : a){
+            if(!mp.containsKey(i)){
+                mp.put(i, 1);
+            }
+            else{
+                mp.put(i, mp.get(i)+1);
             }
         }
-        return false;
-    }
-}
-
-
-class EmpName {                       //get value............
-    String name;
-    EmpName(String name){
-        this.name = name;
-    }
-    public String toString() {
-        return name;
-    }
-}
-class HashMapCl {
-    public static void main(String[] args) {
-        EmpId id1 = new EmpId(101);
-        EmpId id2 = new EmpId(101);
-        EmpId id3 = new EmpId(23);
-        EmpName name1 = new EmpName("Ram");
-        EmpName name2 = new EmpName("jojo");
-        EmpName name3 = new EmpName("ishan");
-
-        HashMap<EmpId, EmpName> h = new HashMap<>();                    ///...HashMap
-        h.put(id1, name1);
-        h.put(id2, name2);
-        h.put(id3, name3);
-
-        // HashMap<EmpId, EmpName> obj2 = new HashMap<>();
-        // HashMap<EmpId, EmpName> obj3 = new HashMap<>();
-
-        for (Map.Entry<EmpId, EmpName> s : h.entrySet()) {              //...generic is required
-            System.out.println(s.getKey()+" "+s.getValue());
+        
+        int maxFreq = 0;
+        int ans = -1;
+        for(var i : mp.keySet()) {              // key
+            if(maxFreq < mp.get(i)){            // value
+                maxFreq = mp.get(i);
+                ans = i;
+            }
         }
-//or...................
-        // Set<Map.Entry<EmpId, EmpName>> ss=h.entrySet();
-        // Iterator itr = ss.iterator();
-        // while(itr.hasNext()){
-        //     Map.Entry e = (Entry)itr.next();
-        //     System.out.println(e.getKey()+"  "+e.getValue());
-        // }
-
-
+        System.out.printf("%d has occurs %d times", ans, maxFreq);              // formating
     }
+    public static void main(String[] args) {
+        int[] a = {1,9,5,2,5,1,2,5, };
+        findMostFreqad(a);
+    }
+    
 }
-
-
-
-

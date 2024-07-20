@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "HashMapCl",
+            "request": "launch",
+            "mainClass": "HashMapCl",
+            "projectName": "Java With DSA_78fb9ee4"
+        },
+        {
+            "type": "java",
             "name": "CircularLL",
             "request": "launch",
             "mainClass": "CircularLL",
