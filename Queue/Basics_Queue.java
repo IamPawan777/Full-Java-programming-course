@@ -149,10 +149,74 @@ package Queue;
     }
 
     public static class QueueImp {
+        Node head = null;
+        Node tail = null;
+        int size = 0;
+
+        public void add(int val) {                          // add
+            Node node = new Node(val);
+            if(size==0)
+                head = tail = node;
+            else {
+                tail.next = node;
+                tail = node;
+            }
+            size++;
+        }
+
+        public int peek() {                                 // get
+            if(size == 0){
+                System.out.println("Queue is Empty");
+                return -1;
+            }
+            return head.data;
+        }
         
+
+        public int remove() {                               // delete
+            if(size == 0){
+                System.out.println("Queue is Empty");
+                return -1;
+            }
+            int x = head.data;
+            head = head.next;
+            size--;
+            return x;
+        }
+
+        public void display(){                              // display
+            if(size == 0){
+                System.out.println("Queue is Empty..");
+            }
+            Node temp = head;
+            while(temp != null) {
+                System.out.print(temp.data+" ");
+                temp = temp.next;
+            }
+            System.out.println();
+        }
+
+        public boolean isEmpty(){                           // is empty?
+            if(size == 0)   return true;
+            else return false;
+        }
     }
 
     public static void main(String[] args) {
-        
+        QueueImp q = new QueueImp();
+        q.add(12);
+        q.add(14);
+        q.add(16);
+        q.add(66);
+        q.add(99);
+        q.display();
+
+        System.out.println("Is Empty: "+q.isEmpty());
+
+        System.out.println("Front: "+q.peek());
+
+        System.out.println("Delete: "+q.remove());
+        q.display();
+        System.out.println("Size: "+q.size);
     }
  }
