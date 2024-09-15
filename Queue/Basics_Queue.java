@@ -148,6 +148,10 @@ package Queue;
         }
     }
 
+    public static class QueueImp {
+        
+    }
+
     public static void main(String[] args) {
         
     }
