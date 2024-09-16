@@ -111,6 +111,11 @@ package Queue;
 //         public int size() {                                    // size
 //             return size;
 //         }
+
+//         public boolean isEmpty() {                              // empty
+//             if(size() == 0)     return true;
+//             return false;
+//         }
 //     }
 //     public static void main(String[] args) {
 //         QueueImp q = new QueueImp();
@@ -129,6 +134,9 @@ package Queue;
 //         System.out.println("remove: "+q.remove());
 //         q.display();
 //         System.out.println("size: "+q.size());
+        
+//         System.out.println(q.isEmpty());
+
 //     }
 // }
 
@@ -149,14 +157,14 @@ package Queue;
     }
 
     public static class QueueImp {
-        Node head = null;
+        Node front = null;
         Node tail = null;
         int size = 0;
 
         public void add(int val) {                          // add
             Node node = new Node(val);
             if(size==0)
-                head = tail = node;
+                front = tail = node;
             else {
                 tail.next = node;
                 tail = node;
@@ -169,7 +177,7 @@ package Queue;
                 System.out.println("Queue is Empty");
                 return -1;
             }
-            return head.data;
+            return front.data;
         }
         
 
@@ -178,8 +186,8 @@ package Queue;
                 System.out.println("Queue is Empty");
                 return -1;
             }
-            int x = head.data;
-            head = head.next;
+            int x = front.data;
+            front = front.next;
             size--;
             return x;
         }
@@ -188,7 +196,7 @@ package Queue;
             if(size == 0){
                 System.out.println("Queue is Empty..");
             }
-            Node temp = head;
+            Node temp = front;
             while(temp != null) {
                 System.out.print(temp.data+" ");
                 temp = temp.next;
@@ -220,3 +228,194 @@ package Queue;
         System.out.println("Size: "+q.size);
     }
  }
+
+
+
+
+
+
+
+
+// // circular Queue Implemantation.........(r+1)%size
+
+// class Basics_Queue {
+//     public static class  CircularQueue {
+//         int f = -1, r = -1;        
+//         int size = 0;
+//         int[] arr = new int[5];
+//         int n = arr.length;
+
+//         public void add(int val) {                 //////////// add
+//             if(size == 0){                      /* zero element */ 
+//                 f = r = 0;
+//                 arr[0] = val;
+//             }
+//             else if(size == n) {                /* size is full */ 
+//                 System.out.println("Queue is full...");
+//                 return;
+//             }
+//             else if(r < n-1){                  /* normal case */ 
+//                 arr[++r] = val;
+//             }
+//             else if(r == n-1){                 /* when rear at last position or stating m value dalna h */ 
+//                 r = 0;
+//                 arr[0] = val;
+//             }
+//             size++;
+//         }
+
+//         public int remove() {                   ////// DELETE
+//             if(size == 0){
+//                 System.out.println("Queue is empty...!");
+//                 return -1;
+//             }
+//             else if(f == n-1) {                 /* front at last */  
+//                 int x = arr[f];
+//                 f = 0;
+//                 size--;
+//                 return x;
+//             }
+//             else {                              /* normal case */            
+//                 int x = arr[f];
+//                 f++;
+//                 size--;
+//                 return x;
+//             }
+//         }
+
+//         public int peek() {                     ////////// front
+//             if(size == 0){
+//                 System.out.println("Queue is empty...!");
+//                 return -1;
+//             }
+//             else{
+//                 return arr[f];
+//             }
+//         }
+
+//         public void display() {                        ////// display
+//             if(size == 0){
+//                 System.out.println("Queue is empty...!");
+//             }
+//             else {
+//                 if(f<r){
+//                     for (int i = f; i <= r; i++) {
+//                         System.out.print(arr[i]+" ");
+//                     }
+//                     System.out.println();
+//                 }
+//                 else if(f>r){
+//                     for (int i = f; i <= n-1; i++) {
+//                         System.out.print(arr[i]+" ");
+//                     }
+//                     for (int i = 0; i <= r; i++) {
+//                         System.out.print(arr[i]+" ");
+//                     }
+//                     System.out.println();
+//                 }
+//             }
+//         }
+//     }
+//     public static void main(String[] args) {
+//         CircularQueue cq = new CircularQueue();
+//         cq.add(11);
+//         cq.add(22);
+//         cq.add(33);
+//         cq.add(44);
+//         cq.add(55);        
+//         cq.display();
+//         System.out.println("front: "+cq.peek());
+        
+//         cq.add(66);             // full
+//         cq.remove();                //  11
+//         cq.remove();                //  22
+
+//         cq.add(77);             // 33 44 55 77
+//         cq.add(88);             // 33 44 55 77 88
+//         cq.display();
+
+//         System.out.println("front: "+cq.peek());
+
+
+//     }
+// }
+
+
+
+
+
+
+
+
+
+// // circular Queue Implemantation using LinkedList (circuler LL)
+
+// class Basics_Queue{
+//     static class Node{
+//         int data;
+//         Node next;
+//         Node(int data) {
+//             this.data = data;
+//         }
+//     }
+//     static class QueueLL {
+//         Node head = null, tail= null;
+//         int size = 0;
+
+//         void add(int data) {                              ////// add
+//             Node node = new Node(data);
+//             if(size == 0){
+//                 head = tail = node;
+//             }
+//             else{
+//                 tail.next = node;
+//                 tail = node;
+//             }
+//             node.next = head;
+//             size++;
+//         }
+
+//         int remove() {                                      ///// delete
+//             if(head == null){
+//                 System.out.println("Queue is Empty...");
+//                 return -1;
+//             }
+//             else{
+//                 int x = head.data;
+//                 head = head.next;
+//                 tail.next = head;
+//                 size--;
+//                 return x;
+//             }
+//         }
+
+//         void display() {                                  //// display
+//             if(head == null) {
+//                 System.out.println("Queue is Empty.....");
+//                 return;
+//             }
+//             Node temp = head.next;
+//             System.out.print(head.data+" ");
+//             while(temp != head){
+//                 System.out.print(temp.data+" ");
+//                 temp = temp.next;
+//             }
+//             System.out.println();
+//         }
+//     }
+//     public static void main(String[] args) {
+//         QueueLL ql = new QueueLL();
+//         ql.add(11);
+//         ql.add(22);
+//         ql.add(33);
+//         ql.add(44);
+//         ql.display();
+//         System.out.println("Size: "+ql.size);
+
+//         System.out.println("remove: "+ql.remove());
+//         System.out.println("remove: "+ql.remove());
+//         ql.display();
+//         System.out.println("Size: "+ql.size);
+
+//     }
+// }

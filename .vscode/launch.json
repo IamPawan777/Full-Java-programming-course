@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Basic_Deque",
+            "request": "launch",
+            "mainClass": "Queue.Basic_Deque",
+            "projectName": "Java With DSA_c287b5d7"
+        },
+        {
+            "type": "java",
+            "name": "CircularLL",
+            "request": "launch",
+            "mainClass": "CircularLL",
+            "projectName": "Java With DSA_c287b5d7"
+        },
+        {
+            "type": "java",
             "name": "Basics_Stack",
             "request": "launch",
             "mainClass": "Stack.Basics_Stack",

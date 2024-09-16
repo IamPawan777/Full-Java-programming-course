@@ -34,10 +34,10 @@ class Encapsulation {
      double age  = 9;
      String name;
 
-     int getAge(int age) {
+    int getAge(int age) {
         return age;
     }
-     void getAge(int age) {
+    void getAge(int age) {
             this.age = age;
     }
 
