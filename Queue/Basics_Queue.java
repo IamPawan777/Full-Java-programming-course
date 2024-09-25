@@ -145,98 +145,98 @@ package Queue;
 
 
 
-// Queue Implematation using LinkedList
+// // Queue Implematation using LinkedList
 
- class Basics_Queue {
-    public static class Node{
-        int data;
-        Node next;
-        Node (int data) {
-            this.data = data;
-        }
-    }
+//  class Basics_Queue {
+//     public static class Node{
+//         int data;
+//         Node next;
+//         Node (int data) {
+//             this.data = data;
+//         }
+//     }
 
-    public static class QueueImp {
-        Node front = null;
-        Node tail = null;
-        int size = 0;
+//     public static class QueueImp {
+//         Node front = null;
+//         Node tail = null;
+//         int size = 0;
 
-        public void add(int val) {                          // add
-            Node node = new Node(val);
-            if(size==0)
-                front = tail = node;
-            else {
-                tail.next = node;
-                tail = node;
-            }
-            size++;
-        }
+//         public void add(int val) {                          // add
+//             Node node = new Node(val);
+//             if(size==0)
+//                 front = tail = node;
+//             else {
+//                 tail.next = node;
+//                 tail = node;
+//             }
+//             size++;
+//         }
 
-        public int peek() {                                 // get
-            if(size == 0){
-                System.out.println("Queue is Empty");
-                return -1;
-            }
-            return front.data;
-        }
+//         public int peek() {                                 // get
+//             if(size == 0){
+//                 System.out.println("Queue is Empty");
+//                 return -1;
+//             }
+//             return front.data;
+//         }
         
 
-        public int remove() {                               // delete
-            if(size == 0){
-                System.out.println("Queue is Empty");
-                return -1;
-            }
-            int x = front.data;
-            front = front.next;
-            size--;
-            return x;
-        }
+//         public int remove() {                               // delete
+//             if(size == 0){
+//                 System.out.println("Queue is Empty");
+//                 return -1;
+//             }
+//             int x = front.data;
+//             front = front.next;
+//             size--;
+//             return x;
+//         }
 
-        public void display(){                              // display
-            if(size == 0){
-                System.out.println("Queue is Empty..");
-            }
-            Node temp = front;
-            while(temp != null) {
-                System.out.print(temp.data+" ");
-                temp = temp.next;
-            }
-            System.out.println();
-        }
+//         public void display(){                              // display
+//             if(size == 0){
+//                 System.out.println("Queue is Empty..");
+//             }
+//             Node temp = front;
+//             while(temp != null) {
+//                 System.out.print(temp.data+" ");
+//                 temp = temp.next;
+//             }
+//             System.out.println();
+//         }
 
-        public boolean isEmpty(){                           // is empty?
-            if(size == 0)   return true;
-            else return false;
-        }
-    }
+//         public boolean isEmpty(){                           // is empty?
+//             if(size == 0)   return true;
+//             else return false;
+//         }
+//     }
 
-    public static void main(String[] args) {
-        QueueImp q = new QueueImp();
-        q.add(12);
-        q.add(14);
-        q.add(16);
-        q.add(66);
-        q.add(99);
-        q.display();
+//     public static void main(String[] args) {
+//         QueueImp q = new QueueImp();
+//         q.add(12);
+//         q.add(14);
+//         q.add(16);
+//         q.add(66);
+//         q.add(99);
+//         q.display();
 
-        System.out.println("Is Empty: "+q.isEmpty());
+//         System.out.println("Is Empty: "+q.isEmpty());
 
-        System.out.println("Front: "+q.peek());
+//         System.out.println("Front: "+q.peek());
 
-        System.out.println("Delete: "+q.remove());
-        q.display();
-        System.out.println("Size: "+q.size);
-    }
- }
-
-
+//         System.out.println("Delete: "+q.remove());
+//         q.display();
+//         System.out.println("Size: "+q.size);
+//     }
+//  }
 
 
 
 
 
 
-// // circular Queue Implemantation.........(r+1)%size
+
+
+// // circular Queue Implemantation using array.........(r+1)%size
 
 // class Basics_Queue {
 //     public static class  CircularQueue {
@@ -419,3 +419,77 @@ package Queue;
 
 //     }
 // }
+
+
+
+
+
+
+
+// // reverse queue...........
+
+// import java.util.*;
+
+// class Basics_Queue {
+//     public static void main(String[] args) {
+//         Queue<Integer> q = new LinkedList<>();
+//         q.add(11);
+//         q.add(22);
+//         q.add(33);
+//         q.add(44);
+//         q.add(55);
+//         System.out.println(q);
+
+//         Stack<Integer> st = new Stack<>();
+//         while(!q.isEmpty()){                // remove from queue and push on stack
+//             st.push(q.remove());
+//         }
+
+//         while (!st.isEmpty()) {             // pop form stack and add on queue
+//             q.add(st.pop());
+//         }
+//         System.out.println(q);
+//     }
+// }
+
+
+
+
+
+
+// reverse at perticular index..........
+
+import java.util.*;
+
+class Basics_Queue {
+    public static void main(String[] args) {
+        Queue<Integer> q = new LinkedList<>();
+        q.add(1);
+        q.add(2);
+        q.add(3);
+        q.add(4);
+        q.add(5);
+        System.out.println(q);
+
+        Stack<Integer> st = new Stack<>();
+        Queue<Integer> q2 = new LinkedList<>();
+
+        int i = 3;
+        while(i>0) {                //push at 3rd index on STACK
+            st.push(q.remove());
+            i--;
+        }
+        while(!q.isEmpty()){        // remaining element at 2nd QUEUE
+            q2.add(q.remove());
+        }
+
+        while (!st.isEmpty()) {     // add on QUEUE from stack
+            q.add(st.pop());
+        }
+        while (!q2.isEmpty()) {     // add remaining element on QUEUE from 2nd queue
+            q.add(q2.remove());
+        }
+        System.out.println(q);
+
+    }
+}
