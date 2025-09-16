@@ -1,4 +1,4 @@
 # Full-Java-programming-course
-I am starting to learn Data Structure and Algorithms in JAVA from today.
+I am starting to learn Data Structure and Algorithms in JAVA.
 <Br>
-Developer- <b><i>Pawan Bisht</i></b>
+Coded By- <b><i>Pawan Bisht</i></b>
