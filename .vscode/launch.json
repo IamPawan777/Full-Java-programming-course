@@ -6,6 +6,55 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Quetions",
+            "request": "launch",
+            "mainClass": "Quetions",
+            "projectName": "Java With DSA_c287b5d7"
+        },
+        {
+            "type": "java",
+            "name": "DFS",
+            "request": "launch",
+            "mainClass": "DFS",
+            "projectName": "Java With DSA_c287b5d7"
+        },
+        {
+            "type": "java",
+            "name": "BFS",
+            "request": "launch",
+            "mainClass": "BFS",
+            "projectName": "Java With DSA_c287b5d7"
+        },
+        {
+            "type": "java",
+            "name": "AdjacencyList",
+            "request": "launch",
+            "mainClass": "Graph.AdjacencyList",
+            "projectName": "Java With DSA_c287b5d7"
+        },
+        {
+            "type": "java",
+            "name": "AdjacencyMetrix",
+            "request": "launch",
+            "mainClass": "Graph.AdjacencyMetrix",
+            "projectName": "Java With DSA_c287b5d7"
+        },
+        {
+            "type": "java",
+            "name": "recursion",
+            "request": "launch",
+            "mainClass": "recursion",
+            "projectName": "Java With DSA_c287b5d7"
+        },
+        {
+            "type": "java",
+            "name": "TreeDS",
+            "request": "launch",
+            "mainClass": "Tree.TreeDS",
+            "projectName": "Java With DSA_c287b5d7"
+        },
+        {
+            "type": "java",
             "name": "Basic_Deque",
             "request": "launch",
             "mainClass": "Queue.Basic_Deque",

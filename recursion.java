@@ -760,23 +760,51 @@
 
 
 
-// keypad combinations..........**
-class recursion{
-    static void combinations(String dig, String[] kp, String res, int ind){
-        if(dig.length() == ind){
-            System.out.print(res+" ");
-            return;
-        }
+// // keypad combinations..........**
+// class recursion{
+//     static void combinations(String dig, String[] kp, String res, int ind){
+//         if(dig.length() == ind){
+//             System.out.print(res+" ");
+//             return;
+//         }
 
-        int currNum = dig.charAt(ind)-'0';
-        String currChoice = kp[currNum];
-        for (int i = 0; i < currChoice.length(); i++) {
-            combinations(dig, kp, res+currChoice.charAt(i), ind+1);            
-        }
+//         int currNum = dig.charAt(ind)-'0';
+//         String currChoice = kp[currNum];
+//         for (int i = 0; i < currChoice.length(); i++) {
+//             combinations(dig, kp, res+currChoice.charAt(i), ind+1);            
+//         }
+//     }
+//     public static void main(String[] args) {
+//         String dig = "253";
+//         String[] kp = {"", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
+//         combinations(dig, kp, "", 0);
+//     }
+// }
+
+
+
+
+
+
+// practice
+
+class recursion{
+
+    static boolean fun(int i, int n, int[] arr, int k){
+        if(k==0)
+            return true;
+
+        // sum += arr[i];
+        fun(i+1, n, arr, k-arr[i]);
+        return fun(i+1, n, arr, k);
+
     }
     public static void main(String[] args) {
-        String dig = "253";
-        String[] kp = {"", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
-        combinations(dig, kp, "", 0);
+        int[] arr = {2,3,6};
+        int n = arr.length;
+        int k = 5;
+
+        boolean x = fun(0, n, arr, k);            // can using arrauList
+        System.err.println(x);
     }
 }
